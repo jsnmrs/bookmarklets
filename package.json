@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint \"src/*.js\"",
     "prettier": "prettier --write \"src/*.js\"",
-    "lint": "npm run prettier && npm run eslint"
+    "lint": "npm run prettier && npm run eslint",
+    "build": "esbuild src/alt-text.js src/strip-onpaste.js --bundle --minify --outdir=dist"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   ],
   "author": "Jason Morris",
   "devDependencies": {
+    "esbuild": "^0.17.11",
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-no-unsanitized": "^4.0.2",
