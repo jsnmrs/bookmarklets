@@ -1,12 +1,14 @@
 import * as esbuild from "esbuild";
-import bookmarkletPlugin from "esbuild-plugin-bookmarklet"
+import bookmarkletPlugin from "esbuild-plugin-bookmarklet";
+import glob from "glob";
 
 esbuild.build({
-  entryPoints: ['src/alt-text.js', 'src/strip-onpaste.js'], // points to normal javascript
+  stdin: { contents: "" },
+  inject: glob.sync("src/*.js"),
   bundle: true,
   minify: true,
   write: false,
-  outdir: 'dist/',
+  outdir: 'dist',
   format: 'iife',
   plugins: [bookmarkletPlugin]
 })
