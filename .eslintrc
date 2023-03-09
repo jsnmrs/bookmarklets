@@ -20,6 +20,8 @@
     "browser": true
   },
 
+  "ignorePatterns": ["dist/**/*.js"],
+
   "globals": {
     "matchMedia": true
   },
