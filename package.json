@@ -2,13 +2,14 @@
   "name": "bookmarklets",
   "version": "1.0.0",
   "description": "A toolbox for the browser",
-  "main": "index.html",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint \"src/*.js\"",
     "prettier": "prettier --write \"src/*.js\"",
     "lint": "npm run prettier && npm run eslint",
-    "build": "esbuild src/alt-text.js src/strip-onpaste.js --bundle --minify --outdir=dist"
+    "build": "node build.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "author": "Jason Morris",
   "devDependencies": {
     "esbuild": "^0.17.11",
+    "esbuild-plugin-bookmarklet": "^1.0.0",
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-no-unsanitized": "^4.0.2",
