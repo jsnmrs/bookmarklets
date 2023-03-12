@@ -1,0 +1,37 @@
+[
+  {
+    "name": "alt text",
+    "title": "bookmarklet-alt-text.js",
+    "code": "javascript:void%20(()=%3E%7Bvar%20t=document.createElement(%22style%22),e=document.createTextNode('img%7Boutline:%204px%20solid%20#f0f%20!important;position:%20relative;%7D%20img%5Balt%5D%7Boutline:%20none%20!important;%7D%20body::after%7B%20position:%20absolute;%20top:%200;%20right:%200;%20background-color:%20#f0f;%20color:%20#fff;%20z-index:%209999;%20font-size:%2012px;%20font-weight:%20400;%20padding:%201px%203px;%20content:%20%22%5Cu%7B1F526%7D%20images%20without%20alt%20attributes%22;%7D'),o=document.getElementsByTagName(%22head%22);t.appendChild(e);o%5B0%5D.appendChild(t);%7D)();%0A"
+  },
+  {
+    "name": "hide cursor",
+    "title": "bookmarklet-hide-cursor.js",
+    "code": "javascript:void%20(()=%3E%7Bvar%20e=document.createElement(%22style%22),t=document.createTextNode('*%20%7B%20cursor:%20none%20!important;%20%7D%20body::after%7B%20position:%20absolute;%20top:%200;%20right:%200;%20background-color:%20#f0f;%20color:%20#fff;%20z-index:%209999;%20font-size:%2012px;%20font-weight:%20400;%20padding:%201px%203px;%20content:%20%22%5Cu%7B1FAE3%7D%20hiding%20cursor%22;%7D'),o=document.getElementsByTagName(%22head%22);e.appendChild(t);o%5B0%5D.appendChild(e);%7D)();%0A"
+  },
+  {
+    "name": "inline styles",
+    "title": "bookmarklet-inline-styles.js",
+    "code": "javascript:void%20(()=%3E%7Bvar%20t=document.createElement(%22style%22),e=document.createTextNode('%5Bstyle%5D%7B%20position:%20relative;%20outline:%204px%20solid%20#f00%20!important;%7D%20%5Bstyle%5D:after%7B%20content:%20%22inline%20style%22;%20position:%20absolute;%20top:%200;%20right:%200;%20background-color:%20#f00;%20color:%20#fff;%20z-index:%209999;%20font-size:%2012px;%20font-weight:%20400;%20padding:%201px%203px;%7D%20body::after%7B%20position:%20absolute;%20top:%200;%20right:%200;%20background-color:%20#f0f;%20color:%20#fff;%20z-index:%209999;%20font-size:%2012px;%20font-weight:%20400;%20padding:%201px%203px;%20content:%20%22%5Cu%7B1F526%7D%20style%20attributes%22;%7D'),o=document.getElementsByTagName(%22head%22);t.appendChild(e);o%5B0%5D.appendChild(t);%7D)();%0A"
+  },
+  {
+    "name": "strip onpaste",
+    "title": "bookmarklet-strip-onpaste.js",
+    "code": "javascript:void%20(()=%3E%7Bdocument.querySelectorAll(%22input%5Btype=password%5D%22).forEach(function(e)%7Breturn%20e.removeAttribute(%22onpaste%22)%7D);%7D)();%0A"
+  },
+  {
+    "name": "test csp",
+    "title": "bookmarklet-test-csp.js",
+    "code": "javascript:void%20(()=%3E%7Bdocument.addEventListener(%22securitypolicyviolation%22,i,!1);function%20i(e)%7B%22use%20strict%22;alert(e.blockedURI),alert(e.violatedDirective),alert(e.originalPolicy)%7D%7D)();%0A"
+  },
+  {
+    "name": "test js local",
+    "title": "bookmarklet-test-js-local.js",
+    "code": "javascript:void%20(()=%3E%7Bvar%20e=document.createElement(%22script%22),t=document.createTextNode('alert(%22Your%20browser%20is%20not%20blocking%20JavaScript%20in%20favorites/bookmarks%22);'),a=document.getElementsByTagName(%22head%22);e.appendChild(t);a%5B0%5D.appendChild(e);%7D)();%0A"
+  },
+  {
+    "name": "youtube UC",
+    "title": "bookmarklet-youtube-UC.js",
+    "code": "javascript:void%20(()=%3E%7Bvar%20t=document.querySelector(%22link%5Brel=canonical%5D%22).getAttribute(%22href%22).replace(%22https://www.youtube.com/channel/%22,%22%22),e=document.createElement(%22p%22),o=document.getElementsByTagName(%22body%22);t&&(e.textContent=t,e.setAttribute(%22style%22,%22position:%20absolute;%20top:%200;%20left:%200;%20font-size:%202rem;%20z-index:%209999;%20color:%20#fff;%20padding:%201rem;%20background-color:%20#000;%20border:%200.25rem%20solid%20#f00;%22),o%5B0%5D.prepend(e));%7D)();%0A"
+  }
+]
