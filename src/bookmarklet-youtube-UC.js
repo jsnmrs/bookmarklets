@@ -15,7 +15,7 @@ if (result) {
   output.textContent = result;
   output.setAttribute(
     "style",
-    "position: absolute; top: 0; left: 0; font-size: 2rem; z-index: 9999; color: #fff; padding: 1rem; background-color: #000; border: 0.25rem solid #f00;"
+    "position: absolute; top: 0; right: 4px; background-color: #000; color: #01ff70; z-index: 9999; font-size: 16px; font-weight: 400; padding: 3px 9px; outline: 4px solid #01ff70 !important;"
   );
   page[0].prepend(output);
 }
