@@ -5,7 +5,7 @@
 
 var style = document.createElement("style"),
   styleContent = document.createTextNode(
-    'img{outline: 4px solid #f0f !important;position: relative;} img[alt]{outline: none !important;} body::after{ position: absolute; top: 0; right: 0; background-color: #f0f; color: #fff; z-index: 9999; font-size: 12px; font-weight: 400; padding: 1px 3px; content: "🔦 images without alt attributes";}'
+    'img{outline: 4px solid #01ff70 !important;position: relative;} img[alt]{outline: none !important;} body::after{ position: absolute; top: 0; right: 4px; background-color: #000; color: #01ff70; z-index: 9999; font-size: 16px; font-weight: 400; padding: 3px 9px; outline: 4px solid #01ff70 !important; content: "images without alt attributes";}'
   ),
   head = document.getElementsByTagName("head");
 
