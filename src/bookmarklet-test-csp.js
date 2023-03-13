@@ -1,7 +1,7 @@
 // Test CSP
 // Test for errors related Content Security Policy (CSP)
-// belykh
-// https://stackoverflow.com/a/61901020
+// SecurityPolicyViolationEvent on MDN
+// https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent#examples
 
 document.addEventListener("securitypolicyviolation", cspCheck, false);
 

@@ -1,7 +1,7 @@
 // Test local JS
 // Test for local JS support via bookmark
-// Jason Morris
-// https://jasonmorris.com
+// Accessible Name and Description Inspector (ANDI) help page
+// https://www.ssa.gov/accessibility/andi/help/faq.html
 
 var script = document.createElement("script"),
   scriptContent = document.createTextNode(
