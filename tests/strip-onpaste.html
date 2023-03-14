@@ -1,34 +1,57 @@
+---
+permalink: "tests/strip-onpaste/"
+reference: "bookmarklet-strip-onpaste.js"
+---
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Strip onpaste</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      max-width: 40em;
-      margin: 1em auto;
-      font-size: 112.5%;
-      font-family: system, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-        "Segoe UI Symbol";
-    }
+  <head>
+    <title>Strip onpaste</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        max-width: 40em;
+        margin: 1em auto;
+        font-size: 112.5%;
+        font-family: system, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol";
+      }
 
-    section {
-      background-color: #f1f1f1;
-      margin: 0 -1rem;
-      padding: 0.5rem 1rem 1rem;
-    }
+      section {
+        background-color: #f1f1f1;
+        margin: 0 -1rem;
+        padding: 0.5rem 1rem 1rem;
+      }
 
-    .btn { display: inline-block; padding: 0.5rem 1.5rem; background-color: #01FF70; color: #222; border-radius: 0.75rem; font-size: 1.25rem; text-decoration: none; border: 0.25rem solid #00bf52; }
-</style>
-</head>
-<body>
-  <h1>Test CSP</h1>
-  <p><a class="btn" href="#">Strip onpaste</a></p>
+      .btn {
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        background-color: #01ff70;
+        color: #222;
+        border-radius: 0.75rem;
+        font-size: 1.25rem;
+        text-decoration: none;
+        border: 0.25rem solid #00bf52;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        {% for bookmark in bookmarklets -%} {% if bookmark.title == reference %}
+        <h1>{{ bookmark.name }} tests</h1>
+        <p><a class="btn" href="{{ bookmark.code }}">{{ bookmark.name }}</a></p>
+        {% endif %} {% endfor %}
 
-  <p><label for="badfield">Password field with <code>onpaste="return false;"</code></label></p>
-  <p><input type="password" id="badfield" onpaste="return false;"></p>
-
-</body>
+        <p>
+          <label for="badfield"
+            >Password field with <code>onpaste="return false;"</code></label
+          >
+        </p>
+        <p><input type="password" id="badfield" onpaste="return false;" /></p>
+      </section>
+    </main>
+  </body>
 </html>
