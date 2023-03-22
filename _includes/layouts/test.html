@@ -1,0 +1,13 @@
+---
+layout: page
+---
+
+{% for reference in references -%} {% if reference.file == file %}
+<h1>{{ reference.name }}</h1>
+<p>
+  {{ reference.description }}. Via
+  <a href="{{ reference.authorUrl }}">{{ reference.author }}</a>.
+</p>
+{% for bookmarklet in bookmarklets -%} {% if bookmarklet.src == file %}
+<p><a class="btn" href="{{ bookmarklet.dist }}">{{ reference.name }}</a></p>
+{% endif %} {% endfor %} {% endif %} {% endfor %} {{ content }}

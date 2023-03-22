@@ -1,0 +1,26 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% if title %}{{ title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <style>
+      {% include "style.css" %}
+    </style>
+  </head>
+
+  <body>
+    <main class="post" id="content" tabindex="-1">{{ content }}</main>
+    <footer>
+      <p>
+        MIT Licensed. Source code on
+        <a href="https://github.com/jsnmrs/bookmarklets">GitHub</a>. Created by
+        <a href="https://jasonmorris.com">Jason Morris</a>.
+      </p>
+    </footer>
+  </body>
+</html>

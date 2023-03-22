@@ -1,0 +1,35 @@
+{
+  "name": "bookmarklets",
+  "version": "1.0.0",
+  "description": "Tools for the browser",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "eslint": "eslint \"**/*.js\"",
+    "site": "eleventy --serve",
+    "build": "node build.js",
+    "clean": "node clean.js",
+    "export": "node export.js",
+    "lint": "npm run eslint",
+    "test": "npm run lint && npm run clean && npm run build && npm run export",
+    "start": "npm run test && eleventy --serve",
+    "buildprod": "npm run lint && eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsnmrs/bookmarklets.git"
+  },
+  "keywords": [
+    "bookmarklet"
+  ],
+  "author": "Jason Morris",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "esbuild": "^0.17.12",
+    "esbuild-plugin-bookmarklet": "^1.0.0",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "netscape-bookmarks": "^0.1.1"
+  }
+}

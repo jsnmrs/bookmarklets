@@ -1,0 +1,61 @@
+---
+permalink: "/"
+title: Bookmarklets
+layout: page
+---
+
+<h1>Bookmarklets</h1>
+<p>Tools for the browser</p>
+<h2>Bookmark import file</h2>
+<p>
+  <a href="data/bookmarks.html">Download bookmark HTML</a> (in
+  <a
+    href="https://web.archive.org/web/20230318225552/https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753582%28v%3Dvs.85%29"
+    >Netscape bookmark format</a
+  >
+  to import into any browser)
+</p>
+<h2>Bookmarklet library</h2>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Bookmarklet</th>
+      <th scope="col">JS source</th>
+      <th scope="col">Test page</th>
+      <th scope="col">Author</th>
+      <th scope="col">Tags</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for reference in references -%}
+    <tr>
+      <td>
+        {% for bookmarklet in bookmarklets -%} {% if reference.file ==
+        bookmarklet.src %}
+        <a href="{{ bookmarklet.dist }}">{{ reference.name }}</a>
+        {% endif %} {% endfor %}
+      </td>
+
+      <td>
+        <a href="bookmarklets/{{ reference.file }}"
+          >{{ reference.name }} source</a
+        >
+      </td>
+      <td>
+        {% if reference.test %}
+        <a href="bookmarklets/{{ reference.file | replace: '.js', '.html' }}"
+          >{{ reference.name }} test page</a
+        >
+        {% endif %}
+      </td>
+      <td>
+        <a href="{{ reference.authorUrl }}">{{ reference.author }}</a>
+      </td>
+      <td>
+        {% for tag in reference.tags %} {{ tag }}{% if forloop.last != true
+        %},{% endif %}{% endfor %}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

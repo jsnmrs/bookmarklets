@@ -1,0 +1,82 @@
+/* CSS */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 112.5%;
+  font-family: system, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+main {
+  max-width: 55em;
+  margin: 1em auto;
+}
+
+.faux-header,
+footer {
+  background-color: #f1f1f1;
+  padding: 1em;
+}
+.faux-header {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1.5em;
+}
+footer {
+  border-top: 1px solid #ccc;
+  margin-top: 1.5em;
+  padding: 3em 1em;
+}
+footer p {
+  max-width: 55em;
+  margin: 0 auto;
+}
+section {
+  margin: 3rem 0;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.1;
+}
+
+p {
+  line-height: 1.4;
+  margin-top: 1em;
+  margin-bottom: 0.25rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.25rem 1.25rem;
+  background-color: #01ff70;
+  color: #222;
+  border-radius: 0.75rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border: 0.25rem solid #00bf52;
+}
+
+table,
+td,
+th {
+  border: 1px solid #aaa;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0.5rem;
+}
+
+th {
+  text-align: left;
+}
