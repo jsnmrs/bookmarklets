@@ -8,10 +8,11 @@
     "eslint": "eslint \"**/*.js\"",
     "site": "eleventy --serve",
     "build": "node build.js",
+    "smush": "node smush.js",
     "clean": "node clean.js",
     "export": "node export.js",
     "lint": "npm run eslint",
-    "test": "npm run lint && npm run clean && npm run build && npm run export",
+    "test": "npm run lint && npm run clean && npm run smush && npm run build && npm run export",
     "start": "npm run test && eleventy --serve",
     "buildprod": "npm run lint && eleventy"
   },
