@@ -8,10 +8,12 @@
     "eslint": "eslint \"**/*.js\"",
     "site": "eleventy --serve",
     "build": "node build.js",
+    "smush": "node smush.js",
     "clean": "node clean.js",
     "export": "node export.js",
-    "lint": "npm run eslint",
-    "test": "npm run lint && npm run clean && npm run build && npm run export",
+    "prettier": "prettier --write \"bookmarklets/*.js\"",
+    "lint": "npm run prettier && npm run eslint",
+    "test": "npm run lint && npm run clean && npm run smush && npm run build && npm run export",
     "start": "npm run test && eleventy --serve",
     "buildprod": "npm run lint && eleventy"
   },
@@ -30,6 +32,7 @@
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "netscape-bookmarks": "^0.1.1"
+    "netscape-bookmarks": "^0.1.1",
+    "prettier": "^2.8.6"
   }
 }

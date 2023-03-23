@@ -125,5 +125,17 @@
       "diagnostic",
       "editable"
     ]
+  },
+  {
+    "author": "Jeremy Keith",
+    "authorUrl": "https://adactio.com/journal/16523",
+    "description": "Run a Lighthouse scan on current URL (regardless of broswer)",
+    "file": "run-lighthouse.js",
+    "name": "Run Lighthouse",
+    "tags": [
+      "accessibility",
+      "bestpractices",
+      "performance"
+    ]
   }
 ]
