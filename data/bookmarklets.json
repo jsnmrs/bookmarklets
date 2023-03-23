@@ -48,5 +48,10 @@
     "name": "Design mode toggle",
     "src": "design-mode-toggle.js",
     "dist": "javascript:void%20(()=%3E%7Bdocument.designMode=document.designMode==%22on%22?%22off%22:%22on%22;%7D)();%0A"
+  },
+  {
+    "name": "Run Lighthouse",
+    "src": "run-lighthouse.js",
+    "dist": "javascript:void%20(()=%3E%7Bdocument.location=%22https://googlechrome.github.io/lighthouse/viewer/?psiurl=%22+escape(document.location)+%22&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa%22;%7D)();%0A"
   }
 ]
