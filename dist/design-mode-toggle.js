@@ -1,1 +1,0 @@
-javascript:void%20(()=%3E%7Bdocument.designMode=document.designMode==%22on%22?%22off%22:%22on%22;%7D)();%0A
