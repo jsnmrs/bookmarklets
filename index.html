@@ -32,24 +32,24 @@ layout: page
       <td>
         {% for bookmarklet in bookmarklets -%} {% if reference.file ==
         bookmarklet.src %}
-        <a href="{{ bookmarklet.dist }}">{{ reference.name }}</a>
+        <a href="{{ bookmarklet.dist }}">{{ reference.bookmarklet }}</a>
         {% endif %} {% endfor %}
       </td>
 
       <td>
         <a href="bookmarklets/{{ reference.file }}"
-          >{{ reference.name }} source</a
+          >{{ reference.bookmarklet }} source</a
         >
       </td>
       <td>
-        {% if reference.test %}
+        {% if reference.pageTest %}
         <a href="bookmarklets/{{ reference.file | replace: '.js', '.html' }}"
-          >{{ reference.name }} test page</a
+          >{{ reference.bookmarklet }} test page</a
         >
         {% endif %}
       </td>
       <td>
-        <a href="{{ reference.authorUrl }}">{{ reference.author }}</a>
+        <a href="{{ reference.sourceUrl }}">{{ reference.source }}</a>
       </td>
       <td>
         {% for tag in reference.tags %} {{ tag }}{% if forloop.last != true

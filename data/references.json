@@ -1,32 +1,32 @@
 [
   {
-    "author": "Accessible Name and Description Inspector (ANDI) help page",
-    "authorUrl": "https://www.ssa.gov/accessibility/andi/help/faq.html",
+    "bookmarklet": "Test local JS",
     "description": "Test for local JS support via bookmark",
     "file": "test-js-local.js",
-    "name": "Test local JS",
+    "source": "Accessible Name and Description Inspector (ANDI) help page",
+    "sourceUrl": "https://www.ssa.gov/accessibility/andi/help/faq.html",
     "tags": [
       "diagnostic",
-      "test"
+      "pageTest"
     ]
   },
   {
-    "author": "Adrian Roselli",
-    "authorUrl": "https://adrianroselli.com/2015/01/css-bookmarklets-for-testing-and-fixing.html#inline",
+    "bookmarklet": "Inline styles",
     "description": "Highlight all elements with style attributes",
     "file": "inline-styles.js",
-    "name": "Inline styles",
+    "source": "Adrian Roselli",
+    "sourceUrl": "https://adrianroselli.com/2015/01/css-bookmarklets-for-testing-and-fixing.html#inline",
     "tags": [
       "HTML",
       "CSS"
     ]
   },
   {
-    "author": "Iain Bean",
-    "authorUrl": "https://iainbean.com/posts/2020/an-opinionated-guide-to-accessibility-testing/",
+    "bookmarklet": "Hide cursor",
     "description": "Hides cursor from window to encourage keyboard use",
     "file": "hide-cursor.js",
-    "name": "Hide cursor",
+    "source": "Iain Bean",
+    "sourceUrl": "https://iainbean.com/posts/2020/an-opinionated-guide-to-accessibility-testing/",
     "tags": [
       "accessibility",
       "2.1",
@@ -39,11 +39,11 @@
     ]
   },
   {
-    "author": "Jason Morris",
-    "authorUrl": "https://jasonmorris.com",
+    "bookmarklet": "Get YouTube UC ID",
     "description": "Fetches UC ID while on a YouTube profile page",
     "file": "youtube-uc-id.js",
-    "name": "Get YouTube UC ID",
+    "source": "Jason Morris",
+    "sourceUrl": "https://jasonmorris.com",
     "tags": [
       "diagnostic",
       "bmxfeed",
@@ -51,40 +51,40 @@
     ]
   },
   {
-    "author": "Jason Morris",
-    "authorUrl": "https://jasonmorris.com",
+    "bookmarklet": "Alt text",
     "description": "Highlight images without alt attributes",
     "file": "alt-text.js",
-    "name": "Alt text",
+    "pageTest": true,
+    "source": "Jason Morris",
+    "sourceUrl": "https://jasonmorris.com",
     "tags": [
       "accessibility",
       "1.1.1 (A)",
       "2.4.4 (A)",
       "2.4.9 (AAA)",
       "WCAG"
-    ],
-    "test": true
+    ]
   },
   {
-    "author": "Jason Morris",
-    "authorUrl": "https://jasonmorris.com",
+    "bookmarklet": "Remove onpaste",
     "description": "Remove onpaste attributes from password inputs which fixes security theatre of preventing paste",
     "file": "strip-onpaste.js",
-    "name": "Remove onpaste",
+    "pageTest": true,
+    "source": "Jason Morris",
+    "sourceUrl": "https://jasonmorris.com",
     "tags": [
       "alter",
       "HTML",
       "forms",
       "security"
-    ],
-    "test": true
+    ]
   },
   {
-    "author": "Mike in a CSS Tricks article comment",
-    "authorUrl": "https://css-tricks.com/snippets/javascript/1024x768-bookmarklet/#comment-1766738",
+    "bookmarklet": "1280x1024 window",
     "description": "Opens a new window with the current URL at 1280x1024",
     "file": "open-1280x1024-window.js",
-    "name": "1280x1024 window",
+    "source": "Mike in a CSS Tricks article comment",
+    "sourceUrl": "https://css-tricks.com/snippets/javascript/1024x768-bookmarklet/#comment-1766738",
     "tags": [
       "accessibility",
       "1.4.10 (AA)",
@@ -92,11 +92,11 @@
     ]
   },
   {
-    "author": "Mike in a CSS Tricks article comment",
-    "authorUrl": "https://css-tricks.com/snippets/javascript/1024x768-bookmarklet/#comment-1766738",
+    "bookmarklet": "320x256 window",
     "description": "Opens a new window with the current URL at 320x256",
     "file": "open-320x256-window.js",
-    "name": "320x256 window",
+    "source": "Mike in a CSS Tricks article comment",
+    "sourceUrl": "https://css-tricks.com/snippets/javascript/1024x768-bookmarklet/#comment-1766738",
     "tags": [
       "accessibility",
       "1.4.10 (AA)",
@@ -104,11 +104,11 @@
     ]
   },
   {
-    "author": "SecurityPolicyViolationEvent on MDN",
-    "authorUrl": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent#examples",
+    "bookmarklet": "Test CSP",
     "description": "Test for errors related Content Security Policy (CSP)",
     "file": "test-csp.js",
-    "name": "Test CSP",
+    "source": "SecurityPolicyViolationEvent on MDN",
+    "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent#examples",
     "tags": [
       "diagnostic",
       "CSP",
@@ -116,22 +116,22 @@
     ]
   },
   {
-    "author": "Christoph Wagner",
-    "authorUrl": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent#examples",
+    "bookmarklet": "Design mode toggle",
     "description": "Make all of the text on page editable",
     "file": "design-mode-toggle.js",
-    "name": "Design mode toggle",
+    "source": "Christoph Wagner",
+    "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent#examples",
     "tags": [
       "diagnostic",
       "editable"
     ]
   },
   {
-    "author": "Jeremy Keith",
-    "authorUrl": "https://adactio.com/journal/16523",
+    "bookmarklet": "Run Lighthouse",
     "description": "Run a Lighthouse scan on current URL (regardless of broswer)",
     "file": "run-lighthouse.js",
-    "name": "Run Lighthouse",
+    "source": "Jeremy Keith",
+    "sourceUrl": "https://adactio.com/journal/16523",
     "tags": [
       "accessibility",
       "bestpractices",

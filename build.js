@@ -10,7 +10,7 @@ references.forEach((reference) => {
   const code = fs.readFileSync(distPath, "utf-8");
 
   data.push({
-    name: reference.name,
+    name: reference.bookmarklet,
     src: reference.file,
     dist: code,
   });
