@@ -1,141 +1,141 @@
 [
-	{
-		"bookmarklet": "Test local JS",
-		"description": "Test for local JS support via bookmark",
-		"file": "test-js-local.js",
-		"source": "Accessible Name and Description Inspector (ANDI) help page",
-		"sourceUrl": "https://www.ssa.gov/accessibility/andi/help/faq.html",
-		"tags": [
-			"diagnostic",
-			"pageTest"
-		]
-	},
-	{
-		"bookmarklet": "Inline styles",
-		"description": "Highlight all elements with style attributes",
-		"file": "inline-styles.js",
-		"source": "Adrian Roselli",
-		"sourceUrl": "https://adrianroselli.com/2015/01/css-bookmarklets-for-testing-and-fixing.html#inline",
-		"tags": [
-			"HTML",
-			"CSS"
-		]
-	},
-	{
-		"bookmarklet": "Hide cursor",
-		"description": "Hides cursor from window to encourage keyboard use",
-		"file": "hide-cursor.js",
-		"source": "Iain Bean",
-		"sourceUrl": "https://iainbean.com/posts/2020/an-opinionated-guide-to-accessibility-testing/",
-		"tags": [
-			"accessibility",
-			"2.1",
-			"2.1.1 (A)",
-			"2.1.2 (A)",
-			"2.1.3 (AAA)",
-			"2.1.4 (A)",
-			"WCAG",
-			"cursor"
-		]
-	},
-	{
-		"bookmarklet": "Get YouTube UC ID",
-		"description": "Fetches UC ID while on a YouTube profile page",
-		"file": "youtube-uc-id.js",
-		"source": "Jason Morris",
-		"sourceUrl": "https://jasonmorris.com",
-		"tags": [
-			"diagnostic",
-			"bmxfeed",
-			"YouTube"
-		]
-	},
-	{
-		"bookmarklet": "Alt text",
-		"description": "Highlight images without alt attributes",
-		"file": "alt-text.js",
-		"pageTest": true,
-		"source": "Jason Morris",
-		"sourceUrl": "https://jasonmorris.com",
-		"tags": [
-			"accessibility",
-			"1.1.1 (A)",
-			"2.4.4 (A)",
-			"2.4.9 (AAA)",
-			"WCAG"
-		]
-	},
-	{
-		"bookmarklet": "Remove onpaste",
-		"description": "Remove onpaste attributes from password inputs which fixes security theatre of preventing paste",
-		"file": "strip-onpaste.js",
-		"pageTest": true,
-		"source": "Jason Morris",
-		"sourceUrl": "https://jasonmorris.com",
-		"tags": [
-			"alter",
-			"HTML",
-			"forms",
-			"security"
-		]
-	},
-	{
-		"bookmarklet": "1280x1024 window",
-		"description": "Opens a new window with the current URL at 1280x1024",
-		"file": "open-1280x1024-window.js",
-		"source": "Mike in a CSS Tricks article comment",
-		"sourceUrl": "https://css-tricks.com/snippets/javascript/1024x768-bookmarklet/#comment-1766738",
-		"tags": [
-			"accessibility",
-			"1.4.10 (AA)",
-			"WCAG"
-		]
-	},
-	{
-		"bookmarklet": "320x256 window",
-		"description": "Opens a new window with the current URL at 320x256",
-		"file": "open-320x256-window.js",
-		"source": "Mike in a CSS Tricks article comment",
-		"sourceUrl": "https://css-tricks.com/snippets/javascript/1024x768-bookmarklet/#comment-1766738",
-		"tags": [
-			"accessibility",
-			"1.4.10 (AA)",
-			"WCAG"
-		]
-	},
-	{
-		"bookmarklet": "Test CSP",
-		"description": "Test for errors related Content Security Policy (CSP)",
-		"file": "test-csp.js",
-		"source": "SecurityPolicyViolationEvent on MDN",
-		"sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent#examples",
-		"tags": [
-			"diagnostic",
-			"CSP",
-			"security"
-		]
-	},
-	{
-		"bookmarklet": "Design mode toggle",
-		"description": "Make all of the text on page editable",
-		"file": "design-mode-toggle.js",
-		"source": "Christoph Wagner",
-		"sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent#examples",
-		"tags": [
-			"diagnostic",
-			"editable"
-		]
-	},
-	{
-		"bookmarklet": "Run Lighthouse",
-		"description": "Run a Lighthouse scan on current URL (regardless of broswer)",
-		"file": "run-lighthouse.js",
-		"source": "Jeremy Keith",
-		"sourceUrl": "https://adactio.com/journal/16523",
-		"tags": [
-			"accessibility",
-			"bestpractices",
-			"performance"
-		]
-	}
+  {
+    "bookmarklet": "Test local JS",
+    "description": "Test for local JS support via bookmark",
+    "file": "test-js-local.js",
+    "source": "Accessible Name and Description Inspector (ANDI) help page",
+    "sourceUrl": "https://www.ssa.gov/accessibility/andi/help/faq.html",
+    "tags": [
+      "diagnostic",
+      "pageTest"
+    ]
+  },
+  {
+    "bookmarklet": "Inline styles",
+    "description": "Highlight all elements with style attributes",
+    "file": "inline-styles.js",
+    "source": "Adrian Roselli",
+    "sourceUrl": "https://adrianroselli.com/2015/01/css-bookmarklets-for-testing-and-fixing.html#inline",
+    "tags": [
+      "HTML",
+      "CSS"
+    ]
+  },
+  {
+    "bookmarklet": "Hide cursor",
+    "description": "Hides cursor from window to encourage keyboard use",
+    "file": "hide-cursor.js",
+    "source": "Iain Bean",
+    "sourceUrl": "https://iainbean.com/posts/2020/an-opinionated-guide-to-accessibility-testing/",
+    "tags": [
+      "accessibility",
+      "2.1",
+      "2.1.1 (A)",
+      "2.1.2 (A)",
+      "2.1.3 (AAA)",
+      "2.1.4 (A)",
+      "WCAG",
+      "cursor"
+    ]
+  },
+  {
+    "bookmarklet": "Get YouTube UC ID",
+    "description": "Fetches UC ID while on a YouTube profile page",
+    "file": "youtube-uc-id.js",
+    "source": "Jason Morris",
+    "sourceUrl": "https://jasonmorris.com",
+    "tags": [
+      "diagnostic",
+      "bmxfeed",
+      "YouTube"
+    ]
+  },
+  {
+    "bookmarklet": "Alt text",
+    "description": "Highlight images without alt attributes",
+    "file": "alt-text.js",
+    "pageTest": true,
+    "source": "Jason Morris",
+    "sourceUrl": "https://jasonmorris.com",
+    "tags": [
+      "accessibility",
+      "1.1.1 (A)",
+      "2.4.4 (A)",
+      "2.4.9 (AAA)",
+      "WCAG"
+    ]
+  },
+  {
+    "bookmarklet": "Remove onpaste",
+    "description": "Remove onpaste attributes from password inputs which fixes security theatre of preventing paste",
+    "file": "strip-onpaste.js",
+    "pageTest": true,
+    "source": "Jason Morris",
+    "sourceUrl": "https://jasonmorris.com",
+    "tags": [
+      "alter",
+      "HTML",
+      "forms",
+      "security"
+    ]
+  },
+  {
+    "bookmarklet": "1280x1024 window",
+    "description": "Opens a new window with the current URL at 1280x1024",
+    "file": "open-1280x1024-window.js",
+    "source": "Mike in a CSS Tricks article comment",
+    "sourceUrl": "https://css-tricks.com/snippets/javascript/1024x768-bookmarklet/#comment-1766738",
+    "tags": [
+      "accessibility",
+      "1.4.10 (AA)",
+      "WCAG"
+    ]
+  },
+  {
+    "bookmarklet": "320x256 window",
+    "description": "Opens a new window with the current URL at 320x256",
+    "file": "open-320x256-window.js",
+    "source": "Mike in a CSS Tricks article comment",
+    "sourceUrl": "https://css-tricks.com/snippets/javascript/1024x768-bookmarklet/#comment-1766738",
+    "tags": [
+      "accessibility",
+      "1.4.10 (AA)",
+      "WCAG"
+    ]
+  },
+  {
+    "bookmarklet": "Test CSP",
+    "description": "Test for errors related Content Security Policy (CSP)",
+    "file": "test-csp.js",
+    "source": "SecurityPolicyViolationEvent on MDN",
+    "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent#examples",
+    "tags": [
+      "diagnostic",
+      "CSP",
+      "security"
+    ]
+  },
+  {
+    "bookmarklet": "Design mode toggle",
+    "description": "Make all of the text on page editable",
+    "file": "design-mode-toggle.js",
+    "source": "Christoph Wagner",
+    "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent#examples",
+    "tags": [
+      "diagnostic",
+      "editable"
+    ]
+  },
+  {
+    "bookmarklet": "Run Lighthouse",
+    "description": "Run a Lighthouse scan on current URL (regardless of broswer)",
+    "file": "run-lighthouse.js",
+    "source": "Jeremy Keith",
+    "sourceUrl": "https://adactio.com/journal/16523",
+    "tags": [
+      "accessibility",
+      "bestpractices",
+      "performance"
+    ]
+  }
 ]
