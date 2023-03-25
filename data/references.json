@@ -137,5 +137,37 @@
       "bestpractices",
       "performance"
     ]
+  },
+  {
+    "bookmarklet": "Grayscale",
+    "description": "Show entire page in gray scale (no color)",
+    "file": "show-grayscale.js",
+    "source": "Level Access",
+    "sourceUrl": "https://labs.levelaccess.com/index.php/Grayscale_Favlet",
+    "tags": [
+      "accessibility"
+    ]
+  },
+  {
+    "bookmarklet": "Headings",
+    "description": "Highlight and display level of all page headings",
+    "file": "show-headings.js",
+    "source": "Jonathan Avila",
+    "sourceUrl": "https://github.com/mraccess77/mraccess77.github.io/blob/master/favlets/headings.js",
+    "tags": [
+      "accessibility"
+    ]
+  },
+  {
+    "bookmarklet": "GUToAF",
+    "description": "Grand Unified Theory of Accessibility Favlets (GUToAF)",
+    "file": "gutoaf.js",
+    "source": "Level Access",
+    "sourceUrl": "https://github.com/mraccess77/mraccess77.github.io/blob/master/favlets/headings.js",
+    "tags": [
+      "accessibility"
+    ]
   }
+
+
 ]
