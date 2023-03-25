@@ -160,14 +160,35 @@
   },
   {
     "bookmarklet": "GUToAF",
-    "description": "Grand Unified Theory of Accessibility Favlets (GUToAF)",
+    "description": "Unified accessibility bookmarklet",
     "file": "gutoaf.js",
     "source": "Level Access",
     "sourceUrl": "https://github.com/mraccess77/mraccess77.github.io/blob/master/favlets/headings.js",
     "tags": [
+      "accessibility",
+      "external"
+    ]
+  },
+  {
+    "bookmarklet": "Sa11y",
+    "description": "The accessibility quality assurance assistant",
+    "file": "sa11y.js",
+    "source": "Toronto Metropolitan University",
+    "sourceUrl": "https://sa11y.netlify.app/",
+    "tags": [
+      "accessibility",
+      "external"
+    ]
+  },
+  {
+    "bookmarklet": "Keyboard visualizer",
+    "description": "Creates an overlay to display typed keys on the underlying page",
+    "file": "keyboard-visualizer.js",
+    "source": "Sarah Higley",
+    "sourceUrl": "https://codepen.io/smhigley/pen/eYEjKQz",
+    "tags": [
+      "diagnostic",
       "accessibility"
     ]
   }
-
-
 ]
