@@ -190,5 +190,28 @@
       "diagnostic",
       "accessibility"
     ]
+  },
+  {
+    "bookmarklet": "Disable CSS",
+    "description": "Drop all page styles",
+    "file": "disable-css.js",
+    "source": "Sarah Higley",
+    "sourceUrl": "https://dorward.uk/software/disablecss/",
+    "tags": [
+      "diagnostic",
+      "accessibility",
+      "css"
+    ]
+  },
+  {
+    "bookmarklet": "a11y.css",
+    "description": "Warns about possible risks and mistakes in HTML code",
+    "file": "a11y-css.js",
+    "source": "Gaël Poupard",
+    "sourceUrl": "https://ffoodd.github.io/a11y.css/",
+    "tags": [
+      "accessibility",
+      "css"
+    ]
   }
 ]
