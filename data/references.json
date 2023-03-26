@@ -135,7 +135,8 @@
     "tags": [
       "accessibility",
       "bestpractices",
-      "performance"
+      "performance",
+      "external"
     ]
   },
   {
@@ -211,7 +212,30 @@
     "sourceUrl": "https://ffoodd.github.io/a11y.css/",
     "tags": [
       "accessibility",
-      "css"
+      "css",
+      "external"
+    ]
+  },
+  {
+    "bookmarklet": "Run WAVE",
+    "description": "Run WebAIM WAVE on the current URL",
+    "file": "run-wave.js",
+    "source": "WebAIM",
+    "sourceUrl": "https://wave.webaim.org/help",
+    "tags": [
+      "accessibility",
+      "external"
+    ]
+  },
+  {
+    "bookmarklet": "Viewport resizer",
+    "description": "Adjust page dimensions quickly",
+    "file": "viewport.js",
+    "source": "Malte Wassermann",
+    "sourceUrl": "https://lab.maltewassermann.com/viewport-resizer/",
+    "tags": [
+      "diagnostic",
+      "external"
     ]
   }
 ]

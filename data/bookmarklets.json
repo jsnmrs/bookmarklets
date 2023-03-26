@@ -88,5 +88,15 @@
     "name": "a11y.css",
     "src": "a11y-css.js",
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20e=document.createElement(%22LINK%22);e.href=%22https://rawgit.com/ffoodd/a11y.css/master/css/a11y-en.css%22,e.rel=%22stylesheet%22,e.media=%22all%22,document.body.appendChild(e)%7D)();%7D)();%0A"
+  },
+  {
+    "name": "Run WAVE",
+    "src": "run-wave.js",
+    "dist": "javascript:void%20(()=%3E%7Bwindow.open(%22https://wave.webaim.org/report?url=%22+escape(window.location));%7D)();%0A"
+  },
+  {
+    "name": "Viewport resizer",
+    "src": "viewport.js",
+    "dist": "javascript:void%20(()=%3E%7B(function(a)%7Bif(self!=top%7C%7Ca.getElementById(%22toolbar%22)&&a.getElementById(%22toolbar%22).getAttribute(%22data-resizer%22))return!1;a.write('%3C!DOCTYPE%20HTML%3E%3Chtml%20style=%22opacity:0;%22%3E%3Chead%3E%3Cmeta%20charset=%22utf-8%22/%3E%3C/head%3E%3Cbody%3E%3Ca%20data-viewport=%22240x240%22%20data-icon=%22handy%22%3ETiny%3C/a%3E%3Ca%20data-viewport=%22320x480%22%20data-icon=%22mobile%22%3ESmall%3C/a%3E%3Ca%20data-viewport=%22768x1024%22%20data-icon=%22tablet%22%3EMedium%3C/a%3E%3Ca%20data-viewport=%221024x768%22%20data-icon=%22display%22%3ELarge%3C/a%3E%3Ca%20data-viewport=%221280x800%22%20data-icon=%22notebook%22%3EWide%3C/a%3E%3Ca%20data-viewport=%222560x1600%22%20data-icon=%22display%22%3EVery%20large%3C/a%3E%3Cscript%20src=%22https://lab.maltewassermann.com/viewport-resizer/resizer.min.js%22%3E%3C%5C/script%3E%3C/body%3E%3C/html%3E')%7D)(document);%7D)();%0A"
   }
 ]
