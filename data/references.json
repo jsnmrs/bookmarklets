@@ -264,8 +264,8 @@
     "bookmarklet": "Text spacing",
     "description": "Test on WCAG 1.4.12 Text Spacing",
     "file": "text-spacing.js",
-    "source": "TPGi",
-    "sourceUrl": "https://www.tpgi.com/short-note-on-getting-spaced-out-with-sc-1-4-12-text-spacing/",
+    "source": "Steve Faulkner",
+    "sourceUrl": "https://codepen.io/stevef/pen/YLMqbo",
     "tags": [
       "accessibility",
       "external"
