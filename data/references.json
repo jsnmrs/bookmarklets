@@ -228,13 +228,46 @@
     ]
   },
   {
-    "bookmarklet": "Viewport resizer",
-    "description": "Adjust page dimensions quickly",
+    "bookmarklet": "Viewport measurements",
+    "description": "See viewport dimensions in pixels and ems",
     "file": "viewport.js",
-    "source": "Malte Wassermann",
-    "sourceUrl": "https://lab.maltewassermann.com/viewport-resizer/",
+    "source": "Matt Stow",
+    "sourceUrl": "https://stowball.github.io/Viewport-Genie/",
     "tags": [
       "diagnostic",
+      "external"
+    ]
+  },
+  {
+    "bookmarklet": "Save to Internet Archive",
+    "description": "Submit current URL to the Internet Archive",
+    "file": "internet-archive.js",
+    "source": "Jesse Gardner",
+    "sourceUrl": "https://plasticmind.com/0s-and-1s/bookmarklet-archive-to-wayback-machine/",
+    "tags": [
+      "diagnostic",
+      "external"
+    ]
+  },
+  {
+    "bookmarklet": "ANDI",
+    "description": "Accessible Name & Description Inspector is a free accessibility testing tool",
+    "file": "andi.js",
+    "source": "Accessible Solutions Branch of the Social Security Administration",
+    "sourceUrl": "https://www.ssa.gov/accessibility/andi/help/install.html",
+    "tags": [
+      "accessibility",
+      "external"
+    ]
+  },
+  {
+    "bookmarklet": "Text spacing",
+    "description": "Test on WCAG 1.4.12 Text Spacing",
+    "file": "text-spacing.js",
+    "source": "TPGi",
+    "sourceUrl": "https://www.tpgi.com/short-note-on-getting-spaced-out-with-sc-1-4-12-text-spacing/",
+    "tags": [
+      "accessibility",
       "external"
     ]
   }
