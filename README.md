@@ -8,13 +8,13 @@ Tools for the browser.
 ## Install and run locally
 
 1. `git clone https://github.com/jsnmrs/bookmarklets.git && cd bookmarklets`
-2. `npm install`
-3. `npm run start`
+2. `npm ci`
+3. `npm start`
 
 ## Adding a bookmarklet
 
-1. Edit [`bookmarklets/reference.json`](https://github.com/jsnmrs/bookmarklets/blob/main/data/reference.json) and add a new entry, following the schema used on the rest of the file
+1. Edit [`data/references.json`](/data/references.json) and add a new entry, following the schema used on the rest of the file
 2. Create a new JS file (and optionally a test HTML page) for the new entry
 3. Add code
-4. Run `npm run start` to lint JS, build data file, and generate static site
+4. Run `npm start` to lint JS, build data file, and generate static site
 5. New entry will be added to the table of bookmarklets in `index.html`
