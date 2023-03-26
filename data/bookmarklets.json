@@ -113,5 +113,25 @@
     "name": "Text spacing",
     "src": "text-spacing.js",
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20o=document,l=%22phltsbkmklt%22,i=o.getElementById(l),a=o.querySelectorAll(%22iframe%22),e=0,m=a.length;if(i)%7Blet%20t=function(n)%7Bfor(var%20d%20of%20n.querySelectorAll(%22*%22))d.shadowRoot&&(d.shadowRoot.getElementById(l).remove(),t(d.shadowRoot))%7D;if(i.remove(),m)for(e=0;e%3Cm;e++)try%7Ba%5Be%5D.contentWindow.document.getElementById(l).remove(),t(a%5Be%5D.contentWindow.document)%7Dcatch(n)%7Bconsole.log(n)%7Dt(o)%7Delse%7Blet%20t=function(n)%7Bfor(var%20d%20of%20n.querySelectorAll(%22*%22))d.shadowRoot&&(d.shadowRoot.appendChild(r.cloneNode(!0)),t(d.shadowRoot))%7D;var%20r=o.createElement(%22style%22);for(r.id=l,r.appendChild(o.createTextNode(%22*%7Bline-height:1.5%20!important;letter-spacing:0.12em%20!important;word-spacing:0.16em%20!important;%7Dp%7Bmargin-bottom:2em%20!important;%7D%22)),o.getElementsByTagName(%22head%22)%5B0%5D.appendChild(r),e=0;e%3Cm;e++)try%7Ba%5Be%5D.contentWindow.document.getElementsByTagName(%22head%22)%5B0%5D.appendChild(r.cloneNode(!0)),t(a%5Be%5D.contentWindow.document)%7Dcatch(n)%7Bconsole.log(n)%7Dt(o)%7D%7D)();%7D)();%0A"
+  },
+  {
+    "name": "Run PageSpeed Insights",
+    "src": "pagespeed.js",
+    "dist": "javascript:void%20(()=%3E%7Bopen(%22https://developers.google.com/speed/pagespeed/insights/?url=%22+encodeURIComponent(location.href));%7D)();%0A"
+  },
+  {
+    "name": "User Agent",
+    "src": "user-agent.js",
+    "dist": "javascript:void%20(()=%3E%7Bprompt(%22User%20agent:%22,navigator.userAgent);%7D)();%0A"
+  },
+  {
+    "name": "Dark color scheme",
+    "src": "color-scheme.js",
+    "dist": "javascript:void%20(()=%3E%7Bdocument.documentElement.style.colorScheme=%22dark%22;%7D)();%0A"
+  },
+  {
+    "name": "Blur page",
+    "src": "blur-page.js",
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Bdocument.body.setAttribute(%22style%22,'filter:url(%22data:image/svg+xml;utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter%20id=%22blur%22%3E%3CfeGaussianBlur%20stdDeviation=%2210%22%20/%3E%3C/filter%3E%3C/svg%3E#blur%22);%20-webkit-filter:blur(10px);%20filter:blur(10px);')%7D)();%7D)();%0A"
   }
 ]

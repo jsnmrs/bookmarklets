@@ -269,5 +269,46 @@
       "accessibility",
       "external"
     ]
+  },
+  {
+    "bookmarklet": "Run PageSpeed Insights",
+    "description": "Run a Google Page Speed test on the current URL",
+    "file": "pagespeed.js",
+    "source": "Thomas Orlita",
+    "sourceUrl": "https://github.com/ThomasOrlita/awesome-bookmarklets#google-page-speed-test",
+    "tags": [
+      "performance",
+      "external"
+    ]
+  },
+  {
+    "bookmarklet": "User Agent",
+    "description": "Display current user agent string",
+    "file": "user-agent.js",
+    "source": "Thomas Orlita",
+    "sourceUrl": "https://github.com/ThomasOrlita/awesome-bookmarklets#get-user-agent",
+    "tags": [
+      "diagnostic"
+    ]
+  },
+  {
+    "bookmarklet": "Dark color scheme",
+    "description": "Enable dark color scheme",
+    "file": "color-scheme.js",
+    "source": "Thomas Orlita",
+    "sourceUrl": "https://github.com/ThomasOrlita/awesome-bookmarklets#dark-color-scheme",
+    "tags": [
+      "css"
+    ]
+  },
+  {
+    "bookmarklet": "Blur page",
+    "description": "Blur entire page",
+    "file": "blur-page.js",
+    "source": "Thomas Park",
+    "sourceUrl": "https://thomaspark.co/2013/11/3-simple-design-bookmarklets-to-improve-your-aesthetics/",
+    "tags": [
+      "diagnostic"
+    ]
   }
 ]
