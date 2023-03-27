@@ -26,6 +26,17 @@
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20t=%22w%22+new%20Date().getTime(),o=%22toolbar=yes,location=yes,status=yes,resizable=yes,favorites=yes,width=320,height=256,left=0,top=0%22,e=document.createElement(%22P%22);e.innerHTML='%3Ca%20href=%22#%22%20id=%22'+t+%60%22%20target=%22_blank%22%20onclick=%22window.open(window.location.href,%20'',%20'%60+o+%60'%20);%20return%20false;%22%3E%3C/a%3E%3C/p%3E%60,document.body.appendChild(e),document.getElementById(t).click()&&document.body.removeChild(e)%7D)();%7D)();%0A"
   },
   {
+    "bookmarklet": "44x44 cursor",
+    "description": "Change cursor to 44px by 44px square",
+    "file": "44x44-cursor.js",
+    "source": "Adrian Roselli",
+    "sourceUrl": "https://adrianroselli.com/2019/06/target-size-and-2-5-5.html#Update04",
+    "tags": [
+      "accessibility"
+    ],
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20t=document.createElement(%22style%22),n=document.createTextNode(%22*%20%7B%20cursor:%20url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJBJREFUeNrs2dEKgDAIhWEN3/%20VLYtBF12MppHwDxY0uvg4DJpORcSl0bB4uPcwq%20oFHu8/956pbtJsAAYMGDBgwIABA044t3pMEgb8VU2XsWdn1o/aUUn4bchPBWNFYWvVidxbCFGmr7YULBs1YDPfsYcXEi9ryvDjAAwYMGDAgAED7nK8bHG7qNLs6nYXYAAheh5j8Qw5fwAAAABJRU5ErkJggg==)%2022%2022,%20auto%20!important%7D%22);t.appendChild(n);var%20a=document.getElementsByTagName(%22head%22);a%5B0%5D.appendChild(t),document.onkeydown=function(e)%7Bvar%20A;(%22key%22in(e=e%7C%7Cwindow.event)?e.key==%22Escape%22%7C%7Ce.key==%22Esc%22:e.keyCode==27)&&(A=document.createElement(%22style%22),document.head.appendChild(A),A.sheet.insertRule(%22*%7Bcursor:revert%20!important%7D%22,0))%7D%7D)();%7D)();%0A"
+  },
+  {
     "bookmarklet": "a11y.css",
     "description": "Warns about possible risks and mistakes in HTML code",
     "file": "a11y-css.js",
@@ -67,6 +78,18 @@
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20t=document.createElement(%22script%22);t.setAttribute(%22src%22,%22https://www.ssa.gov/accessibility/andi/andi.js%22),document.body.appendChild(t)%7D)();%7D)();%0A"
   },
   {
+    "bookmarklet": "ARIA usage",
+    "description": "Report on ARIA usage on current URL",
+    "file": "aria-usage.js",
+    "source": "TPGi",
+    "sourceUrl": "https://thepaciellogroup.github.io/WAI-ARIA-Usage/WAI-ARIA_usage.html",
+    "tags": [
+      "accessibility",
+      "external"
+    ],
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20t=document.createElement(%22script%22);t.setAttribute(%22src%22,%22https://thepaciellogroup.github.io/WAI-ARIA-Usage/aria-usage.js%22),document.body.appendChild(t)%7D)();%7D)();%0A"
+  },
+  {
     "bookmarklet": "Blur page",
     "description": "Blur entire page",
     "file": "blur-page.js",
@@ -76,6 +99,19 @@
       "diagnostic"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bdocument.body.setAttribute(%22style%22,'filter:url(%22data:image/svg+xml;utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter%20id=%22blur%22%3E%3CfeGaussianBlur%20stdDeviation=%2210%22%20/%3E%3C/filter%3E%3C/svg%3E#blur%22);%20-webkit-filter:blur(10px);%20filter:blur(10px);')%7D)();%7D)();%0A"
+  },
+  {
+    "bookmarklet": "ct.css",
+    "description": "Identify performance issues on the current page",
+    "file": "ct.js",
+    "source": "Harry Roberts",
+    "sourceUrl": "https://csswizardry.com/ct/",
+    "tags": [
+      "performance",
+      "diagnostic",
+      "external"
+    ],
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20t=document.createElement(%22link%22);t.rel=%22stylesheet%22,t.href=%22https://csswizardry.com/ct/ct.css%22,t.classList.add(%22ct%22),document.head.appendChild(t)%7D)();%7D)();%0A"
   },
   {
     "bookmarklet": "Dark color scheme",
@@ -315,6 +351,18 @@
       "external"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20o=document,l=%22phltsbkmklt%22,i=o.getElementById(l),a=o.querySelectorAll(%22iframe%22),e=0,m=a.length;if(i)%7Blet%20t=function(n)%7Bfor(var%20d%20of%20n.querySelectorAll(%22*%22))d.shadowRoot&&(d.shadowRoot.getElementById(l).remove(),t(d.shadowRoot))%7D;if(i.remove(),m)for(e=0;e%3Cm;e++)try%7Ba%5Be%5D.contentWindow.document.getElementById(l).remove(),t(a%5Be%5D.contentWindow.document)%7Dcatch(n)%7Bconsole.log(n)%7Dt(o)%7Delse%7Blet%20t=function(n)%7Bfor(var%20d%20of%20n.querySelectorAll(%22*%22))d.shadowRoot&&(d.shadowRoot.appendChild(r.cloneNode(!0)),t(d.shadowRoot))%7D;var%20r=o.createElement(%22style%22);for(r.id=l,r.appendChild(o.createTextNode(%22*%7Bline-height:1.5%20!important;letter-spacing:0.12em%20!important;word-spacing:0.16em%20!important;%7Dp%7Bmargin-bottom:2em%20!important;%7D%22)),o.getElementsByTagName(%22head%22)%5B0%5D.appendChild(r),e=0;e%3Cm;e++)try%7Ba%5Be%5D.contentWindow.document.getElementsByTagName(%22head%22)%5B0%5D.appendChild(r.cloneNode(!0)),t(a%5Be%5D.contentWindow.document)%7Dcatch(n)%7Bconsole.log(n)%7Dt(o)%7D%7D)();%7D)();%0A"
+  },
+  {
+    "bookmarklet": "Tota11y 2",
+    "description": "Accessibility visualization",
+    "file": "tota11y2.js",
+    "source": "Bruce Lawson",
+    "sourceUrl": "https://brucelawson.co.uk/2021/accessibility-visualisation-with-tota11y-2/",
+    "tags": [
+      "accessibility",
+      "external"
+    ],
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20t=document.createElement(%22SCRIPT%22);t.type=%22text/javascript%22,t.src=%22https://tota11y.babylontech.co.uk/tota11y.min.js%22,document.getElementsByTagName(%22head%22)%5B0%5D.appendChild(t)%7D)();%7D)();%0A"
   },
   {
     "bookmarklet": "User Agent",
