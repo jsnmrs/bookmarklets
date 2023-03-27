@@ -7,14 +7,11 @@
   "scripts": {
     "eslint": "eslint \"**/*.js\"",
     "site": "eleventy --serve",
-    "build": "node build.js",
-    "smush": "node smush.js",
-    "clean": "node clean.js",
-    "export": "node export.js",
     "prettier": "prettier --write \"bookmarklets/*.js\"",
     "lint": "npm run prettier && npm run eslint",
-    "test": "npm run lint && npm run clean && npm run smush && npm run smush && npm run build && npm run export",
+    "test": "npm run lint && npm run build",
     "start": "npm run test && eleventy --serve",
+    "build": "node build.js",
     "buildprod": "npm run lint && eleventy"
   },
   "repository": {
@@ -27,8 +24,7 @@
   "author": "Jason Morris",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
-    "esbuild": "^0.17.13",
-    "esbuild-plugin-bookmarklet": "^1.0.0",
+    "esbuild": "^0.17.14",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
