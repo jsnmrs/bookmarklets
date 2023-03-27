@@ -13,7 +13,7 @@ Tools for the browser.
 
 ## Adding a bookmarklet
 
-1. Edit [`data/references.json`](/data/references.json) and add a new entry, following the schema used on the rest of the file
+1. Edit [`data/bookmarklets.json`](/data/bookmarklets.json) and add a new entry, following the schema used on the rest of the file
 2. Create a new JS file (and optionally a test HTML page) for the new entry
 3. Add code
 4. Run `npm start` to lint JS, build data file, and generate static site
@@ -29,9 +29,9 @@ Tools for the browser.
 
 via [ANDI - Accessibility Testing Tool - Install](https://www.ssa.gov/accessibility/andi/help/install.html)
 
->If after pressing the ANDI favelet button, ANDI does not launch after a few seconds, it could be due to the page telling the browser to enforce a Content Security Policy directive. To determine if this is the issue, open the browser's Developer Tools (F12) and attempt to launch ANDI. If the Dev Tools console shows an error message that says *"Refused to load the script…because it violates the following Content Security Policy directive"* then this is the issue.  
+> If after pressing the ANDI favelet button, ANDI does not launch after a few seconds, it could be due to the page telling the browser to enforce a Content Security Policy directive. To determine if this is the issue, open the browser's Developer Tools (F12) and attempt to launch ANDI. If the Dev Tools console shows an error message that says _"Refused to load the script…because it violates the following Content Security Policy directive"_ then this is the issue.
 >
->If the user desires to use ANDI immediately, Content Security Policy (CSP) can be disabled. Note: **It is the user's decision to disable CSP and the user's responsibility to re-enable CSP when testing with ANDI has concluded.** If users decide not to disable CSP, and ANDI cannot be launched, it is recommended to use other accessibility testing procedures.
+> If the user desires to use ANDI immediately, Content Security Policy (CSP) can be disabled. Note: **It is the user's decision to disable CSP and the user's responsibility to re-enable CSP when testing with ANDI has concluded.** If users decide not to disable CSP, and ANDI cannot be launched, it is recommended to use other accessibility testing procedures.
 
 ### Chrome
 

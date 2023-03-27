@@ -2,12 +2,13 @@
 layout: page
 ---
 
-{% for reference in references -%} {% if reference.file == file %}
-<h1>{{ reference.name }}</h1>
+{% for bookmarklet in bookmarklets -%}
+<h1>{{ bookmarklet.bookmarklet }}</h1>
 <p>
-  {{ reference.description }}. Via
-  <a href="{{ reference.authorUrl }}">{{ reference.author }}</a>.
+  {{ bookmarklet.description }}. Via
+  <a href="{{ bookmarklet.authorUrl }}">{{ bookmarklet.author }}</a>.
 </p>
-{% for bookmarklet in bookmarklets -%} {% if bookmarklet.src == file %}
-<p><a class="btn" href="{{ bookmarklet.dist }}">{{ reference.name }}</a></p>
-{% endif %} {% endfor %} {% endif %} {% endfor %} {{ content }}
+<p>
+  <a class="btn" href="{{ bookmarklet.dist }}">{{ bookmarklet.bookmarklet }}</a>
+</p>
+{% endfor %} {{ content }}

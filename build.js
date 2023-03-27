@@ -22,7 +22,9 @@ async function setup() {
 }
 
 async function buildBookmarklets() {
-  const references = JSON.parse(await readFile("data/references.json", "utf8"));
+  const references = JSON.parse(
+    await readFile("data/bookmarklets.json", "utf8")
+  );
   const bookmarkletsJson = await Promise.all(
     references.map(esbuildBookMarklet)
   );
@@ -31,11 +33,11 @@ async function buildBookmarklets() {
 
   try {
     await writeFile(
-      "data/references.json",
+      "data/bookmarklets.json",
       JSON.stringify(bookmarkletsJson, null, 2),
       "utf8"
     );
-    console.log("Saved data/references.json!");
+    console.log("Saved data/bookmarklets.json!");
   } catch (err) {
     console.error(err);
   }
@@ -69,7 +71,7 @@ async function esbuildBookMarklet(bookmarklet) {
 }
 
 async function exportBookmarklets() {
-  const bookmarklets = JSON.parse(await readFile("data/references.json"));
+  const bookmarklets = JSON.parse(await readFile("data/bookmarklets.json"));
 
   let bookmarks = {};
   for (const { dist, bookmarklet } of bookmarklets) {
