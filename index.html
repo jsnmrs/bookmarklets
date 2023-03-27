@@ -27,13 +27,10 @@ layout: page
     </tr>
   </thead>
   <tbody>
-    {% for reference in references -%}
+    {% for reference in bookmarklets -%}
     <tr>
       <td>
-        {% for bookmarklet in bookmarklets -%} {% if reference.file ==
-        bookmarklet.src %}
-        <a href="{{ bookmarklet.dist }}">{{ reference.bookmarklet }}</a>
-        {% endif %} {% endfor %}
+        <a href="{{ reference.dist }}">{{ reference.bookmarklet }}</a>
       </td>
 
       <td>
