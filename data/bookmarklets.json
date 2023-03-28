@@ -44,7 +44,8 @@
     "source": "Adrian Roselli",
     "sourceUrl": "https://adrianroselli.com/2019/06/target-size-and-2-5-5.html#Update04",
     "tags": [
-      "accessibility"
+      "accessibility",
+      "2.5.5 (AAA)"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20t=document.createElement(%22style%22),n=document.createTextNode(%22*%20%7B%20cursor:%20url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJBJREFUeNrs2dEKgDAIhWEN3/+VLYtBF12MppHwDxY0uvg4DJpORcSl0bB4uPcwq+oFHu8/956pbtJsAAYMGDBgwIABA044t3pMEgb8VU2XsWdn1o/aUUn4bchPBWNFYWvVidxbCFGmr7YULBs1YDPfsYcXEi9ryvDjAAwYMGDAgAED7nK8bHG7qNLs6nYXYAAheh5j8Qw5fwAAAABJRU5ErkJggg==)%2022%2022,%20auto%20!important%7D%22);t.appendChild(n);var%20a=document.getElementsByTagName(%22head%22);a%5B0%5D.appendChild(t),document.onkeydown=function(e)%7Bvar%20A;(%22key%22in(e=e%7C%7Cwindow.event)?e.key==%22Escape%22%7C%7Ce.key==%22Esc%22:e.keyCode==27)&&(A=document.createElement(%22style%22),document.head.appendChild(A),A.sheet.insertRule(%22*%7Bcursor:revert%20!important%7D%22,0))%7D%7D)();%7D)();%0A"
   },
@@ -225,6 +226,20 @@
       "cursor"
     ],
     "dist": "javascript:void%20(()=%3E%7Bvar%20e=document.createElement(%22style%22),t=document.createTextNode('*%20%7B%20cursor:%20none%20!important;%20%7D%20body::after%7B%20position:%20absolute;%20top:%200;%20right:%204px;%20background-color:%20#000;%20color:%20#01ff70;%20z-index:%209999;%20font-size:%2016px;%20font-weight:%20400;%20padding:%203px%209px;%20outline:%204px%20solid%20#01ff70%20!important;%20content:%20%22hiding%20cursor%22;%7D'),o=document.getElementsByTagName(%22head%22);e.appendChild(t);o%5B0%5D.appendChild(e);%7D)();%0A"
+  },
+  {
+    "bookmarklet": "HTML Validator",
+    "description": "Validate HTML of DOM",
+    "file": "html-validator.js",
+    "source": "Deque",
+    "sourceUrl": "https://dequeuniversity.com/validator",
+    "tags": [
+      "accessibility",
+      "HTML",
+      "4.1.1 (A)",
+      "external"
+    ],
+    "dist": "javascript:void%20(()=%3E%7B(function()%7B(function()%7Bvar%20t=document.doctype,d=%22%3C!DOCTYPE%20%22+t.name+(t.publicId?'%20PUBLIC%20%22'+t.publicId+'%22':%22%22)+(!t.publicId&&t.systemId?%22%20SYSTEM%22:%22%22)+(t.systemId?'%20%22'+t.systemId+'%22':%22%22)+%22%3E%22,m=document.documentElement.outerHTML,r=d+m,a=document.getElementById(%22deque-w3c-validator-bookmarklet%22);a&&a.remove();var%20e=document.createElement(%22form%22);e.id=%22deque-w3c-validator-bookmarklet%22,e.method=%22POST%22,e.action=%22https://validator.w3.org/nu/?showsource=yes&nocache=%22+Math.random(),e.target=%22_blank%22,e.enctype=%22multipart/form-data%22;var%20o=document.createElement(%22textarea%22);o.name=%22content%22,o.value=r,e.appendChild(o),document.body.appendChild(e),e.submit(),a=document.getElementById(%22deque-w3c-validator-bookmarklet%22),a&&a.remove()%7D)()%7D)();%7D)();%0A"
   },
   {
     "bookmarklet": "Inline styles",
