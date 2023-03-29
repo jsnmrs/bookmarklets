@@ -173,7 +173,7 @@
       "bmxfeed",
       "YouTube"
     ],
-    "dist": "javascript:void%20(()=%3E%7Bvar%20e=document.querySelector(%22link%5Brel=canonical%5D%22).getAttribute(%22href%22).replace(%22https://www.youtube.com/channel/%22,%22%22),t=document.createElement(%22p%22),o=document.getElementsByTagName(%22body%22);e&&(t.textContent=e,t.setAttribute(%22style%22,%22position:%20absolute;%20top:%200;%20right:%204px;%20background-color:%20#000;%20color:%20#01ff70;%20z-index:%209999;%20font-size:%2016px;%20font-weight:%20400;%20padding:%203px%209px;%20outline:%204px%20solid%20#01ff70%20!important;%22),o%5B0%5D.prepend(t));%7D)();%0A"
+    "dist": "javascript:void%20(()=%3E%7Bvar%20e=document.querySelector(%22link%5Brel=canonical%5D%22).getAttribute(%22href%22).replace(%22https://www.youtube.com/channel/%22,%22%22);e&&prompt(%22UC%20ID:%22,e);%7D)();%0A"
   },
   {
     "bookmarklet": "Grayscale",
