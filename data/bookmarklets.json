@@ -295,18 +295,6 @@
     "dist": "javascript:void%20(()=%3E%7Bdocument.location=%22https://googlechrome.github.io/lighthouse/viewer/?psiurl=%22+escape(document.location)+%22&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa%22;%7D)();%0A"
   },
   {
-    "bookmarklet": "Run PageSpeed Insights",
-    "description": "Run a Google Page Speed test on the current URL",
-    "file": "pagespeed.js",
-    "source": "Thomas Orlita",
-    "sourceUrl": "https://github.com/ThomasOrlita/awesome-bookmarklets#google-page-speed-test",
-    "tags": [
-      "performance",
-      "external"
-    ],
-    "dist": "javascript:void%20(()=%3E%7Bopen(%22https://developers.google.com/speed/pagespeed/insights/?url=%22+encodeURIComponent(location.href));%7D)();%0A"
-  },
-  {
     "bookmarklet": "Run WAVE",
     "description": "Run WebAIM WAVE on the current URL",
     "file": "run-wave.js",
