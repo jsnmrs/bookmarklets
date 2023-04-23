@@ -103,6 +103,18 @@
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20t=document.createElement(%22script%22);t.setAttribute(%22src%22,%22https://thepaciellogroup.github.io/WAI-ARIA-Usage/aria-usage.js%22),document.body.appendChild(t)%7D)();%7D)();%0A"
   },
   {
+    "bookmarklet": "Autocomplete",
+    "description": "Highlight all elements with style attributes",
+    "file": "autocomplete.js",
+    "source": "Jonathan Avila",
+    "sourceUrl": "https://github.com/mraccess77/mraccess77.github.io/blob/master/favlets/autocomplete_attribute.js",
+    "tags": [
+      "accessibility",
+      "1.3.5 Identify Input Purpose"
+    ],
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20t=document.createElement(%22script%22);t.setAttribute(%22src%22,%22https://mraccess77.github.io/favlets/autocomplete_attribute.js%22),document.body.appendChild(t)%7D)();%7D)();%0A"
+  },
+  {
     "bookmarklet": "Blur page",
     "description": "Blur entire page",
     "file": "blur-page.js",
@@ -227,6 +239,18 @@
       "cursor"
     ],
     "dist": "javascript:void%20(()=%3E%7Bvar%20e=document.createElement(%22style%22),t=document.createTextNode('*%20%7B%20cursor:%20none%20!important;%20%7D%20body::after%7B%20position:%20absolute;%20top:%200;%20right:%204px;%20background-color:%20#000;%20color:%20#01ff70;%20z-index:%209999;%20font-size:%2016px;%20font-weight:%20400;%20padding:%203px%209px;%20outline:%204px%20solid%20#01ff70%20!important;%20content:%20%22hiding%20cursor%22;%7D'),o=document.getElementsByTagName(%22head%22);e.appendChild(t);o%5B0%5D.appendChild(e);%7D)();%0A"
+  },
+  {
+    "bookmarklet": "HTML CodeSniffer",
+    "description": "Checks HTML source code and detects violations of a defined coding standard",
+    "file": "html-codesniffer.js",
+    "source": "Squiz Labs",
+    "sourceUrl": "https://squizlabs.github.io/HTML_CodeSniffer/",
+    "tags": [
+      "accessibility",
+      "HTML"
+    ],
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20n=%22//squizlabs.github.io/HTML_CodeSniffer/build/%22,t=function(o,d)%7Bvar%20e=document.createElement(%22script%22);e.onload=function()%7Be.onload=null,e.onreadystatechange=null,d.call(this)%7D,e.onreadystatechange=function()%7B/%5E(complete%7Cloaded)$/.test(this.readyState)===!0&&(e.onreadystatechange=null,e.onload())%7D,e.src=o,document.head?document.head.appendChild(e):document.getElementsByTagName(%22head%22)%5B0%5D.appendChild(e)%7D,a=%7Bpath:n%7D;t(n+%22HTMLCS.js%22,function()%7BHTMLCSAuditor.run(%22WCAG2AA%22,null,a)%7D)%7D)();%7D)();%0A"
   },
   {
     "bookmarklet": "HTML link",
