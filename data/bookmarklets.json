@@ -288,6 +288,17 @@
     "dist": "javascript:void%20(()=%3E%7Bvar%20t=document.title+%22%20%5Cu2014%20%22+location.href;window.prompt(%22Plain%20text%20link:%22,t);%7D)();%0A"
   },
   {
+    "bookmarklet": "Re-enable selection",
+    "description": "Unset user-select CSS property",
+    "file": "re-enable-selection.js",
+    "source": "Adrian Roselli",
+    "sourceUrl": "https://adrianroselli.com/2015/01/css-bookmarklets-for-testing-and-fixing.html#Selection",
+    "tags": [
+      "diagnostic"
+    ],
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20e=document.createElement(%22style%22),t;document.head.appendChild(e),t=e.sheet,t.insertRule(%22*%7Buser-select:unset%20!important%7D%22,0)%7D)();%7D)();%0A"
+  },
+  {
     "bookmarklet": "Remove onpaste",
     "description": "Remove onpaste attributes from password inputs which fixes security theatre of preventing paste",
     "file": "strip-onpaste.js",
