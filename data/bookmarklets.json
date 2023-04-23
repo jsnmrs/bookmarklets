@@ -217,6 +217,17 @@
     "dist": "javascript:void%20(()=%3E%7Bvar%20e=document.createElement(%22style%22),t=document.createTextNode('*%20%7B%20cursor:%20none%20!important;%20%7D%20body::after%7B%20position:%20absolute;%20top:%200;%20right:%204px;%20background-color:%20#000;%20color:%20#01ff70;%20z-index:%209999;%20font-size:%2016px;%20font-weight:%20400;%20padding:%203px%209px;%20outline:%204px%20solid%20#01ff70%20!important;%20content:%20%22hiding%20cursor%22;%7D'),o=document.getElementsByTagName(%22head%22);e.appendChild(t);o%5B0%5D.appendChild(e);%7D)();%0A"
   },
   {
+    "bookmarklet": "HTML link",
+    "description": "Copy page title and URL in an HTML anchor",
+    "file": "html-link.js",
+    "source": "Jason Morris",
+    "sourceUrl": "https://jasonmorris.com",
+    "tags": [
+      "diagnostic"
+    ],
+    "dist": "javascript:void%20(()=%3E%7Bvar%20t='%3Ca%20href=%22'+location.href+'%22%3E'+document.title+%22%3C/a%3E%22;window.prompt(%22HTML%20link:%22,t);%7D)();%0A"
+  },
+  {
     "bookmarklet": "HTML Validator",
     "description": "Validate HTML of DOM",
     "file": "html-validator.js",
