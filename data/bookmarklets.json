@@ -457,5 +457,17 @@
       "external"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20e=document.createElement(%22SCRIPT%22);e.src=%22http://stowball.github.io/Viewport-Genie/js/viewport.genie.bookmarklet.min.js%22,document.body.appendChild(e)%7D)();%7D)();%0A"
+  },
+  {
+    "bookmarklet": "Viewport size",
+    "description": "Display viewport width and height",
+    "file": "viewport-size.js",
+    "source": "jakob-e",
+    "sourceUrl": "https://codepen.io/jakob-e/pen/qEZZox/top/",
+    "tags": [
+      "accessibility",
+      "HTML"
+    ],
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20t=document,n=window,i=t.body,e,o,d=%22top%22,p=%22left%22;if(n.vpbkmklt)%7Bi.removeChild(t.getElementById(%22vpbkmklt1%22)),i.removeChild(t.getElementById(%22vpbkmklt2%22)),n.vpbkmklt=0;return%7De=t.createElement(%22style%22),e.setAttribute(%22id%22,%22vpbkmklt1%22),e.innerText=%22.foo%7B%20content:bar;%7D%22,i.appendChild(e),e=t.createElement(%22script%22),e.setAttribute(%22id%22,%22vpbkmklt2%22),e.innerText=%22var%20u=undefined,d=document,w=window,b=d.body;s=d.getElementById('vpbkmklt1'),or=function()%7Bb.setAttribute('data-vp','Width:%20%20'+w.innerWidth+'px%5C%5CnHeight:%20'+w.innerHeight+'px');%7D,dc=function(e)%7B%20%20%20x=(e!==u%20&&%20e.x/w.innerWidth%20%3E%20.5)?'right':'left';%20%20%20y=(e!==u%20&&%20e.y/w.innerHeight%20%3E%20.5)?'bottom':'top';if(e!==u%20)%7Bconsole.log(e.x/w.innerWidth);%7D%20%20s.innerText='body:before%7B'+y+':5px;'+x+':5px;content:attr(data-vp);background:#f0f;color:#fff;white-space:pre;display:inline-block;padding:5px;position:fixed;opacity:0.95;-webkit-font-smoothing:subpixel-antialiased;font:11px/1.4%20monospace;z-index:9999%20!important;%7D';%20%7D;%22,i.appendChild(e),n.vpbkmklt=1,n.onresize=or,t.ondblclick=dc,or(),dc()%7D)();%7D)();%0A"
   }
 ]
