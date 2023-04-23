@@ -152,6 +152,18 @@
     "dist": "javascript:void%20(()=%3E%7Bfor(e=0;e%3Cdocument.styleSheets.length;e++)document.styleSheets.item(e).disabled=!0;var%20e,t=document.getElementsByTagName(%22*%22);for(e=0;e%3Ct.length;e++)t%5Be%5D.style.cssText=%22%22;%7D)();%0A"
   },
   {
+    "bookmarklet": "Find Duplicate ARIA Roles",
+    "description": "Roles appearing more than once for banner, contentinfo, and main",
+    "file": "find-aria-duplicate-roles.js",
+    "source": "Adrian Roselli",
+    "sourceUrl": "https://adrianroselli.com/2015/01/css-bookmarklets-for-testing-and-fixing.html#ARIAdupes",
+    "tags": [
+      "accessibility",
+      "HTML"
+    ],
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20e=document.createElement(%22style%22),n;document.head.appendChild(e),n=e.sheet,n.insertRule(%22*%5Brole=main%5D:nth-of-type(n+2),*%5Brole=banner%5D:nth-of-type(n+2),*%5Brole=contentinfo%5D:nth-of-type(n+2),main:nth-of-type(n+2)%7Bborder:2px%20dotted%20#f00%20!important;background-color:#f00;%7D%22,0)%7D)();%7D)();%0A"
+  },
+  {
     "bookmarklet": "Get YouTube UC ID",
     "description": "Fetches UC ID while on a YouTube profile page",
     "file": "youtube-uc-id.js",
