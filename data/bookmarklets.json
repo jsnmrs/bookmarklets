@@ -7,8 +7,9 @@
     "sourceUrl": "https://css-tricks.com/snippets/javascript/1024x768-bookmarklet/#comment-1766738",
     "tags": [
       "accessibility",
-      "1.4.10 (AA)",
-      "WCAG"
+      "WCAG",
+      "1.4.4 Resize Text (AA)",
+      "1.4.10 Reflow (AA)"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20t=%22w%22+new%20Date().getTime(),o=%22toolbar=yes,location=yes,status=yes,resizable=yes,favorites=yes,width=1280,height=1024,left=0,top=0%22,e=document.createElement(%22P%22);e.innerHTML='%3Ca%20href=%22#%22%20id=%22'+t+%60%22%20target=%22_blank%22%20onclick=%22window.open(window.location.href,%20'',%20'%60+o+%60'%20);%20return%20false;%22%3E%3C/a%3E%3C/p%3E%60,document.body.appendChild(e),document.getElementById(t).click()&&document.body.removeChild(e)%7D)();%7D)();%0A"
   },
@@ -20,7 +21,8 @@
     "sourceUrl": "https://adrianroselli.com/2022/05/24x24-pixel-cursor-bookmarklet.html",
     "tags": [
       "accessibility",
-      "2.5.8 (2.2 AA)"
+      "WCAG",
+      "2.5.8 Target Size (Minimum) (2.2 AA)"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20o=document,r=%22AAR24pxBkmklt%22,c=o.getElementById(r),d=o.querySelectorAll(%22iframe%22),e=0,l=d.length;if(c)%7Blet%20t=function(A)%7Bfor(var%20n%20of%20A.querySelectorAll(%22*%22))n.shadowRoot&&(n.shadowRoot.getElementById(r).remove(),t(n.shadowRoot))%7D;if(c.remove(),l)for(e=0;e%3Cl;e++)try%7Bd%5Be%5D.contentWindow.document.getElementById(r).remove(),t(d%5Be%5D.contentWindow.document)%7Dcatch(A)%7Bconsole.log(A)%7Dt(o)%7Delse%7Blet%20t=function(A)%7Bfor(var%20n%20of%20A.querySelectorAll(%22*%22))n.shadowRoot&&(n.shadowRoot.appendChild(a.cloneNode(!0)),t(n.shadowRoot))%7D;var%20a=o.createElement(%22style%22);for(a.id=r,a.appendChild(o.createTextNode(%22*%7B%20cursor:%20url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYAgMAAACdGdVrAAAACVBMVEUAAAAAAAD///+D3c/SAAAAAXRSTlMAQObYZgAAACtJREFUCNdjCAUDhqxVQLCSIYEBCDgJUIwOOCnG0FAHKIVfJWGLoE6COhAAxmsXhSV+DZoAAAAASUVORK5CYII=)%2012%2012,%20auto%20!important%7D%22)),o.getElementsByTagName(%22head%22)%5B0%5D.appendChild(a),e=0;e%3Cl;e++)try%7Bd%5Be%5D.contentWindow.document.getElementsByTagName(%22head%22)%5B0%5D.appendChild(a.cloneNode(!0)),t(d%5Be%5D.contentWindow.document)%7Dcatch(A)%7Bconsole.log(A)%7Dt(o)%7D%7D)();%7D)();%0A"
   },
@@ -32,8 +34,8 @@
     "sourceUrl": "https://css-tricks.com/snippets/javascript/1024x768-bookmarklet/#comment-1766738",
     "tags": [
       "accessibility",
-      "1.4.10 (AA)",
-      "WCAG"
+      "WCAG",
+      "1.4.10 Reflow (AA)"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20t=%22w%22+new%20Date().getTime(),o=%22toolbar=yes,location=yes,status=yes,resizable=yes,favorites=yes,width=320,height=256,left=0,top=0%22,e=document.createElement(%22P%22);e.innerHTML='%3Ca%20href=%22#%22%20id=%22'+t+%60%22%20target=%22_blank%22%20onclick=%22window.open(window.location.href,%20'',%20'%60+o+%60'%20);%20return%20false;%22%3E%3C/a%3E%3C/p%3E%60,document.body.appendChild(e),document.getElementById(t).click()&&document.body.removeChild(e)%7D)();%7D)();%0A"
   },
@@ -45,7 +47,8 @@
     "sourceUrl": "https://adrianroselli.com/2019/06/target-size-and-2-5-5.html#Update04",
     "tags": [
       "accessibility",
-      "2.5.5 (AAA)"
+      "WCAG",
+      "2.5.5 Target Size (AAA)"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20t=document.createElement(%22style%22),n=document.createTextNode(%22*%20%7B%20cursor:%20url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJBJREFUeNrs2dEKgDAIhWEN3/+VLYtBF12MppHwDxY0uvg4DJpORcSl0bB4uPcwq+oFHu8/956pbtJsAAYMGDBgwIABA044t3pMEgb8VU2XsWdn1o/aUUn4bchPBWNFYWvVidxbCFGmr7YULBs1YDPfsYcXEi9ryvDjAAwYMGDAgAED7nK8bHG7qNLs6nYXYAAheh5j8Qw5fwAAAABJRU5ErkJggg==)%2022%2022,%20auto%20!important%7D%22);t.appendChild(n);var%20a=document.getElementsByTagName(%22head%22);a%5B0%5D.appendChild(t),document.onkeydown=function(e)%7Bvar%20A;(%22key%22in(e=e%7C%7Cwindow.event)?e.key==%22Escape%22%7C%7Ce.key==%22Esc%22:e.keyCode==27)&&(A=document.createElement(%22style%22),document.head.appendChild(A),A.sheet.insertRule(%22*%7Bcursor:revert%20!important%7D%22,0))%7D%7D)();%7D)();%0A"
   },
