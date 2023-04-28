@@ -137,7 +137,7 @@
       "accessibility",
       "1.3.5 Identify Input Purpose"
     ],
-    "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20t=document.createElement(%22script%22);t.setAttribute(%22src%22,%22https://mraccess77.github.io/favlets/autocomplete_attribute.js%22),document.body.appendChild(t)%7D)();%7D)();%0A"
+    "dist": "javascript:void%20(()=%3E%7Bfunction%20c(o,e)%7Bd(o,e);for(var%20r=%5B%22frame%22,%22iframe%22%5D,a=0;a%3Cr.length;a++)for(var%20u=o.getElementsByTagName(r%5Ba%5D),l=0;l%3Cu.length;l++)try%7Bc(u%5Bl%5D.contentWindow.document,e)%7Dcatch%7Be.extFrameSrcList=e.extFrameSrcList+%60%0A%60+u%5Bl%5D.src,e.frameErrorCount=e.frameErrorCount+1%7Dreturn%20e%7Dfunction%20d(o,e)%7Bvar%20r=o.querySelectorAll(%22%5Bautocomplete%5D%22);e.foundCount=e.foundCount+r.length;var%20a,u=%5B%5D,l;if(r.length%3E0)for(var%20n=0;n%3Cr.length;n++)s=o.createElement(%22Span%22),t=o.createTextNode(%22%20Autocomplete=%22+r.item(n).autocomplete+%22%20%22),s.appendChild(t),s.style.backgroundColor=%22gold%22,s.border=%22thin%20solid%20black%22,s.style.color=%22black%22,s.style.fontSize=%22x-small%22,s.zIndex=%2299999%22,r.item(n).parentNode.insertBefore(s,r.item(n))%7Dfunction%20i(o)%7Bvar%20e=%5B%5D;e.foundCount=0,e.extFrameSrcList=%22%22,e.frameErrorCount=0,e=c(o,e),alert(e.foundCount+%22%20element(s)%20with%20autocomplete%20attribute%20found.%20%22)%7Di(document);%7D)();%0A"
   },
   {
     "bookmarklet": "Blur page",
