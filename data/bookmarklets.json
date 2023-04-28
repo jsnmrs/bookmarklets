@@ -208,7 +208,7 @@
     "tags": [
       "accessibility"
     ],
-    "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20t=document.createElement(%22script%22);t.setAttribute(%22src%22,%22https://mraccess77.github.io/favlets/duplicateIds.js%22),document.body.appendChild(t)%7D)();%7D)();%0A"
+    "dist": "javascript:void%20(()=%3E%7Bfunction%20u()%7Bvar%20t=document.cloneNode(!0),l=t.querySelectorAll(%22%5Bid%5D%22),e=%5B%5D;c(l,e);var%20n=e.length+%60%20elements%20with%20duplicate%20ids%0A%60;e.forEach(function(r)%7Br.innerHTML=%22%22,n=n+r.outerHTML+%60%0A%60%7D),alert(n)%7Dfunction%20c(t,l)%7Bt.forEach(function(e)%7Bvar%20n=document.querySelectorAll('%5Bid=%22'+e.id+'%22%5D');n.length%3E1&&l.push(e)%7D)%7Du();%7D)();%0A"
   },
   {
     "bookmarklet": "Find Duplicate ARIA Roles",
