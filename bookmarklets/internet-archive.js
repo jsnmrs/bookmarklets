@@ -1,1 +1,1 @@
-location.href = "//web.archive.org/save/" + location.href.split("?")[0];
+void window.open("https://web.archive.org/save/" + escape(window.location));
