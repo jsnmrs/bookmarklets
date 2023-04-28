@@ -41,12 +41,4 @@ function showHeading(doc) {
     col[i].style.border = "thin solid magenta";
   }
 }
-
-function dynamicallyLoadScript(url) {
-  var script = document.createElement("script");
-  script.src = url;
-  document.head.appendChild(script);
-}
-
-dynamicallyLoadScript("./recursion.js");
 traverseFrames(document);
