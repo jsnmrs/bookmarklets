@@ -344,6 +344,7 @@
       "accessibility",
       "HTML",
       "4.1.1 (A)",
+      "WCAG",
       "external"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7B(function()%7Bvar%20t=document.doctype,d=%22%3C!DOCTYPE%20%22+t.name+(t.publicId?'%20PUBLIC%20%22'+t.publicId+'%22':%22%22)+(!t.publicId&&t.systemId?%22%20SYSTEM%22:%22%22)+(t.systemId?'%20%22'+t.systemId+'%22':%22%22)+%22%3E%22,m=document.documentElement.outerHTML,r=d+m,a=document.getElementById(%22deque-w3c-validator-bookmarklet%22);a&&a.remove();var%20e=document.createElement(%22form%22);e.id=%22deque-w3c-validator-bookmarklet%22,e.method=%22POST%22,e.action=%22https://validator.w3.org/nu/?showsource=yes&nocache=%22+Math.random(),e.target=%22_blank%22,e.enctype=%22multipart/form-data%22;var%20o=document.createElement(%22textarea%22);o.name=%22content%22,o.value=r,e.appendChild(o),document.body.appendChild(e),e.submit(),a=document.getElementById(%22deque-w3c-validator-bookmarklet%22),a&&a.remove()%7D)()%7D)();%7D)();%0A"
@@ -393,6 +394,21 @@
       "accessibility"
     ],
     "dist": "javascript:void%20(()=%3E%7Bfunction%20o(r)%7Bvar%20e=r.createElement(%22script%22);e.setAttribute(%22src%22,%22https://whatsock.github.io/w3c-alternative-text-computation/Sample%2520JavaScript%2520Recursion%2520Algorithm/recursion.js%22),r.head.appendChild(e),setTimeout(function()%7Bm(r)%7D,500);for(var%20n=%5B%22frame%22,%22iframe%22%5D,t=0;t%3Cn.length;t++)for(var%20a=r.getElementsByTagName(n%5Bt%5D),l=0;l%3Ca.length;l++)try%7Bo(a%5Bl%5D.contentWindow.document)%7Dcatch%7B%7D%7Dfunction%20s(r,e)%7Bvar%20n=e.id;labels=r.getElementsByTagName(%22label%22);for(var%20t=0;t%3Clabels.length;t++)if(labels%5Bt%5D.htmlFor==n)return%20labels%5Bt%5D%7Dfunction%20m(r)%7Bfor(var%20e=r.querySelectorAll(%22button,%20input,%20textarea,%20select,%20%5Btabindex='0'%5D,a%5Bhref%5D,summary%22),n,t,a=0;a%3Ce.length;a++)if(n=%22%22,n=getAccName(e%5Ba%5D),t=%22%22,(e%5Ba%5D.tagName==%22INPUT%22%7C%7Ce%5Ba%5D.tagName==%22SELECT%22%7C%7Ce%5Ba%5D.tagName==%22TEXTAREA%22)&&s(r,e%5Ba%5D)?t=s(r,e%5Ba%5D).textContent:e%5Ba%5D.tagName==%22INPUT%22&&e%5Ba%5D.hasAttribute(%22value%22)?t=e%5Ba%5D.getAttribute(%22value%22):t=e%5Ba%5D.textContent,t=t.trim(),t&&!n.name.includes(t))%7Bvar%20l=document.createElement(%22span%22);l.style.color=%22black%22,l.style.backgroundColor=%22gold%22,l.style.fontSize=%22small%22,l.style.border=%22thin%20solid%20black%22,l.style.position=%22absolute%22,l.appendChild(r.createTextNode(n.name)),e%5Ba%5D.parentNode.insertBefore(l,e%5Ba%5D)%7D%7Do(document);%7D)();%0A"
+  },
+  {
+    "bookmarklet": "Language of page/parts",
+    "description": "Display all lang and hrefland attributes on page",
+    "file": "language.js",
+    "pageTest": true,
+    "source": "Jason Morris",
+    "sourceUrl": "https://jasonmorris.com",
+    "tags": [
+      "accessibility",
+      "3.1.1 (A)",
+      "3.1.2 (AA)",
+      "WCAG"
+    ],
+    "dist": "javascript:void%20(()=%3E%7Bvar%20a=document.querySelectorAll(%22%5Blang%5D%22),g=document.querySelector(%22html%5Blang%5D%22),t=%22%22;g?t+=%22The%20page%20lang%20attribute%20is%20%22+g.getAttribute(%22lang%22)+%60%0A%60:t+=%60Page%20is%20missing%20lang%20attribute%0A%60;for(e=0;e%3Ca.length;e++)t+=a%5Be%5D.tagName+%22%20tag%20has%20%22+a%5Be%5D.getAttribute(%22lang%22)+%60%0A%60;var%20e;alert(t);%7D)();%0A"
   },
   {
     "bookmarklet": "Lighthouse report",
