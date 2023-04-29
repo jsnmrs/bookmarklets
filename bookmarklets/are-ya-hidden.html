@@ -1,0 +1,37 @@
+---
+permalink: "bookmarklets/are-ya-hidden.html"
+file: "are-ya-hidden.js"
+layout: test
+title: are ya hidden
+---
+
+<style>
+  .visually-hidden {
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  .sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  .visuallyhidden {
+    position: absolute;
+    transform: scale(0);
+  }
+</style>
+
+<section>
+  <p>Text with <code>aria-hidden="true"</code>: <span aria-hidden="true">hidden text</span></p>
+  <p>Text with <code>class="visually-hidden"</code>: <span class="visually-hidden">hidden text</span></p>
+  <p>Text with <code>class="visuallyhidden"</code>: <span class="visuallyhidden">hidden text</span></p>
+  <p>Text with <code>class="sr-only"</code>: <span class="sr-only">hidden text</span></p>
+</section>
