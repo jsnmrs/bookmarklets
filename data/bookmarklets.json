@@ -112,7 +112,8 @@
     "source": "Lloydi",
     "sourceUrl": "https://a11y-tools.com/bookmarklets/",
     "tags": [
-      "accessibility"
+      "accessibility",
+      "local"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20p=document.querySelectorAll(%22*%22);function%20u()%7BArray.from(p).forEach(t=%3E%7Bcs=getComputedStyle(t);for(var%20e=!1,s=!1,r=!1,l=!1,n=!1,c=!1,o=!1,d=!1,a=0;a%3Ccs.length;a++)cssProperty=cs%5Ba%5D,cssValue=cs.getPropertyValue(cssProperty),cssProperty===%22clip%22&&cssValue===%22rect(1px,%201px,%201px,%201px)%22&&(e=!0),cssProperty===%22clip-path%22&&cssValue===%22inset(100%25)%22&&(s=!0),cssProperty===%22height%22&&cssValue===%221px%22&&(r=!0),cssProperty===%22overflow-x%22&&cssValue===%22hidden%22&&(l=!0),cssProperty===%22overflow-y%22&&cssValue===%22hidden%22&&(n=!0),cssProperty===%22position%22&&cssValue===%22absolute%22&&(c=!0),cssProperty===%22white-space%22&&cssValue===%22nowrap%22&&(o=!0),cssProperty===%22width%22&&cssValue===%221px%22&&(d=!0);e===!0&&s===!0&&r===!0&&l===!0&&n===!0&&c===!0&&o===!0&&d===!0&&t.classList.add(%22was-visually-hidden%22),t.classList.forEach(h=%3E%7Bh.indexOf(%22-offscreen%22)!==-1&&t.classList.add(%22was-visually-hidden%22)%7D),(t.classList.contains(%22sr-only%22)%7C%7Ct.classList.contains(%22screenreader-only%22)%7C%7Ct.classList.contains(%22visually-hidden%22)%7C%7Ct.classList.contains(%22visuallyhidden%22))&&t.classList.add(%22was-visually-hidden%22)%7D)%7Dfunction%20i(t)%7Bu();var%20e,s=t.createElement(%22style%22);t.head.appendChild(s),(e=s.sheet).insertRule(%22%5Baria-hidden=true%5D%20%7Bbackground:black;color:black;%7D%22,0),e.insertRule(%22%5Baria-hidden=true%5D%20%5Baria-hidden=true%5D%20%7Bopacity:1%7D%22,0),e.insertRule(%22.was-visually-hidden%20%7Bclip-path:%20initial!important;clip:%20initial!important;height:%20auto!important;overflow:%20initial!important;position:%20initial!important;white-space:%20initial!important;width:%20auto!important;opacity:initial!important;z-index:initial!important;background:black!important;color:lime!important;%7D%22,0)%7Di(document);var%20y=document.querySelectorAll(%22iframe%22);Array.from(y).forEach(t=%3E%7Bi(t.contentWindow.document)%7D)%7D)();%7D)();%0A"
   },
@@ -156,10 +157,12 @@
     "bookmarklet": "Blur page",
     "description": "Blur entire page",
     "file": "blur-page.js",
+    "pageTest": false,
     "source": "Thomas Park",
     "sourceUrl": "https://thomaspark.co/2013/11/3-simple-design-bookmarklets-to-improve-your-aesthetics/",
     "tags": [
-      "diagnostic"
+      "diagnostic",
+      "local"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bdocument.body.setAttribute(%22style%22,'filter:url(%22data:image/svg+xml;utf8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter%20id=%22blur%22%3E%3CfeGaussianBlur%20stdDeviation=%2210%22%20/%3E%3C/filter%3E%3C/svg%3E#blur%22);%20-webkit-filter:blur(10px);%20filter:blur(10px);')%7D)();%7D)();%0A"
   },
@@ -171,7 +174,8 @@
     "source": "Jonathan Avila",
     "sourceUrl": "https://labs.levelaccess.com/index.php/Complex_Tables_Favlet",
     "tags": [
-      "accessibility"
+      "accessibility",
+      "local"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20e=document.querySelectorAll(%22td,%20th%22),n,t=%5B%5D,d;if(e.length%3E0)%7Bfor(var%20l=0;l%3Ce.length;l++)%7Bif(e.item(l).hasAttribute(%22headers%22))%7Bn=e.item(l).getAttribute(%22headers%22),t=n.split(%22%20%22);for(var%20r=0;r%3Ct.length;r++)if(document.getElementById(t%5Br%5D))%7Bd=1;var%20a=document.createElement(%22Span%22),o=document.createTextNode(document.getElementById(t%5Br%5D).textContent+%22%20%22);a.appendChild(o),a.style.backgroundColor=%22antiqueWhite%22,a.style.color=%22black%22,e.item(l).appendChild(a)%7D%7Dn=%22%22,t=%22%22,o=%22%22%7Dd%7C%7Calert(%22no%20valid%20headers%20found%22)%7Delse%20alert(%22No%20table%20cells%20found%22)%7D)();%7D)();%0A"
   },
