@@ -1,0 +1,92 @@
+---
+permalink: "bookmarklets/non-underlined-links.html"
+file: "non-underlined-links.js"
+layout: test
+title: non-underlined links
+---
+
+<style>
+  .testlink {
+    text-decoration: none;
+  }
+  .lowcontrast {
+    color: #222;
+  }
+  .bordered {
+    border-bottom: 1px solid #aaa;
+  }
+  .clearborder {
+    border-bottom-color: transparent;
+  }
+  li {
+    margin-bottom: 1rem;
+  }
+</style>
+
+<ul>
+  <li><a href="#" class="testlink">Test link without underline</a></li>
+  <li>
+    <a href="#" class="testlink lowcontrast"
+      >Test link without underline and low contrast against body text</a
+    >
+    (body text for reference)
+  </li>
+  <li>
+    <a href="#" class="lowcontrast"
+      >Test link with underline and low contrast against body text</a
+    >
+    (body text for reference)
+  </li>
+  <li>
+    <a href="#" class="testlink bordered"
+      >Test link without underline, with bottom border</a
+    >
+  </li>
+  <li>
+    <a href="#" class="testlink bordered clearborder"
+      >Test link without underline, with transparent bottom border</a
+    >
+  </li>
+  <li><a href="#">Test link with underline</a></li>
+</ul>
+
+<nav>
+  <ul>
+    <li>
+      <a href="#" class="testlink"
+        >Test link without underline, inside a <code>&lt;nav&gt;</code></a
+      >
+    </li>
+    <li>
+      <a href="#" class="testlink lowcontrast"
+        >Test link without underline and low contrast against body text, inside
+        a <code>&lt;nav&gt;</code></a
+      >
+      (body text for reference)
+    </li>
+    <li>
+      <a href="#" class="lowcontrast"
+        >Test link with underline and low contrast against body text, inside a
+        <code>&lt;nav&gt;</code></a
+      >
+      (body text for reference)
+    </li>
+    <li>
+      <a href="#" class="testlink bordered"
+        >Test link without underline, with bottom border, inside a
+        <code>&lt;nav&gt;</code></a
+      >
+    </li>
+    <li>
+      <a href="#" class="testlink bordered clearborder"
+        >Test link without underline, with transparent bottom border, inside a
+        <code>&lt;nav&gt;</code></a
+      >
+    </li>
+    <li>
+      <a href="#"
+        >Test link with underline, inside a <code>&lt;nav&gt;</code></a
+      >
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,22 @@
+---
+permalink: "bookmarklets/tool-label-in-name.html"
+file: "tool-label-in-name.js"
+layout: test
+title: label in name
+---
+
+<p>
+  <label for="example">Example</label>
+  <input
+    type="submit"
+    name="different"
+    id="example"
+    value="Not the same"
+    aria-label="forget it"
+  />
+</p>
+
+<p>
+  <label for="example2">Example 2</label>
+  <button id="example2" aria-label="forget it">Not the same</button>
+</p>
