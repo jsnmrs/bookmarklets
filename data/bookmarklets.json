@@ -64,6 +64,7 @@
     "bookmarklet": "a11y.css",
     "description": "Warns about possible risks and mistakes in HTML code",
     "file": "tool-a11y-css.js",
+    "pageTest": false,
     "source": "Gaël Poupard",
     "sourceUrl": "https://ffoodd.github.io/a11y.css/",
     "tags": [
@@ -85,7 +86,8 @@
       "1.1.1 (A)",
       "2.4.4 (A)",
       "2.4.9 (AAA)",
-      "WCAG"
+      "WCAG",
+      "local"
     ],
     "dist": "javascript:void%20(()=%3E%7Bvar%20t=document.createElement(%22style%22),e=document.createTextNode('img%7Boutline:%204px%20solid%20#01ff70%20!important;position:%20relative;%7D%20img%5Balt%5D%7Boutline:%20none%20!important;%7D%20body::after%7B%20position:%20absolute;%20top:%200;%20right:%204px;%20background-color:%20#000;%20color:%20#01ff70;%20z-index:%209999;%20font-size:%2016px;%20font-weight:%20400;%20padding:%203px%209px;%20outline:%204px%20solid%20#01ff70%20!important;%20content:%20%22images%20without%20alt%20attributes%22;%7D'),o=document.getElementsByTagName(%22head%22);t.appendChild(e);o%5B0%5D.appendChild(t);%7D)();%0A"
   },
@@ -93,6 +95,7 @@
     "bookmarklet": "ANDI",
     "description": "Accessible Name & Description Inspector is a free accessibility testing tool",
     "file": "tool-andi.js",
+    "pageTest": false,
     "source": "Accessible Solutions Branch of the Social Security Administration",
     "sourceUrl": "https://www.ssa.gov/accessibility/andi/help/install.html",
     "tags": [
@@ -105,6 +108,7 @@
     "bookmarklet": "Are ya hidden?",
     "description": "Display hidden content",
     "file": "are-ya-hidden.js",
+    "pageTest": true,
     "source": "Lloydi",
     "sourceUrl": "https://a11y-tools.com/bookmarklets/",
     "tags": [
