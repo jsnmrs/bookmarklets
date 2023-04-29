@@ -1,8 +1,7 @@
 function runDuplicateIds() {
   var clone = document.cloneNode(true);
   var col = clone.querySelectorAll("[id]");
-  //alert(find_duplicate_ids(Array.prototype.slice.call( col, 0 )).length);
-  //
+
   var results = [];
   find_duplicate_ids(col, results);
   var strResults = results.length + " elements with duplicate ids" + "\n";
