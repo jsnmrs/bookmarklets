@@ -196,11 +196,13 @@
     "bookmarklet": "Design mode toggle",
     "description": "Make all of the text on page editable",
     "file": "design-mode-toggle.js",
+    "pageTest": false,
     "source": "Christoph Wagner",
     "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent#examples",
     "tags": [
       "diagnostic",
-      "editable"
+      "editable",
+      "local"
     ],
     "dist": "javascript:void%20(()=%3E%7Bdocument.designMode=document.designMode==%22on%22?%22off%22:%22on%22;%7D)();%0A"
   },
@@ -208,12 +210,14 @@
     "bookmarklet": "Disable CSS",
     "description": "Drop all page styles",
     "file": "disable-css.js",
+    "pageTest": false,
     "source": "Sarah Higley",
     "sourceUrl": "https://dorward.uk/software/disablecss/",
     "tags": [
       "diagnostic",
       "accessibility",
-      "css"
+      "css",
+      "local"
     ],
     "dist": "javascript:void%20(()=%3E%7Bfor(e=0;e%3Cdocument.styleSheets.length;e++)document.styleSheets.item(e).disabled=!0;var%20e,t=document.getElementsByTagName(%22*%22);for(e=0;e%3Ct.length;e++)t%5Be%5D.style.cssText=%22%22;%7D)();%0A"
   },
@@ -225,7 +229,8 @@
     "source": "Jonathan Avila",
     "sourceUrl": "https://github.com/mraccess77/mraccess77.github.io/blob/master/favlets/duplicateIds.js",
     "tags": [
-      "accessibility"
+      "accessibility",
+      "local"
     ],
     "dist": "javascript:void%20(()=%3E%7Bfunction%20u()%7Bvar%20t=document.cloneNode(!0),l=t.querySelectorAll(%22%5Bid%5D%22),e=%5B%5D;c(l,e);var%20n=e.length+%60%20elements%20with%20duplicate%20ids%0A%60;e.forEach(function(r)%7Br.innerHTML=%22%22,n=n+r.outerHTML+%60%0A%60%7D),alert(n)%7Dfunction%20c(t,l)%7Bt.forEach(function(e)%7Bvar%20n=document.querySelectorAll('%5Bid=%22'+e.id+'%22%5D');n.length%3E1&&l.push(e)%7D)%7Du();%7D)();%0A"
   },
