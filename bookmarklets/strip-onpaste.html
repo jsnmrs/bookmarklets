@@ -5,8 +5,23 @@ layout: test
 title: onpaste
 ---
 
+<style>
+  input[onpaste] {
+    border: 5px solid red;
+  }
+  input:not([onpaste]) {
+    border: 5px solid #01ff70;
+  }
+</style>
+
 <p>
   <label for="badfield"
     >Password field with <code>onpaste="return false;"</code></label
   ><br /><input type="password" id="badfield" onpaste="return false;" />
+</p>
+
+<p>
+  <label for="goodfield"
+    >Password field without <code>onpaste</code> attribute</label
+  ><br /><input type="password" id="goodfield" />
 </p>
