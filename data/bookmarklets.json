@@ -243,7 +243,8 @@
     "sourceUrl": "https://adrianroselli.com/2015/01/css-bookmarklets-for-testing-and-fixing.html#ARIAdupes",
     "tags": [
       "accessibility",
-      "HTML"
+      "HTML",
+      "local"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20e=document.createElement(%22style%22),n;document.head.appendChild(e),n=e.sheet,n.insertRule(%22*%5Brole=main%5D:nth-of-type(n+2),*%5Brole=banner%5D:nth-of-type(n+2),*%5Brole=contentinfo%5D:nth-of-type(n+2),main:nth-of-type(n+2)%7Bborder:2px%20dotted%20#f00%20!important;background-color:#f00;%7D%22,0)%7D)();%7D)();%0A"
   },
@@ -251,10 +252,12 @@
     "bookmarklet": "Force focus indicator",
     "description": "Adds a 4 pixel solid orange outline around all focusable elements",
     "file": "force-focus.js",
+    "pageTest": false,
     "source": "Paul J. Adam",
     "sourceUrl": "https://pauljadam.com/bookmarklets/focus.html",
     "tags": [
-      "accessibility"
+      "accessibility",
+      "local"
     ],
     "dist": "javascript:void%20(()=%3E%7Bvar%20e=document.createElement(%22style%22),t=document.createTextNode(%22a:focus,%20*:focus%20%7B%20outline:%204px%20solid%20orange%20!important;%20outline-offset:1px%20!important;%20%7D%22),n=document.getElementsByTagName(%22head%22);e.appendChild(t);n%5B0%5D.appendChild(e);%7D)();%0A"
   },
@@ -262,12 +265,14 @@
     "bookmarklet": "Get YouTube UC ID",
     "description": "Fetches UC ID while on a YouTube profile page",
     "file": "youtube-uc-id.js",
+    "pageTest": false,
     "source": "Jason Morris",
     "sourceUrl": "https://jasonmorris.com",
     "tags": [
       "diagnostic",
       "bmxfeed",
-      "YouTube"
+      "YouTube",
+      "local"
     ],
     "dist": "javascript:void%20(()=%3E%7Bvar%20e=document.querySelector(%22link%5Brel=canonical%5D%22).getAttribute(%22href%22).replace(%22https://www.youtube.com/channel/%22,%22%22);e&&prompt(%22UC%20ID:%22,e);%7D)();%0A"
   },
@@ -275,10 +280,12 @@
     "bookmarklet": "Grayscale",
     "description": "Show entire page in gray scale (no color)",
     "file": "grayscale.js",
+    "pageTest": false,
     "source": "Level Access",
     "sourceUrl": "https://labs.levelaccess.com/index.php/Grayscale_Favlet",
     "tags": [
-      "accessibility"
+      "accessibility",
+      "local"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7Blet%20e=document.createElement(%22style%22);e.type=%22text/css%22,e.appendChild(document.createTextNode(%22%22)),document.head.appendChild(e),e.sheet.insertRule(%22html%20%7B%20%20filter:%20grayscale(100%25)%20!important;%20-webkit-filter:%20grayscale(1)%20!important;%7D%22,e.sheet.cssRules.length)%7D)();%7D)();%0A"
   },
@@ -297,6 +304,7 @@
     "bookmarklet": "GUToAF",
     "description": "Unified accessibility bookmarklet",
     "file": "tool-gutoaf.js",
+    "pageTest": false,
     "source": "Level Access",
     "sourceUrl": "https://github.com/mraccess77/mraccess77.github.io/blob/master/favlets/headings.js",
     "tags": [
@@ -320,6 +328,7 @@
     "bookmarklet": "Hide cursor",
     "description": "Hides cursor from window to encourage keyboard use",
     "file": "hide-cursor.js",
+    "pageTest": false,
     "source": "Iain Bean",
     "sourceUrl": "https://iainbean.com/posts/2020/an-opinionated-guide-to-accessibility-testing/",
     "tags": [
@@ -330,7 +339,8 @@
       "2.1.3 (AAA)",
       "2.1.4 (A)",
       "WCAG",
-      "cursor"
+      "cursor",
+      "local"
     ],
     "dist": "javascript:void%20(()=%3E%7Bvar%20e=document.createElement(%22style%22),t=document.createTextNode('*%20%7B%20cursor:%20none%20!important;%20%7D%20body::after%7B%20position:%20absolute;%20top:%200;%20right:%204px;%20background-color:%20#000;%20color:%20#01ff70;%20z-index:%209999;%20font-size:%2016px;%20font-weight:%20400;%20padding:%203px%209px;%20outline:%204px%20solid%20#01ff70%20!important;%20content:%20%22hiding%20cursor%22;%7D'),o=document.getElementsByTagName(%22head%22);e.appendChild(t);o%5B0%5D.appendChild(e);%7D)();%0A"
   },
@@ -338,11 +348,13 @@
     "bookmarklet": "HTML CodeSniffer",
     "description": "Checks HTML source code and detects violations of a defined coding standard",
     "file": "tool-html-codesniffer.js",
+    "pageTest": false,
     "source": "Squiz Labs",
     "sourceUrl": "https://squizlabs.github.io/HTML_CodeSniffer/",
     "tags": [
       "accessibility",
-      "HTML"
+      "HTML",
+      "external"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20n=%22//squizlabs.github.io/HTML_CodeSniffer/build/%22,t=function(o,d)%7Bvar%20e=document.createElement(%22script%22);e.onload=function()%7Be.onload=null,e.onreadystatechange=null,d.call(this)%7D,e.onreadystatechange=function()%7B/%5E(complete%7Cloaded)$/.test(this.readyState)===!0&&(e.onreadystatechange=null,e.onload())%7D,e.src=o,document.head?document.head.appendChild(e):document.getElementsByTagName(%22head%22)%5B0%5D.appendChild(e)%7D,a=%7Bpath:n%7D;t(n+%22HTMLCS.js%22,function()%7BHTMLCSAuditor.run(%22WCAG2AA%22,null,a)%7D)%7D)();%7D)();%0A"
   },
