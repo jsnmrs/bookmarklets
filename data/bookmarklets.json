@@ -55,7 +55,7 @@
   {
     "bookmarklet": "a11y.css",
     "description": "Warns about possible risks and mistakes in HTML code",
-    "file": "a11y-css.js",
+    "file": "tool-a11y-css.js",
     "source": "Gaël Poupard",
     "sourceUrl": "https://ffoodd.github.io/a11y.css/",
     "tags": [
@@ -84,7 +84,7 @@
   {
     "bookmarklet": "ANDI",
     "description": "Accessible Name & Description Inspector is a free accessibility testing tool",
-    "file": "andi.js",
+    "file": "tool-andi.js",
     "source": "Accessible Solutions Branch of the Social Security Administration",
     "sourceUrl": "https://www.ssa.gov/accessibility/andi/help/install.html",
     "tags": [
@@ -107,18 +107,19 @@
   {
     "bookmarklet": "ARIA",
     "description": "Display ARIA information for accessibility testing",
-    "file": "aria.js",
+    "file": "tool-aria.js",
     "source": "Paul J. Adam",
     "sourceUrl": "https://pauljadam.com/bookmarklets/aria.html",
     "tags": [
-      "accessibility"
+      "accessibility",
+      "external"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bdocument.body.appendChild(document.createElement(%22script%22)).src=%22https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/aria.js%22;for(var%20t=document.getElementsByTagName(%22iframe%22),e=0;e%3Ct.length;e++)t%5Be%5D.contentDocument.body.appendChild(document.createElement(%22script%22)).src=%22https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/aria.js%22%7D)();%7D)();%0A"
   },
   {
     "bookmarklet": "ARIA usage",
     "description": "Report on ARIA usage on current URL",
-    "file": "aria-usage.js",
+    "file": "tool-aria-usage.js",
     "source": "TPGi",
     "sourceUrl": "https://thepaciellogroup.github.io/WAI-ARIA-Usage/WAI-ARIA_usage.html",
     "tags": [
@@ -165,7 +166,7 @@
   {
     "bookmarklet": "ct.css",
     "description": "Identify performance issues on the current page",
-    "file": "ct.js",
+    "file": "tool-ct.js",
     "source": "Harry Roberts",
     "sourceUrl": "https://csswizardry.com/ct/",
     "tags": [
@@ -272,7 +273,7 @@
   {
     "bookmarklet": "GUToAF",
     "description": "Unified accessibility bookmarklet",
-    "file": "gutoaf.js",
+    "file": "tool-gutoaf.js",
     "source": "Level Access",
     "sourceUrl": "https://github.com/mraccess77/mraccess77.github.io/blob/master/favlets/headings.js",
     "tags": [
@@ -336,7 +337,7 @@
   {
     "bookmarklet": "HTML Validator",
     "description": "Validate HTML of DOM",
-    "file": "html-validator.js",
+    "file": "service-html-validator.js",
     "source": "Deque",
     "sourceUrl": "https://dequeuniversity.com/validator",
     "tags": [
@@ -385,7 +386,7 @@
   {
     "bookmarklet": "Label in name",
     "description": "Display label in name",
-    "file": "label-in-name.js",
+    "file": "tool-label-in-name.js",
     "source": "Jonathan Avila",
     "sourceUrl": "https://mraccess77.github.io/favlets/Label-in-name.js",
     "tags": [
@@ -396,7 +397,7 @@
   {
     "bookmarklet": "Lighthouse report",
     "description": "Run a Lighthouse scan on current URL (regardless of broswer)",
-    "file": "lighthouse.js",
+    "file": "service-lighthouse.js",
     "source": "Jeremy Keith",
     "sourceUrl": "https://adactio.com/journal/16523",
     "tags": [
@@ -524,7 +525,7 @@
   {
     "bookmarklet": "Save to Internet Archive",
     "description": "Submit current URL to the Internet Archive",
-    "file": "internet-archive.js",
+    "file": "service-internet-archive.js",
     "source": "Jesse Gardner",
     "sourceUrl": "https://plasticmind.com/0s-and-1s/bookmarklet-archive-to-wayback-machine/",
     "tags": [
@@ -627,7 +628,7 @@
   {
     "bookmarklet": "WAVE report",
     "description": "Run WebAIM WAVE on the current URL",
-    "file": "wave.js",
+    "file": "service-wave.js",
     "source": "WebAIM",
     "sourceUrl": "https://wave.webaim.org/help",
     "tags": [
