@@ -205,6 +205,7 @@
     "bookmarklet": "Duplicate IDs",
     "description": "Display duplicated ID values",
     "file": "duplicate-ids.js",
+    "pageTest": true,
     "source": "Jonathan Avila",
     "sourceUrl": "https://github.com/mraccess77/mraccess77.github.io/blob/master/favlets/duplicateIds.js",
     "tags": [
@@ -215,7 +216,8 @@
   {
     "bookmarklet": "Find Duplicate ARIA Roles",
     "description": "Roles appearing more than once for banner, contentinfo, and main",
-    "file": "find-aria-duplicate-roles.js",
+    "file": "find-duplicate-aria-roles.js",
+    "pageTest": true,
     "source": "Adrian Roselli",
     "sourceUrl": "https://adrianroselli.com/2015/01/css-bookmarklets-for-testing-and-fixing.html#ARIAdupes",
     "tags": [
