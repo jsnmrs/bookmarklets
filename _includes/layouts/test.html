@@ -3,12 +3,14 @@ layout: page
 ---
 
 {% for bookmarklet in bookmarklets -%}
-<h1>{{ bookmarklet.bookmarklet }}</h1>
-<p>
-  {{ bookmarklet.description }}. Via
-  <a href="{{ bookmarklet.authorUrl }}">{{ bookmarklet.author }}</a>.
-</p>
-<p>
-  <a class="btn" href="{{ bookmarklet.dist }}">{{ bookmarklet.bookmarklet }}</a>
-</p>
+{% if bookmarklet.file == file %}
+  <h1>{{ bookmarklet.bookmarklet }}</h1>
+  <p>
+    {{ bookmarklet.description }}. Via
+    <a href="{{ bookmarklet.sourceUrl }}">{{ bookmarklet.source }}</a>.
+  </p>
+  <p>
+    <a class="btn" href="{{ bookmarklet.dist }}">{{ bookmarklet.bookmarklet }}</a>
+  </p>
+{% endif %}
 {% endfor %} {{ content }}

@@ -16,6 +16,7 @@ body {
 main {
   max-width: 55em;
   margin: 1em auto;
+  padding: 1rem;
 }
 
 .faux-header,

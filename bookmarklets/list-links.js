@@ -382,31 +382,6 @@
       'function hideGoodRows(){Array.from(trsWithoutIssue).forEach(trWithoutIssue => {trWithoutIssue.setAttribute("hidden","hidden");});}function showGoodRows(){Array.from(trsWithoutIssue).forEach(trWithoutIssue => {trWithoutIssue.removeAttribute("hidden");});}var trsWithoutIssue=document.querySelectorAll("tbody tr:not(.issue)");var showProblemCheckbox=document.querySelector("#showPotentialProblemsOnly");showProblemCheckbox.addEventListener("click", e => {if (showProblemCheckbox.checked) {hideGoodRows();} else {showGoodRows();}});';
     s +=
       '}window.addEventListener("load", (event) => {showLinks();});</script>';
-    s += "<script>";
-    s +=
-      'var dcUrl = "https://lloydi.com/a11y-tools/markup-de-crapulator/index.html?markup=";';
-    s += 'const dcs = document.querySelectorAll(".decrapulate");';
-    s += "Array.from(dcs).forEach(function (dc) {";
-    s += 'dc.addEventListener("click", e => {';
-    s += "var m = dc.previousElementSibling.value;";
-    s += "m = encodeURIComponent(m);";
-    s += 'window.open(dcUrl + m, "dcWin", "height=800,width=1000");';
-    s += "});";
-    s += "});";
-    s += 'const sss = document.querySelectorAll(".showSnippet");';
-    s += "Array.from(sss).forEach(function (ss) {";
-    s += 'ss.addEventListener("click", e => {';
-    s += "let n = ss.nextElementSibling;";
-    s += 'if (ss.getAttribute("aria-expanded")==="false") {';
-    s += 'n.removeAttribute("hidden");';
-    s += 'ss.setAttribute("aria-expanded","true");';
-    s += "} else {";
-    s += 'n.setAttribute("hidden","hidden");';
-    s += 'ss.setAttribute("aria-expanded","false");';
-    s += "}";
-    s += "});";
-    s += "});";
-    s += "</script>";
 
     const popUpWinLinks = window.open(
       "",
