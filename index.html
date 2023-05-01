@@ -40,9 +40,13 @@ layout: page
       </td>
       <td>
         {% if reference.pageTest %}
+          {% if reference.pageTest == "self" %}
+          this page
+          {% else %}
         <a href="bookmarklets/{{ reference.file | replace: '.js', '.html' }}"
           >{{ reference.bookmarklet }} test page</a
         >
+        {% endif %}
         {% endif %}
       </td>
       <td>

@@ -29,6 +29,8 @@ function displayAlt(doc, _framesObj) {
   var str;
   var headers = [];
   var sentinel;
+  var s;
+  var t;
 
   if (el.length > 0) {
     for (var i = 0; i < el.length; i++) {
