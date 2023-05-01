@@ -44,7 +44,7 @@
     "description": "Display hidden content",
     "file": "are-ya-hidden.js",
     "pageTest": true,
-    "source": "Lloydi",
+    "source": "Ian Lloyd",
     "sourceUrl": "https://a11y-tools.com/bookmarklets/",
     "tags": [
       "accessibility",
@@ -208,6 +208,18 @@
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20e=document.createElement(%22style%22),n;document.head.appendChild(e),n=e.sheet,n.insertRule(%22*%5Brole=main%5D:nth-of-type(n+2),*%5Brole=banner%5D:nth-of-type(n+2),*%5Brole=contentinfo%5D:nth-of-type(n+2),main:nth-of-type(n+2)%7Bborder:2px%20dotted%20#f00%20!important;background-color:#f00;%7D%22,0)%7D)();%7D)();%0A"
   },
   {
+    "bookmarklet": "Focus everything",
+    "description": "A technique for testing 1.3.2 Meaningful Sequence a tab path visualizer",
+    "file": "focus-everything.js",
+    "pageTest": "self",
+    "source": "Ian Lloyd",
+    "sourceUrl": "https://a11y-tools.com/bookmarklets/",
+    "tags": [
+      "1.3.2 Meaningful Sequence (A)"
+    ],
+    "dist": "javascript:void%20(()=%3E%7Bvar%20r=document.querySelectorAll(%22body%20*%22);Array.from(r).forEach(e=%3E%7Be.setAttribute(%22tabindex%22,%220%22)%7D);%7D)();%0A"
+  },
+  {
     "bookmarklet": "Force focus indicator",
     "description": "Adds a 4 pixel solid orange outline around all focusable elements",
     "file": "force-focus.js",
@@ -252,7 +264,7 @@
     "bookmarklet": "Grouped fields",
     "description": "Display grouped fields",
     "file": "grouped-fields.js",
-    "source": "Lloydi",
+    "source": "Ian Lloyd",
     "sourceUrl": "https://a11y-tools.com/bookmarklets/",
     "tags": [
       "accessibility"
@@ -420,7 +432,7 @@
     "description": "Display all buttons",
     "file": "list-buttons.js",
     "pageTest": false,
-    "source": "Lloydi",
+    "source": "Ian Lloyd",
     "sourceUrl": "https://a11y-tools.com/bookmarklets/",
     "tags": [
       "accessibility"
@@ -432,7 +444,7 @@
     "description": "Display all images",
     "file": "list-images.js",
     "pageTest": false,
-    "source": "Lloydi",
+    "source": "Ian Lloyd",
     "sourceUrl": "https://a11y-tools.com/bookmarklets/",
     "tags": [
       "accessibility"
@@ -444,7 +456,7 @@
     "description": "Display all links",
     "file": "list-links.js",
     "pageTest": false,
-    "source": "Lloydi",
+    "source": "Ian Lloyd",
     "sourceUrl": "https://a11y-tools.com/bookmarklets/",
     "tags": [
       "accessibility"
@@ -456,7 +468,7 @@
     "description": "Display all titles",
     "file": "list-titles.js",
     "pageTest": false,
-    "source": "Lloydi",
+    "source": "Ian Lloyd",
     "sourceUrl": "https://a11y-tools.com/bookmarklets/",
     "tags": [
       "accessibility"
@@ -480,7 +492,7 @@
     "description": "Display information about links without underlines",
     "file": "non-underlined-links.js",
     "pageTest": true,
-    "source": "Lloydi",
+    "source": "Ian Lloyd",
     "sourceUrl": "https://a11y-tools.com/bookmarklets/",
     "tags": [
       "1.4.1 Use of Color (A)"
@@ -674,7 +686,7 @@
     "description": "Display information with focusable elements",
     "file": "wtfocus.js",
     "pageTest": "self",
-    "source": "Lloydi",
+    "source": "Ian Lloyd",
     "sourceUrl": "https://a11y-tools.com/bookmarklets/",
     "tags": [
       "2.4.4 Link Purpose (In Context) (A)",
