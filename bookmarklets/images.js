@@ -29,12 +29,14 @@ function displayAlt(doc, _framesObj) {
   var str;
   var headers = [];
   var sentinel;
+  var s;
+  var t;
 
   if (el.length > 0) {
     for (var i = 0; i < el.length; i++) {
-      var s = doc.createElement("Span");
+      s = doc.createElement("Span");
       if (el.item(i).getAttribute("alt"))
-        var t = "Alt=" + el.item(i).getAttribute("alt") + " ";
+        t = "Alt=" + el.item(i).getAttribute("alt") + " ";
       else if (el.item(i).hasAttribute("alt")) t = 'Alt=""';
       if (el.item(i).getAttribute("title"))
         t = t + "Title=" + el.item(i).getAttribute("title") + " ";
