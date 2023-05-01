@@ -217,7 +217,7 @@
     "tags": [
       "1.3.2 Meaningful Sequence (A)"
     ],
-    "dist": "javascript:void%20(()=%3E%7Bvar%20r=document.querySelectorAll(%22body%20*%22);Array.from(r).forEach(e=%3E%7Be.setAttribute(%22tabindex%22,%220%22)%7D);%7D)();%0A"
+    "dist": "javascript:void%20(()=%3E%7Bdocument.querySelectorAll(%22body%20*%22).forEach(function(t)%7Bt.setAttribute(%22tabindex%22,%220%22)%7D);%7D)();%0A"
   },
   {
     "bookmarklet": "Force focus indicator",

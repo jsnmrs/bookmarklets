@@ -1,9 +1,6 @@
-document
-  .querySelectorAll("input[type=password]")
-  // eslint-disable-next-line strict
-  .forEach(function (el) {
-    return el.removeAttribute("onpaste");
-  });
+document.querySelectorAll("input[type=password]").forEach(function (el) {
+  return el.removeAttribute("onpaste");
+});
 
 var style = document.createElement("style"),
   styleContent = document.createTextNode(

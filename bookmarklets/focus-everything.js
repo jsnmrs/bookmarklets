@@ -1,4 +1,3 @@
-var allElements = document.querySelectorAll("body *");
-Array.from(allElements).forEach((el) => {
+document.querySelectorAll("body *").forEach(function (el) {
   el.setAttribute("tabindex", "0");
 });
