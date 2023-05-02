@@ -1,0 +1,22 @@
+---
+permalink: "bookmarklets/show-focus-styles.html"
+file: "show-focus-styles.js"
+layout: test
+title: show focus styles
+---
+
+<p>Does not account for <code>:focus-visible</code> at this time.</p>
+
+<p>A <a href="https://example.com">link</a> and a <button>button</button> walk into a bar...</p>
+
+<p>
+  <label for="badfield"
+    >Password field with <code>onpaste="return false;"</code></label
+  ><br /><input type="password" id="badfield" onpaste="return false;" />
+</p>
+
+<p>
+  <label for="goodfield"
+    >Password field without <code>onpaste</code> attribute</label
+  ><br /><input type="password" id="goodfield" />
+</p>
