@@ -8,10 +8,10 @@
       o = "";
     console.clear(),
       Array.from(e).forEach(function (e) {
-        e.style.transition = "none";
-        e.focusable.focus();
-        t = getComputedStyle(e);
-        o = "";
+        (e.style.transition = "none"),
+          e.focus(),
+          (t = getComputedStyle(e)),
+          (o = "");
         for (var s = 0; s < t.length; s++)
           (cssProperty = t[s]),
             (cssValue = t.getPropertyValue(cssProperty)),

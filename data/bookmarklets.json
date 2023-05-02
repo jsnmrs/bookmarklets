@@ -573,7 +573,7 @@
       "2.4.12 Focus Not Obscured (2.2 AA",
       "2.4.13 Focus Not Obscured (2.2 AAA)"
     ],
-    "dist": "javascript:void%20(()=%3E%7B(function()%7Bfunction%20r()%7Blet%20s=document.querySelectorAll('a%5Bhref%5D,button,select,input:not(%5Btype=%22hidden%22%5D),textarea,summary,details,area,%5Btabindex%5D,%5Bcontenteditable%5D:not(%5Bcontenteditable=%22false%22%5D)'),t,o=%22%22;console.clear(),Array.from(s).forEach(function(e)%7Be.style.transition=%22none%22,e.focusable.focus(),t=getComputedStyle(e),o=%22%22;for(var%20n=0;n%3Ct.length;n++)cssProperty=t%5Bn%5D,cssValue=t.getPropertyValue(cssProperty),o+=cssProperty+%22:%22+cssValue+%22;%22;e.setAttribute(%22style%22,o)%7D)%7Dr()%7D)();%7D)();%0A"
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Bfunction%20r()%7Blet%20s=document.querySelectorAll('a%5Bhref%5D,button,select,input:not(%5Btype=%22hidden%22%5D),textarea,summary,details,area,%5Btabindex%5D,%5Bcontenteditable%5D:not(%5Bcontenteditable=%22false%22%5D)'),t,o=%22%22;console.clear(),Array.from(s).forEach(function(e)%7Be.style.transition=%22none%22,e.focus(),t=getComputedStyle(e),o=%22%22;for(var%20n=0;n%3Ct.length;n++)cssProperty=t%5Bn%5D,cssValue=t.getPropertyValue(cssProperty),o+=cssProperty+%22:%22+cssValue+%22;%22;e.setAttribute(%22style%22,o)%7D)%7Dr()%7D)();%7D)();%0A"
   },
   {
     "bookmarklet": "Test CSP",
