@@ -14,19 +14,6 @@
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20e=document.createElement(%22LINK%22);e.href=%22https://rawgit.com/ffoodd/a11y.css/master/css/a11y-en.css%22,e.rel=%22stylesheet%22,e.media=%22all%22,document.body.appendChild(e)%7D)();%7D)();%0A"
   },
   {
-    "bookmarklet": "Alt text",
-    "description": "Highlight images without alt attributes",
-    "file": "alt-text.js",
-    "pageTest": true,
-    "source": "Jason Morris",
-    "sourceUrl": "https://jasonmorris.com",
-    "tags": [
-      "1.1.1 Non-text Content (A)",
-      "2.4.4 Link Purpose (In Context) (A)"
-    ],
-    "dist": "javascript:void%20(()=%3E%7Bvar%20t=document.createElement(%22style%22),e=document.createTextNode('img%7Boutline:%204px%20solid%20#01ff70%20!important;position:%20relative;%7D%20img%5Balt%5D%7Boutline:%20none%20!important;%7D%20body::after%7B%20position:%20absolute;%20top:%200;%20right:%204px;%20background-color:%20#000;%20color:%20#01ff70;%20z-index:%209999;%20font-size:%2016px;%20font-weight:%20400;%20padding:%203px%209px;%20outline:%204px%20solid%20#01ff70%20!important;%20content:%20%22images%20without%20alt%20attributes%22;%7D'),o=document.getElementsByTagName(%22head%22);t.appendChild(e);o%5B0%5D.appendChild(t);%7D)();%0A"
-  },
-  {
     "bookmarklet": "ANDI",
     "description": "Accessible Name & Description Inspector is a free accessibility testing tool",
     "file": "tool-andi.js",
@@ -455,7 +442,7 @@
     "bookmarklet": "List images",
     "description": "Display all images",
     "file": "list-images.js",
-    "pageTest": false,
+    "pageTest": true,
     "source": "Ian Lloyd",
     "sourceUrl": "https://a11y-tools.com/bookmarklets/",
     "tags": [
