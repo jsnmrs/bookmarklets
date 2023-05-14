@@ -29,7 +29,7 @@ async function buildBookmarklets() {
     references.map(esbuildBookMarklet)
   );
 
-  bookmarkletsJson.sort((a, b) => a.bookmarklet.localeCompare(b.bookmarklet));
+  bookmarkletsJson.sort((a, b) => a.file.localeCompare(b.file));
 
   try {
     await writeFile(
