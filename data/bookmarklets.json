@@ -103,9 +103,7 @@
     "source": "Christoph Wagner",
     "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent#examples",
     "tags": [
-      "diagnostic",
-      "editable",
-      "local"
+      "diagnostic"
     ],
     "dist": "javascript:void%20(()=%3E%7Bdocument.designMode=document.designMode==%22on%22?%22off%22:%22on%22;%7D)();%0A"
   },
@@ -119,8 +117,7 @@
     "tags": [
       "diagnostic",
       "accessibility",
-      "css",
-      "local"
+      "css"
     ],
     "dist": "javascript:void%20(()=%3E%7Bfor(e=0;e%3Cdocument.styleSheets.length;e++)document.styleSheets.item(e).disabled=!0;var%20e,t=document.getElementsByTagName(%22*%22);for(e=0;e%3Ct.length;e++)t%5Be%5D.style.cssText=%22%22;%7D)();%0A"
   },
@@ -132,8 +129,7 @@
     "source": "Jonathan Avila",
     "sourceUrl": "https://github.com/mraccess77/mraccess77.github.io/blob/master/favlets/duplicateIds.js",
     "tags": [
-      "accessibility",
-      "local"
+      "accessibility"
     ],
     "dist": "javascript:void%20(()=%3E%7Bfunction%20u()%7Bvar%20t=document.cloneNode(!0),l=t.querySelectorAll(%22%5Bid%5D%22),e=%5B%5D;c(l,e);var%20n=e.length+%60%20elements%20with%20duplicate%20ids%0A%60;e.forEach(function(r)%7Br.innerHTML=%22%22,n=n+r.outerHTML+%60%0A%60%7D),alert(n)%7Dfunction%20c(t,l)%7Bt.forEach(function(e)%7Bvar%20n=document.querySelectorAll('%5Bid=%22'+e.id+'%22%5D');n.length%3E1&&l.push(e)%7D)%7Du();%7D)();%0A"
   },
@@ -146,8 +142,7 @@
     "sourceUrl": "https://adrianroselli.com/2015/01/css-bookmarklets-for-testing-and-fixing.html#ARIAdupes",
     "tags": [
       "accessibility",
-      "HTML",
-      "local"
+      "HTML"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20e=document.createElement(%22style%22),n;document.head.appendChild(e),n=e.sheet,n.insertRule(%22*%5Brole=main%5D:nth-of-type(n+2),*%5Brole=banner%5D:nth-of-type(n+2),*%5Brole=contentinfo%5D:nth-of-type(n+2),main:nth-of-type(n+2)%7Bborder:2px%20dotted%20#f00%20!important;background-color:#f00;%7D%22,0)%7D)();%7D)();%0A"
   },
@@ -171,8 +166,7 @@
     "source": "Paul J. Adam",
     "sourceUrl": "https://pauljadam.com/bookmarklets/focus.html",
     "tags": [
-      "accessibility",
-      "local"
+      "accessibility"
     ],
     "dist": "javascript:void%20(()=%3E%7Bvar%20e=document.createElement(%22style%22),t=document.createTextNode(%22a:focus,%20*:focus%20%7B%20outline:%204px%20solid%20orange%20!important;%20outline-offset:1px%20!important;%20%7D%22),n=document.getElementsByTagName(%22head%22);e.appendChild(t);n%5B0%5D.appendChild(e);%7D)();%0A"
   },
@@ -184,8 +178,7 @@
     "source": "Level Access",
     "sourceUrl": "https://labs.levelaccess.com/index.php/Grayscale_Favlet",
     "tags": [
-      "accessibility",
-      "local"
+      "accessibility"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7Blet%20e=document.createElement(%22style%22);e.type=%22text/css%22,e.appendChild(document.createTextNode(%22%22)),document.head.appendChild(e),e.sheet.insertRule(%22html%20%7B%20%20filter:%20grayscale(100%25)%20!important;%20-webkit-filter:%20grayscale(1)%20!important;%7D%22,e.sheet.cssRules.length)%7D)();%7D)();%0A"
   },
@@ -225,8 +218,7 @@
       "2.1.2 (A)",
       "2.1.4 (A)",
       "WCAG",
-      "cursor",
-      "local"
+      "cursor"
     ],
     "dist": "javascript:void%20(()=%3E%7Bvar%20e=document.createElement(%22style%22),t=document.createTextNode('*%20%7B%20cursor:%20none%20!important;%20%7D%20body::after%7B%20position:%20absolute;%20top:%200;%20right:%204px;%20background-color:%20#000;%20color:%20#01ff70;%20z-index:%209999;%20font-size:%2016px;%20font-weight:%20400;%20padding:%203px%209px;%20outline:%204px%20solid%20#01ff70%20!important;%20content:%20%22hiding%20cursor%22;%7D'),o=document.getElementsByTagName(%22head%22);e.appendChild(t);o%5B0%5D.appendChild(e);%7D)();%0A"
   },
@@ -676,8 +668,7 @@
     "tags": [
       "diagnostic",
       "bmxfeed",
-      "YouTube",
-      "local"
+      "YouTube"
     ],
     "dist": "javascript:void%20(()=%3E%7Bvar%20e=document.querySelector(%22link%5Brel=canonical%5D%22).getAttribute(%22href%22).replace(%22https://www.youtube.com/channel/%22,%22%22);e&&prompt(%22UC%20ID:%22,e);%7D)();%0A"
   }
