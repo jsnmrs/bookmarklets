@@ -134,6 +134,32 @@
     "dist": "javascript:void%20(()=%3E%7Bvar%20t=document.title+%22%20%5Cu2014%20%22+location.href;window.prompt(%22Plain%20text%20link:%22,t);%7D)();%0A"
   },
   {
+    "bookmarklet": "Parsing only",
+    "description": "Reduce HTML validation results to 4.1.1 Parsing (A) only",
+    "file": "parsing-only.js",
+    "auditing": true,
+    "pageTest": "self",
+    "source": "Steve Faulkner",
+    "sourceUrl": "https://cdpn.io/stevef/debug/dyGeywr",
+    "tags": [
+      "4.1.1 Parsing (A)"
+    ],
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20r=!0,i=%5B%22tag%20seen%22,%22Stray%20end%20tag%22,%22Bad%20start%20tag%22,%22violates%20nesting%20rules%22,%22Duplicate%20ID%22,%22first%20occurrence%20of%20ID%22,%22Unclosed%20element%22,%22not%20allowed%20as%20child%20of%20element%22,%22unclosed%20elements%22,%22not%20allowed%20on%20element%22,%22unquoted%20attribute%20value%22,%22Duplicate%20attribute%22%5D,o,l,s,e,t,n,a=0;if(o=i.join(%22%7C%22),l=document.getElementById(%22results%22),!l)%7Balert(%22No%20results%20container%20found.%22);return%7Dfor(s=l.getElementsByTagName(%22li%22),n=0;n%3Cs.length;n++)e=s%5Bn%5D,e.className!==%22%22&&(t=(e.innerText!==void%200?e.innerText:e.textContent)+%22%22,(t.match(o)===null%7C%7Cr==!0&&t.indexOf(%22not%20allowed%20on%20element%22)!==-1&&t.indexOf(%22ng-%22)!==-1)&&(e.style.display=%22none%22,e.className=e.className+%22%20steveNoLike%22,a++));alert(%22Complete.%20%22+a+%22%20items%20removed.%22)%7D)();%7D)();%0A"
+  },
+  {
+    "bookmarklet": "Validate",
+    "description": "Validate HTML of DOM",
+    "file": "service-html-validator.js",
+    "auditing": true,
+    "pageTest": "self",
+    "source": "Deque",
+    "sourceUrl": "https://dequeuniversity.com/validator",
+    "tags": [
+      "4.1.1 Parsing (A)"
+    ],
+    "dist": "javascript:void%20(()=%3E%7B(function()%7B(function()%7Bvar%20t=document.doctype,d=%22%3C!DOCTYPE%20%22+t.name+(t.publicId?'%20PUBLIC%20%22'+t.publicId+'%22':%22%22)+(!t.publicId&&t.systemId?%22%20SYSTEM%22:%22%22)+(t.systemId?'%20%22'+t.systemId+'%22':%22%22)+%22%3E%22,m=document.documentElement.outerHTML,r=d+m,a=document.getElementById(%22deque-w3c-validator-bookmarklet%22);a&&a.remove();var%20e=document.createElement(%22form%22);e.id=%22deque-w3c-validator-bookmarklet%22,e.method=%22POST%22,e.action=%22https://validator.w3.org/nu/?showsource=yes&nocache=%22+Math.random(),e.target=%22_blank%22,e.enctype=%22multipart/form-data%22;var%20o=document.createElement(%22textarea%22);o.name=%22content%22,o.value=r,e.appendChild(o),document.body.appendChild(e),e.submit(),a=document.getElementById(%22deque-w3c-validator-bookmarklet%22),a&&a.remove()%7D)()%7D)();%7D)();%0A"
+  },
+  {
     "bookmarklet": "Text spacing",
     "description": "Test on WCAG 1.4.12 Text Spacing",
     "file": "text-spacing.js",
