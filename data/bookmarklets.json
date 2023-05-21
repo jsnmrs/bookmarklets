@@ -652,6 +652,7 @@
     "pageTest": "self",
     "source": "Ian Lloyd",
     "sourceUrl": "https://a11y-tools.com/bookmarklets/",
+    "auditing": true,
     "tags": [
       "2.4.4 Link Purpose (In Context) (A)",
       "4.1.2 Name, Role, Value (A)"
