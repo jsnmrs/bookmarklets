@@ -30,6 +30,7 @@ async function buildBookmarklets() {
   );
 
   bookmarkletsJson.sort((a, b) => a.file.localeCompare(b.file));
+  const favorites = bookmarkletsJson.filter((d) => d.auditing === true);
 
   try {
     await writeFile(
@@ -38,6 +39,17 @@ async function buildBookmarklets() {
       "utf8"
     );
     console.log("Saved data/bookmarklets.json!");
+  } catch (err) {
+    console.error(err);
+  }
+
+  try {
+    await writeFile(
+      "data/auditing.json",
+      JSON.stringify(favorites, null, 2),
+      "utf8"
+    );
+    console.log("Saved data/auditing.json!");
   } catch (err) {
     console.error(err);
   }
@@ -71,19 +83,34 @@ async function esbuildBookMarklet(bookmarklet) {
 }
 
 async function exportBookmarklets() {
-  const bookmarklets = JSON.parse(await readFile("data/bookmarklets.json"));
+  const bookmarklets = JSON.parse(await readFile("data/bookmarklets.json")),
+    auditingBookmarklets = JSON.parse(await readFile("data/auditing.json"));
 
-  let bookmarks = {};
+  let bookmarks = {},
+    auditing = {};
+
   for (const { dist, bookmarklet } of bookmarklets) {
     bookmarks[bookmarklet] = dist;
   }
 
-  const html = netscape(bookmarks);
+  for (const { dist, bookmarklet } of auditingBookmarklets) {
+    auditing[bookmarklet] = dist;
+  }
+
+  const html = netscape(bookmarks),
+    auditHtml = netscape(auditing);
 
   // write bookmark HTML file to disk
   try {
     await writeFile("data/bookmarks.html", html, "utf8");
     console.log(`Saved data/bookmarks.html!`);
+  } catch (err) {
+    console.log(`Error writing file: ${err}`);
+  }
+
+  try {
+    await writeFile("data/auditing.html", auditHtml, "utf8");
+    console.log(`Saved data/auditing.html!`);
   } catch (err) {
     console.log(`Error writing file: ${err}`);
   }
