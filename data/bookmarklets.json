@@ -200,14 +200,16 @@
   },
   {
     "bookmarklet": "Headings",
-    "description": "Highlight and display level of all page headings",
+    "description": "Display level of all page headings in console",
     "file": "headings.js",
-    "source": "Jonathan Avila",
-    "sourceUrl": "https://github.com/mraccess77/mraccess77.github.io/blob/master/favlets/headings.js",
+    "auditing": true,
+    "pageTest": "self",
+    "source": "Mu-An Chiou",
+    "sourceUrl": "https://github.com/muan/headings",
     "tags": [
       "accessibility"
     ],
-    "dist": "javascript:void%20(()=%3E%7Bfunction%20n(o)%7Bs(o);for(var%20r=%5B%22frame%22,%22iframe%22%5D,e=0;e%3Cr.length;e++)for(var%20a=o.getElementsByTagName(r%5Be%5D),l=0;l%3Ca.length;l++)try%7Bn(a%5Bl%5D.contentWindow.document)%7Dcatch%7Bconsole.log(%22error%22)%7D%7Dfunction%20s(o)%7Bfor(var%20r=o.querySelectorAll(%22h1,h2,h3,h4,h5,h6,%5Brole='heading'%5D%22),e=0;e%3Cr.length;e++)%7Bvar%20a=r%5Be%5D.tagName+%22%20%22;r%5Be%5D.hasAttribute(%22role%22)&&(a=a+%22role=%22+r%5Be%5D.getAttribute(%22role%22)+%22%20%22),r%5Be%5D.hasAttribute(%22aria-level%22)&&(a=a+%22aria-level=%22+r%5Be%5D.getAttribute(%22aria-level%22));var%20l=document.createTextNode(a),t=document.createElement(%22span%22);t.style.color=%22black%22,t.style.backgroundColor=%22gold%22,t.style.fontSize=%22small%22,t.style.border=%22thin%20solid%20black%22,t.style.position=%22absolute%22,t.appendChild(l),r%5Be%5D.parentNode.insertBefore(t,r%5Be%5D),r%5Be%5D.style.border=%22thin%20solid%20magenta%22%7D%7Dn(document);%7D)();%0A"
+    "dist": "javascript:void%20(()=%3E%7Bvar%20a=%22%22;for(let%20t%20of%20document.querySelectorAll(%22h1,%20h2,%20h3,%20h4,%20h5,%20h6%22))%7Blet%20e=r(t);if(i(t)&&(t.offsetHeight%3E0%7C%7Ct.offsetWidth)&&e)%7Blet%20n=parseInt(t.tagName.match(/%5Cd/)%5B0%5D);a+=new%20Array((n-1)*2).fill(%22-%22).join(%22%22)+t.tagName.toLowerCase()+%22:%20%22+e+%60%0A%60%7D%7Dconsole.log(a);function%20r(t)%7Blet%20e=t.getAttribute(%22aria-labelledby%22);return(t.getAttribute(%22alt%22)%7C%7Ct.getAttribute(%22aria-label%22)%7C%7Ce&&o(document.getElementById(e))%7C%7Co(t)).trim()%7Dfunction%20o(t)%7Blet%20e=%22%22;for(let%20n%20of%20t.childNodes)e+=n%20instanceof%20HTMLElement?r(n):n.textContent%7C%7C%22%22;return%20e%7Dfunction%20i(t)%7Breturn!t.closest('%5Baria-hidden=%22%22%5D,%20%5Baria-hidden=%22true%22%5D')%7D%7D)();%0A"
   },
   {
     "bookmarklet": "Hide cursor",

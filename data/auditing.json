@@ -66,6 +66,19 @@
     "dist": "javascript:void%20(()=%3E%7Bvar%20e=document.createElement(%22style%22),t=document.createTextNode(%22a:focus,%20*:focus%20%7B%20outline:%204px%20solid%20orange%20!important;%20outline-offset:1px%20!important;%20%7D%22),n=document.getElementsByTagName(%22head%22);e.appendChild(t);n%5B0%5D.appendChild(e);%7D)();%0A"
   },
   {
+    "bookmarklet": "Headings",
+    "description": "Display level of all page headings in console",
+    "file": "headings.js",
+    "auditing": true,
+    "pageTest": "self",
+    "source": "Mu-An Chiou",
+    "sourceUrl": "https://github.com/muan/headings",
+    "tags": [
+      "accessibility"
+    ],
+    "dist": "javascript:void%20(()=%3E%7Bvar%20a=%22%22;for(let%20t%20of%20document.querySelectorAll(%22h1,%20h2,%20h3,%20h4,%20h5,%20h6%22))%7Blet%20e=r(t);if(i(t)&&(t.offsetHeight%3E0%7C%7Ct.offsetWidth)&&e)%7Blet%20n=parseInt(t.tagName.match(/%5Cd/)%5B0%5D);a+=new%20Array((n-1)*2).fill(%22-%22).join(%22%22)+t.tagName.toLowerCase()+%22:%20%22+e+%60%0A%60%7D%7Dconsole.log(a);function%20r(t)%7Blet%20e=t.getAttribute(%22aria-labelledby%22);return(t.getAttribute(%22alt%22)%7C%7Ct.getAttribute(%22aria-label%22)%7C%7Ce&&o(document.getElementById(e))%7C%7Co(t)).trim()%7Dfunction%20o(t)%7Blet%20e=%22%22;for(let%20n%20of%20t.childNodes)e+=n%20instanceof%20HTMLElement?r(n):n.textContent%7C%7C%22%22;return%20e%7Dfunction%20i(t)%7Breturn!t.closest('%5Baria-hidden=%22%22%5D,%20%5Baria-hidden=%22true%22%5D')%7D%7D)();%0A"
+  },
+  {
     "bookmarklet": "Images",
     "description": "Display all images",
     "file": "images.js",
