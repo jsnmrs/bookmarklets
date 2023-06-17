@@ -1,0 +1,46 @@
+---
+permalink: "bookmarklets/image-info.html"
+file: "image-info.js"
+layout: test
+title: Image info
+---
+
+<section>
+  <p>
+    <img src="https://dummyimage.com/300x200/000/fff" /><br />Alt text false
+  </p>
+
+  <p>
+    <img
+      src="https://dummyimage.com/300x200/000/fff"
+      alt="placebholder"
+    /><br />Alt text true
+  </p>
+
+  <p>
+    <img src="https://dummyimage.com/300x200/000/fff" alt="" /><br />Alt text
+    empty (true)
+  </p>
+
+  <p>
+    <img
+      src="https://dummyimage.com/300x200/000/fff"
+      alt="" title="title text"
+    /><br />title and alt text empty (true)
+  </p>
+
+  <p>
+    <img
+      src="https://dummyimage.com/300x200/000/fff"
+      alt="" aria-labelledby="desc"
+    /><br />aria-labelledby and alt text empty (true)
+  </p>
+  <p id="desc">Image description</p>
+
+  <p>
+    <img
+      src="https://dummyimage.com/300x200/000/fff"
+      alt="" aria-label="aria-label text"
+    /><br />aria-label and alt text empty (true)
+  </p>
+</section>
