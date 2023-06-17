@@ -242,6 +242,20 @@
     "dist": "javascript:void%20(()=%3E%7Bvar%20t='%3Ca%20href=%22'+location.href+'%22%3E'+document.title+%22%3C/a%3E%22;window.prompt(%22HTML%20link:%22,t);%7D)();%0A"
   },
   {
+    "bookmarklet": "Image info",
+    "description": "Display image alt, role, title, aria-label, aria-labelledby",
+    "file": "image-info.js",
+    "pageTest": "true",
+    "source": "Jonathan Avila",
+    "sourceUrl": "https://github.com/mraccess77/mraccess77.github.io/blob/master/favlets/images.js",
+    "tags": [
+      "1.1.1 Non-text Content (A)",
+      "1.4.5 Images of Text (A)",
+      "2.4.4 Link Purpose (In Context) (A)"
+    ],
+    "dist": "javascript:void%20(()=%3E%7Bfunction%20b(l,e)%7Bd(l,e);for(var%20t=%5B%22frame%22,%22iframe%22%5D,o=0;o%3Ct.length;o++)for(var%20u=l.getElementsByTagName(t%5Bo%5D),i=0;i%3Cu.length;i++)try%7Bb(u%5Bi%5D.contentWindow.document,e)%7Dcatch%7Be.extFrameSrcList=e.extFrameSrcList+%60%0A%60+u%5Bi%5D.src,e.frameErrorCount=e.frameErrorCount+1%7Dreturn%20e%7Dfunction%20d(l,e)%7Bvar%20t=l.querySelectorAll(%22img,*%5Brole='image'%5D%22);e.foundCount=e.foundCount+t.length;var%20o,u=%5B%5D,i,n,a;if(t.length%3E0)for(var%20r=0;r%3Ct.length;r++)n=l.createElement(%22span%22),t.item(r).getAttribute(%22alt%22)?a='alt=%22'+t.item(r).getAttribute(%22alt%22)+'%22%20':t.item(r).hasAttribute(%22alt%22)?a='alt=%22%22%20':a=%22NO%20alt%20attribute!%20%22,t.item(r).getAttribute(%22title%22)&&(a=a+'title=%22'+t.item(r).getAttribute(%22title%22)+'%22%20'),t.item(r).getAttribute(%22aria-label%22)&&(a=a+'aria-label=%22'+t.item(r).getAttribute(%22aria-label%22)+'%22%20'),t.item(r).getAttribute(%22aria-labelledby%22)&&(a=a+'aria-labelledby=%22'+t.item(r).getAttribute(%22aria-labelledby%22)+'%22%20%5Cu2192%20'+l.getElementById(t.item(r).getAttribute(%22aria-labelledby%22)).innerHTML),n.appendChild(l.createTextNode(a)),n.style.backgroundColor=%22cyan%22,n.style.border=%22thin%20solid%20black%22,n.style.color=%22black%22,n.style.fontSize=%22small%22,n.zIndex=%2299999%22,t.item(r).style.border=%22thin%20dotted%20cyan%22,t.item(r).parentNode.insertBefore(n,t.item(r))%7Dfunction%20m(l)%7Bvar%20e=%5B%5D;e.foundCount=0,e.extFrameSrcList=%22%22,e.frameErrorCount=0,e=b(l,e),alert(e.foundCount+%22%20element(s)%20with%20alt,%20title,%20aria-label,%20aria-labelledby%20attributes%20found.%20%22)%7Dm(document);%7D)();%0A"
+  },
+  {
     "bookmarklet": "Images",
     "description": "Display all images",
     "file": "images.js",
