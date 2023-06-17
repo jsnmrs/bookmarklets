@@ -1,46 +1,44 @@
-let map = "";
-
-for (const heading of document.querySelectorAll("h1, h2, h3, h4, h5, h6")) {
-  const text = getAccesibleName(heading);
-  if (
-    screenaderVisible(heading) &&
-    (heading.offsetHeight > 0 || heading.offsetWidth) &&
-    text
-  ) {
-    // visible
-    const n = parseInt(heading.tagName.match(/\d/)[0]);
-    map +=
-      new Array((n - 1) * 2).fill("-").join("") +
-      heading.tagName.toLowerCase() +
-      ": " +
-      text +
-      "\n";
+/* eslint-disable no-empty */
+// ***********************************************
+function traverseFrames(doc) {
+  showHeading(doc);
+  // go through for each frame's document if there are any frames
+  var frametypes = ["frame", "iframe"];
+  for (var i = 0; i < frametypes.length; i++) {
+    var myframes = doc.getElementsByTagName(frametypes[i]);
+    for (var z = 0; z < myframes.length; z++) {
+      try {
+        traverseFrames(myframes[z].contentWindow.document);
+      } catch (e) {}
+    }
   }
 }
-console.log(map);
 
-function getAccesibleName(element) {
-  const labelledby = element.getAttribute("aria-labelledby");
-  const name =
-    element.getAttribute("alt") ||
-    element.getAttribute("aria-label") ||
-    (labelledby && getText(document.getElementById(labelledby))) ||
-    getText(element);
-  return name.trim();
-}
+// ***********************************************
+function showHeading(doc) {
+  var col = doc.querySelectorAll("h1,h2,h3,h4,h5,h6,[role='heading']");
 
-function getText(heading) {
-  let text = "";
-  for (const node of heading.childNodes) {
-    text +=
-      node instanceof HTMLElement
-        ? getAccesibleName(node)
-        : node.textContent || "";
+  for (var i = 0; i < col.length; i++) {
+    var textStr = col[i].tagName + " ";
+
+    if (col[i].hasAttribute("role")) {
+      textStr = textStr + "role=" + col[i].getAttribute("role") + " ";
+    }
+    if (col[i].hasAttribute("aria-level")) {
+      textStr = textStr + "aria-level=" + col[i].getAttribute("aria-level");
+    }
+
+    var text = document.createTextNode(textStr);
+    var node = document.createElement("span");
+    node.style.color = "black";
+    node.style.backgroundColor = "gold";
+    node.style.fontSize = "small";
+    node.style.border = "thin solid black";
+    node.style.position = "absolute";
+    node.appendChild(text);
+    col[i].parentNode.insertBefore(node, col[i]);
+    col[i].style.border = "thin solid magenta";
   }
-
-  return text;
 }
 
-function screenaderVisible(element) {
-  return !element.closest('[aria-hidden=""], [aria-hidden="true"]');
-}
+traverseFrames(document);

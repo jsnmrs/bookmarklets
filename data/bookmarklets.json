@@ -199,9 +199,9 @@
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bfunction%20b()%7Blet%20r=%22#662e2e%22,i=0;function%20a(e,l)%7Be.style.boxShadow=%220px%200px%200px%2010px%20white%22,e.style.outline=%225px%20solid%20%22+l,e.style.outlineOffset=%225px%22,i++%7Dfunction%20n(e,l,t)%7Blet%20o=document.createElement(%22span%22);o.innerHTML=l,o.style.display=%22inline-block%22,o.style.margin=%2220px%200%205px%20-10px%22,o.style.padding=%225px%22,o.style.background=t,o.style.fontWeight=%22bold%22,o.style.fontSize=%2218px%22,o.style.color=%22white%22,o.classList.add(%22group-description%22),e.parentNode.insertBefore(o,e)%7Dvar%20d,u=document.querySelectorAll(%22fieldset%22);console.log(u),Array.from(u).forEach(e=%3E%7Bconsole.log(e),a(e,r),e.querySelector(%22legend%22)&&n(e,'Group%20label%20(from%20fieldset%20%3E%20legend):%20%3Cbr%3E%3Cbr%3E%22'+e.querySelector(%22legend%22).textContent+'%22',r)%7D),r=%22#66482e%22,Array.from(document.querySelectorAll(%22%5Brole=group%5D%5Baria-label%5D,%5Brole=region%5D%5Baria-label%5D%22)).forEach(e=%3E%7Bconsole.log(e);let%20l=e.getAttribute(%22role%22).toLowerCase();a(e,r),n(e,%22Group%20label%20(from%20%5Brole=%22+l+'%5D%5Baria-label%5D):%20%3Cbr%3E%3Cbr%3E%22'+e.getAttribute(%22aria-label%22)+'%22',r)%7D),r=%22#662e43%22,Array.from(document.querySelectorAll(%22%5Brole=group%5D%5Baria-labelledby%5D,%5Brole=region%5D%5Baria-labelledby%5D%22)).forEach(e=%3E%7Bconsole.log(e);let%20l=e.getAttribute(%22role%22).toLowerCase();a(e,r);let%20t=%22Source%20for%20aria-labelledby%20is%20missing/broken%22;document.querySelector(%22#%22+e.getAttribute(%22aria-labelledby%22))&&(t=document.querySelector(%22#%22+e.getAttribute(%22aria-labelledby%22)).textContent),n(e,%22Group%20label%20(from%20%5Brole=%22+l+'%5D%5Baria-labelledby%5D):%20%3Cbr%3E%3Cbr%3E%22'+t+'%22',r)%7D),i===0&&alert(%22No%20grouped%20fields%20found%20on%20this%20page%22)%7Db()%7D)();%7D)();%0A"
   },
   {
-    "bookmarklet": "Headings",
+    "bookmarklet": "Document outline in console",
     "description": "Display level of all page headings in console",
-    "file": "headings.js",
+    "file": "headings-console.js",
     "auditing": true,
     "pageTest": "self",
     "source": "Mu-An Chiou",
@@ -210,6 +210,20 @@
       "accessibility"
     ],
     "dist": "javascript:void%20(()=%3E%7Bvar%20a=%22%22;for(let%20t%20of%20document.querySelectorAll(%22h1,%20h2,%20h3,%20h4,%20h5,%20h6%22))%7Blet%20e=r(t);if(i(t)&&(t.offsetHeight%3E0%7C%7Ct.offsetWidth)&&e)%7Blet%20n=parseInt(t.tagName.match(/%5Cd/)%5B0%5D);a+=new%20Array((n-1)*2).fill(%22-%22).join(%22%22)+t.tagName.toLowerCase()+%22:%20%22+e+%60%0A%60%7D%7Dconsole.log(a);function%20r(t)%7Blet%20e=t.getAttribute(%22aria-labelledby%22);return(t.getAttribute(%22alt%22)%7C%7Ct.getAttribute(%22aria-label%22)%7C%7Ce&&o(document.getElementById(e))%7C%7Co(t)).trim()%7Dfunction%20o(t)%7Blet%20e=%22%22;for(let%20n%20of%20t.childNodes)e+=n%20instanceof%20HTMLElement?r(n):n.textContent%7C%7C%22%22;return%20e%7Dfunction%20i(t)%7Breturn!t.closest('%5Baria-hidden=%22%22%5D,%20%5Baria-hidden=%22true%22%5D')%7D%7D)();%0A"
+  },
+  {
+    "bookmarklet": "Headings",
+    "description": "Display level of all page headings",
+    "file": "headings.js",
+    "auditing": true,
+    "pageTest": "self",
+    "source": "Jonathan Avila",
+    "sourceUrl": "https://github.com/mraccess77/mraccess77.github.io/blob/master/favlets/headings.js",
+    "tags": [
+      "1.3.1 Info and Relationships (A)",
+      "2.4.6 Headings and Labels (AA)"
+    ],
+    "dist": "javascript:void%20(()=%3E%7Bfunction%20n(o)%7Bs(o);for(var%20a=%5B%22frame%22,%22iframe%22%5D,e=0;e%3Ca.length;e++)for(var%20r=o.getElementsByTagName(a%5Be%5D),l=0;l%3Cr.length;l++)try%7Bn(r%5Bl%5D.contentWindow.document)%7Dcatch%7B%7D%7Dfunction%20s(o)%7Bfor(var%20a=o.querySelectorAll(%22h1,h2,h3,h4,h5,h6,%5Brole='heading'%5D%22),e=0;e%3Ca.length;e++)%7Bvar%20r=a%5Be%5D.tagName+%22%20%22;a%5Be%5D.hasAttribute(%22role%22)&&(r=r+%22role=%22+a%5Be%5D.getAttribute(%22role%22)+%22%20%22),a%5Be%5D.hasAttribute(%22aria-level%22)&&(r=r+%22aria-level=%22+a%5Be%5D.getAttribute(%22aria-level%22));var%20l=document.createTextNode(r),t=document.createElement(%22span%22);t.style.color=%22black%22,t.style.backgroundColor=%22gold%22,t.style.fontSize=%22small%22,t.style.border=%22thin%20solid%20black%22,t.style.position=%22absolute%22,t.appendChild(l),a%5Be%5D.parentNode.insertBefore(t,a%5Be%5D),a%5Be%5D.style.border=%22thin%20solid%20magenta%22%7D%7Dn(document);%7D)();%0A"
   },
   {
     "bookmarklet": "Hide cursor",
