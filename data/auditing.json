@@ -87,7 +87,8 @@
     "source": "Jonathan Avila",
     "sourceUrl": "https://github.com/mraccess77/mraccess77.github.io/blob/master/favlets/headings.js",
     "tags": [
-      "accessibility"
+      "1.3.1 Info and Relationships (A)",
+      "2.4.6 Headings and Labels (AA)"
     ],
     "dist": "javascript:void%20(()=%3E%7Bfunction%20n(o)%7Bs(o);for(var%20a=%5B%22frame%22,%22iframe%22%5D,e=0;e%3Ca.length;e++)for(var%20r=o.getElementsByTagName(a%5Be%5D),l=0;l%3Cr.length;l++)try%7Bn(r%5Bl%5D.contentWindow.document)%7Dcatch%7B%7D%7Dfunction%20s(o)%7Bfor(var%20a=o.querySelectorAll(%22h1,h2,h3,h4,h5,h6,%5Brole='heading'%5D%22),e=0;e%3Ca.length;e++)%7Bvar%20r=a%5Be%5D.tagName+%22%20%22;a%5Be%5D.hasAttribute(%22role%22)&&(r=r+%22role=%22+a%5Be%5D.getAttribute(%22role%22)+%22%20%22),a%5Be%5D.hasAttribute(%22aria-level%22)&&(r=r+%22aria-level=%22+a%5Be%5D.getAttribute(%22aria-level%22));var%20l=document.createTextNode(r),t=document.createElement(%22span%22);t.style.color=%22black%22,t.style.backgroundColor=%22gold%22,t.style.fontSize=%22small%22,t.style.border=%22thin%20solid%20black%22,t.style.position=%22absolute%22,t.appendChild(l),a%5Be%5D.parentNode.insertBefore(t,a%5Be%5D),a%5Be%5D.style.border=%22thin%20solid%20magenta%22%7D%7Dn(document);%7D)();%0A"
   },
