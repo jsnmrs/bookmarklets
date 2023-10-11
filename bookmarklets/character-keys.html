@@ -14,13 +14,9 @@ title: character keys
 <p>This test page contains a script that triggers an alert message when the <kbd>p</kbd> or <kbd>P</kbd> key is pressed. If the alerts appear when the bookmarklet is activated, the bookmarklet has successfully send those key presses.</p>
 
 <script>
-document.addEventListener("keydown", function(evt) {
-  const key = evt.key;
-  if (key === "p") {
-    alert("Key p was pressed via the bookmarklet script!");
-  }
-  if (key === "P") {
-    alert("Key P (capital P) was pressed via the bookmarklet script!");
-  }
+document.addEventListener("keydown", function(event) {
+  const key = event.key;
+  if (key === "p") { alert("Key p was pressed via the bookmarklet script!"); }
+  if (key === "P") { alert("Key P (capital P) was pressed via the bookmarklet script!"); }
 });
 </script>
