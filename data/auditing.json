@@ -43,7 +43,7 @@
     "bookmarklet": "Focus everything",
     "description": "A technique for testing 1.3.2 Meaningful Sequence a tab path visualizer",
     "file": "focus-everything.js",
-    "pageTest": "self",
+    "pageTest": true,
     "auditing": true,
     "source": "Ian Lloyd",
     "sourceUrl": "https://a11y-tools.com/bookmarklets/",
