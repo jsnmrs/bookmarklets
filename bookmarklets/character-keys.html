@@ -1,0 +1,26 @@
+---
+permalink: "bookmarklets/character-keys.html"
+file: "character-keys.js"
+layout: test
+title: character keys
+---
+
+<p>This bookmarklet triggers a <code>keypress</code> event for every printable character (and then some) on a US standard 101 keyboard. The keypress details are logged to the console.</p>
+
+<p>In practice, this bookmarket will trigger any single character key shortcut on a page or application, surfacing potential <a href="https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts.html">2.1.4 Character Key Shortcuts (A) issues</a>.</p>
+
+<p>Related, <a href="https://www.toptal.com/developers/keycode/table">Toptal has a helpful keycode reference table</a>.</p>
+
+<p>This test page contains a script that triggers an alert message when the <kbd>p</kbd> or <kbd>P</kbd> key is pressed. If the alerts appear when the bookmarklet is activated, the bookmarklet has successfully send those key presses.</p>
+
+<script>
+document.addEventListener("keydown", function(evt) {
+  const key = evt.key;
+  if (key === "p") {
+    alert("Key p was pressed via the bookmarklet script!");
+  }
+  if (key === "P") {
+    alert("Key P (capital P) was pressed via the bookmarklet script!");
+  }
+});
+</script>
