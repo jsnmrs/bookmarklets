@@ -50,7 +50,7 @@ layout: page
           {% if reference.pageTest == "self" %}
           this page
           {% else %}
-        <a href="bookmarklets/{{ reference.file | replace: '.js', '.html' }}"
+        <a href="{{ reference.file | replace: '.js', '/' }}"
           >{{ reference.bookmarklet }} test page</a
         >
         {% endif %}

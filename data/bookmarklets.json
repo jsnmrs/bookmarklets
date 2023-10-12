@@ -14,7 +14,7 @@
   {
     "bookmarklet": "Autocomplete",
     "description": "Find all fields without autocomplete and decide best fit",
-    "file": "autocomplete.js",
+    "file": "auto-complete.js",
     "auditing": true,
     "pageTest": true,
     "source": "Ian Lloyd",
