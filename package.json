@@ -24,11 +24,11 @@
   "author": "Jason Morris",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "esbuild": "^0.19.4",
-    "eslint": "^8.51.0",
+    "esbuild": "^0.19.8",
+    "eslint": "^8.54.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
     "netscape-bookmarks": "^0.1.1",
-    "prettier": "^3.0.3"
+    "prettier": "^3.1.0"
   }
 }
