@@ -104,26 +104,26 @@
       v
         ? document.querySelector("#WTFocusPanel").removeAttribute("style")
         : n > i
-        ? (l > d
-            ? ((r.style.top = "auto"),
-              (r.style.bottom = d - (o + t.bottom) - 10 + "px"),
-              r.classList.add("toBottom"))
-            : ((r.style.top = o + t.top + "px"),
-              (r.style.bottom = "auto"),
-              r.classList.remove("toBottom")),
-          (r.style.left = "auto"),
-          (r.style.right = i - t.left + c - u + "px"),
-          r.classList.add("toLeft"))
-        : (l > d
-            ? ((r.style.top = "auto"),
-              (r.style.bottom = d - (o + t.bottom) - 10 + "px"),
-              r.classList.add("toBottom"))
-            : ((r.style.top = o + t.top + "px"),
-              (r.style.bottom = "auto"),
-              r.classList.remove("toBottom")),
-          (r.style.left = t.right + c - u + "px"),
-          (r.style.right = "auto"),
-          r.classList.remove("toLeft"));
+          ? (l > d
+              ? ((r.style.top = "auto"),
+                (r.style.bottom = d - (o + t.bottom) - 10 + "px"),
+                r.classList.add("toBottom"))
+              : ((r.style.top = o + t.top + "px"),
+                (r.style.bottom = "auto"),
+                r.classList.remove("toBottom")),
+            (r.style.left = "auto"),
+            (r.style.right = i - t.left + c - u + "px"),
+            r.classList.add("toLeft"))
+          : (l > d
+              ? ((r.style.top = "auto"),
+                (r.style.bottom = d - (o + t.bottom) - 10 + "px"),
+                r.classList.add("toBottom"))
+              : ((r.style.top = o + t.top + "px"),
+                (r.style.bottom = "auto"),
+                r.classList.remove("toBottom")),
+            (r.style.left = t.right + c - u + "px"),
+            (r.style.right = "auto"),
+            r.classList.remove("toLeft"));
     }
     console.clear(),
       (function () {
