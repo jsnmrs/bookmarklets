@@ -34,7 +34,7 @@
     "tags": [
       "utility"
     ],
-    "dist": "javascript:void%20(()=%3E%7B(function()%7Bfor(var%20n=document.getElementsByTagName(%22*%22),e,t=0;t%3Cn.length;t++)e=n%5Bt%5D,e.currentStyle?e.currentStyle.backgroundImage!==%22none%22&&(e.style.outline=%222px%20solid%20#f00%22):window.getComputedStyle&&document.defaultView.getComputedStyle(e,null).getPropertyValue(%22background-image%22)!==%22none%22&&(e.style.outline=%222px%20solid%20#f00%22)%7D)();%7D)();%0A"
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Bfor(var%20n=document.getElementsByTagName(%22*%22),e,t=0;t%3Cn.length;t++)e=n%5Bt%5D,e.currentStyle?e.currentStyle.backgroundImage!==%22none%22&&(e.style.outline=%222px%20solid%20#f00%22):window.getComputedStyle&&document.defaultView.getComputedStyle(e,null).getPropertyValue(%22background-image%22)!==%22none%22&&(e.style.outline=%224px%20solid%20#f00%22)%7D)();%7D)();%0A"
   },
   {
     "bookmarklet": "Blur page",
@@ -559,6 +559,20 @@
       "1.4.12 Text Spacing (AA)"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20o=document,l=%22phltsbkmklt%22,i=o.getElementById(l),a=o.querySelectorAll(%22iframe%22),e=0,m=a.length;if(i)%7Blet%20t=function(n)%7Bfor(var%20d%20of%20n.querySelectorAll(%22*%22))d.shadowRoot&&(d.shadowRoot.getElementById(l).remove(),t(d.shadowRoot))%7D;if(i.remove(),m)for(e=0;e%3Cm;e++)try%7Ba%5Be%5D.contentWindow.document.getElementById(l).remove(),t(a%5Be%5D.contentWindow.document)%7Dcatch(n)%7Bconsole.log(n)%7Dt(o)%7Delse%7Blet%20t=function(n)%7Bfor(var%20d%20of%20n.querySelectorAll(%22*%22))d.shadowRoot&&(d.shadowRoot.appendChild(r.cloneNode(!0)),t(d.shadowRoot))%7D;var%20r=o.createElement(%22style%22);for(r.id=l,r.appendChild(o.createTextNode(%22*%7Bline-height:1.5%20!important;letter-spacing:0.12em%20!important;word-spacing:0.16em%20!important;%7Dp%7Bmargin-bottom:2em%20!important;%7D%22)),o.getElementsByTagName(%22head%22)%5B0%5D.appendChild(r),e=0;e%3Cm;e++)try%7Ba%5Be%5D.contentWindow.document.getElementsByTagName(%22head%22)%5B0%5D.appendChild(r.cloneNode(!0)),t(a%5Be%5D.contentWindow.document)%7Dcatch(n)%7Bconsole.log(n)%7Dt(o)%7D%7D)();%7D)();%0A"
+  },
+  {
+    "bookmarklet": "Text zoom 200%",
+    "description": "Zoom text only (not page) size to 200%",
+    "file": "text-zoom.js",
+    "pageTest": false,
+    "source": "Ashlee M. Boyer",
+    "sourceUrl": "https://ashleemboyer.com/blog/an-accessibility-bookmarklet-for-testing-200-percent-text-size",
+    "tags": [
+      "accessibility",
+      "1.4.4",
+      "WCAG"
+    ],
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Blet%20e=document.querySelector(%22html%22),t=e.style.getPropertyValue(%22font-size%22)===%22200%25%22?null:%22200%25%22;e.style.setProperty(%22font-size%22,t)%7D)();%7D)();%0A"
   },
   {
     "bookmarklet": "Titles",
