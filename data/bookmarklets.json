@@ -640,20 +640,6 @@
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bdocument.body.appendChild(document.createElement(%22script%22)).src=%22https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/aria.js%22;for(var%20t=document.getElementsByTagName(%22iframe%22),e=0;e%3Ct.length;e++)t%5Be%5D.contentDocument.body.appendChild(document.createElement(%22script%22)).src=%22https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/aria.js%22%7D)();%7D)();%0A"
   },
   {
-    "bookmarklet": "GUToAF",
-    "description": "Unified accessibility bookmarklet",
-    "file": "tool-gutoaf.js",
-    "auditing": true,
-    "pageTest": false,
-    "source": "Level Access",
-    "sourceUrl": "https://github.com/mraccess77/mraccess77.github.io/blob/master/favlets/headings.js",
-    "tags": [
-      "accessibility",
-      "external"
-    ],
-    "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20e=document.createElement(%22script%22);e.setAttribute(%22src%22,%22https://labs.levelaccess.com/images/4/43/GUToAF.js%22),document.body.appendChild(e)%7D)();%7D)();%0A"
-  },
-  {
     "bookmarklet": "HTML CodeSniffer",
     "description": "Checks HTML source code and detects violations of a defined coding standard",
     "file": "tool-html-codesniffer.js",

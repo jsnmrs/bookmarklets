@@ -240,20 +240,6 @@
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20t=document.createElement(%22script%22);t.setAttribute(%22src%22,%22https://www.ssa.gov/accessibility/andi/andi.js%22),document.body.appendChild(t)%7D)();%7D)();%0A"
   },
   {
-    "bookmarklet": "GUToAF",
-    "description": "Unified accessibility bookmarklet",
-    "file": "tool-gutoaf.js",
-    "auditing": true,
-    "pageTest": false,
-    "source": "Level Access",
-    "sourceUrl": "https://github.com/mraccess77/mraccess77.github.io/blob/master/favlets/headings.js",
-    "tags": [
-      "accessibility",
-      "external"
-    ],
-    "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20e=document.createElement(%22script%22);e.setAttribute(%22src%22,%22https://labs.levelaccess.com/images/4/43/GUToAF.js%22),document.body.appendChild(e)%7D)();%7D)();%0A"
-  },
-  {
     "bookmarklet": "Open 1280x1024",
     "description": "Opens a new window with the current URL at 1280x1024",
     "file": "window-1280x1024.js",
