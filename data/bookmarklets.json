@@ -88,7 +88,7 @@
   },
   {
     "bookmarklet": "Cursor 24x24",
-    "description": "Change cursor to 24px by 24px circlesquare",
+    "description": "Change cursor to 24px by 24px circle",
     "file": "cursor-24x24.js",
     "pageTest": "self",
     "source": "Adrian Roselli",
