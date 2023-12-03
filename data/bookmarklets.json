@@ -640,6 +640,20 @@
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bdocument.body.appendChild(document.createElement(%22script%22)).src=%22https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/aria.js%22;for(var%20t=document.getElementsByTagName(%22iframe%22),e=0;e%3Ct.length;e++)t%5Be%5D.contentDocument.body.appendChild(document.createElement(%22script%22)).src=%22https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/aria.js%22%7D)();%7D)();%0A"
   },
   {
+    "bookmarklet": "Contrast checker",
+    "description": "Contrast checker for color combinations",
+    "file": "tool-contrast-checker.js",
+    "pageTest": false,
+    "source": "WebAIM",
+    "sourceUrl": "https://webaim.org/resources/contrastchecker/bookmarklet",
+    "tags": [
+      "1.4.1",
+      "1.4.3",
+      "1.4.11"
+    ],
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20s=document.getElementById(%22contrastletdragable%22);if(s==null)%7Bvar%20e=document.createElement(%22div%22);e.id=%22contrastletdragable%22,e.style.width=%22384px%22,e.style.position=%22absolute%22,e.style.right=%2220px%22,e.style.top=window.pageYOffset+20+%22px%22,e.style.zIndex=%2210000%22,e.style.boxSizing=%22content-box%22;var%20o=document.createElement(%22div%22);o.id=%22contrastletdragzone%22,o.style.width=%22100%25%22,o.style.height=%2215px%22,o.style.cursor=%22move%22,o.style.backgroundColor=%22#0f2c65%22,o.style.boxSizing=%22content-box%22,e.appendChild(o),document.body.appendChild(e);var%20n=document.createElement(%22button%22);n.id=%22contrastletclose%22,n.style.width=%2215px%22,n.style.height=%2215px%22,n.style.float=%22right%22,n.style.padding=%220%22,n.style.border=%220%22,n.style.borderTop=%221px%20solid%20#0f2c65%22,n.style.borderRight=%221px%20solid%20#0f2c65%22,n.setAttribute(%22aria-label%22,%22Close%20Contrast%20Checker%22),n.addEventListener(%22click%22,function()%7Be.remove()%7D,!1);var%20v=document.createTextNode(%22X%22);n.appendChild(v),o.appendChild(n);var%20d=document.createElement(%22iframe%22);d.src=%22https://webaim.org/resources/contrastchecker/mini?ver=1&a=%22+Math.random(),d.style.width=%22380px%22,d.style.height=%22368px%22,d.style.margin=%220px%22,d.style.borderStyle=%22solid%22,d.style.borderColor=%22#0f2c65%22,d.style.boxSizing=%22content-box%22,e.appendChild(d);let%20m=0,u=0,f=function(i)%7Bm=i.clientX,u=i.clientY,document.addEventListener(%22mousemove%22,p),document.addEventListener(%22mouseup%22,y)%7D,p=function(i)%7Blet%20h=i.clientX-m,t=i.clientY-u;e.style.top=%60$%7Be.offsetTop+t%7Dpx%60,e.style.left=%60$%7Be.offsetLeft+h%7Dpx%60,m=i.clientX,u=i.clientY%7D,y=function()%7Bdocument.removeEventListener(%22mousemove%22,p),document.removeEventListener(%22mouseup%22,y)%7D;e.addEventListener(%22mousedown%22,f),document.addEventListener(%22keyup%22,function(i)%7Bi.keyCode===27&&e.remove()%7D),d.addEventListener(%22keyup%22,function(i)%7Bi.keyCode===27&&e.remove()%7D),document.addEventListener(%22securitypolicyviolation%22,()=%3E%7Bd.remove();var%20i=document.createTextNode(%22The%20Content%20Security%20Policy%20on%20this%20page%20does%20not%20allow%20embedded%20iframes.%20The%20Contrast%20Checker%20Bookmarklet%20cannot%20run%20on%20this%20page.%20Press%20Esc%20to%20dismiss%20this%20message.%22);e.style.backgroundColor=%22#fff%22,e.appendChild(i)%7D)%7D%7D)();%7D)();%0A"
+  },
+  {
     "bookmarklet": "HTML CodeSniffer",
     "description": "Checks HTML source code and detects violations of a defined coding standard",
     "file": "tool-html-codesniffer.js",
