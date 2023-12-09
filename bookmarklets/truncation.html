@@ -1,0 +1,19 @@
+---
+permalink: "truncation/"
+file: "truncation.js"
+layout: test
+title: truncation
+---
+<style>
+.barf {text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.holder { width: 475px; height: 100px; overflow: hidden;}
+</style>
+
+<div class="holder">
+<p style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">This content has <code>text-overflow: ellipsis</code> as an inline style applied to it.</p>
+
+<p class="barf">This content has <code>text-overflow: ellipsis</code> as a class applied to it.</p>
+</div>
