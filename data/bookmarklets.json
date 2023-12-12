@@ -269,6 +269,18 @@
     "dist": "javascript:void%20(()=%3E%7Bvar%20e=document.createElement(%22style%22),t=document.createTextNode('*%20%7B%20cursor:%20none%20!important;%20%7D%20body::after%7B%20position:%20absolute;%20top:%200;%20right:%204px;%20background-color:%20#000;%20color:%20#01ff70;%20z-index:%209999;%20font-size:%2016px;%20font-weight:%20400;%20padding:%203px%209px;%20outline:%204px%20solid%20#01ff70%20!important;%20content:%20%22hiding%20cursor%22;%7D'),o=document.getElementsByTagName(%22head%22);e.appendChild(t);o%5B0%5D.appendChild(e);%7D)();%0A"
   },
   {
+    "bookmarklet": "Horizontal scroll",
+    "description": "Alert when a horizontal scrollbar appears",
+    "file": "horizontal-scroll.js",
+    "pageTest": true,
+    "source": " Jason Morris",
+    "sourceUrl": "https://jasonmorris.com",
+    "tags": [
+      "accessibility"
+    ],
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Bdocument.body.style.outline=%225px%20solid%20green%22,window.addEventListener(%22resize%22,function()%7Bdocument.body.scrollWidth%3Ewindow.innerWidth&&(document.body.style.outline=%2210px%20dashed%20red%22)%7D)%7D)();%7D)();%0A"
+  },
+  {
     "bookmarklet": "HTML link",
     "description": "Copy page title and URL in an HTML anchor",
     "file": "html-link.js",
@@ -691,6 +703,18 @@
       "external"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function(e)%7Be.body.appendChild(e.createElement(%22script%22)).src=%22https://cdn.jsdelivr.net/gh/ryersondmp/sa11y@latest/bookmarklet/sa11y-en.min.js%22%7D)(document);%7D)();%0A"
+  },
+  {
+    "bookmarklet": "Truncation",
+    "description": "Identify instances of text-overflow: ellipsis",
+    "file": "truncation.js",
+    "pageTest": true,
+    "source": " Jason Morris",
+    "sourceUrl": "https://jasonmorris.com",
+    "tags": [
+      "accessibility"
+    ],
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Bfunction%20s(e)%7Bfor(var%20l=e.cssRules%7C%7Ce.rules,t=0;t%3Cl.length;t++)%7Bvar%20r=l%5Bt%5D;if(r.style&&r.style.textOverflow===%22ellipsis%22)%7Bvar%20f=document.querySelectorAll(r.selectorText);f.forEach(function(u)%7Bu.style.border=%225px%20solid%20red%22%7D)%7D%7D%7Dvar%20o=document.querySelectorAll(%22style%22);o.forEach(function(e)%7Bs(e.sheet)%7D);var%20c=document.querySelectorAll('link%5Brel=%22stylesheet%22%5D');c.forEach(function(e)%7Bvar%20l=e.sheet;l&&s(l)%7D);var%20n=document.querySelectorAll(%22*%22);n.forEach(function(e)%7Be.style.textOverflow===%22ellipsis%22&&(e.style.border=%225px%20solid%20red%22)%7D)%7D)();%7D)();%0A"
   },
   {
     "bookmarklet": "User Agent",
