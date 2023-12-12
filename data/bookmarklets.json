@@ -693,7 +693,7 @@
     "dist": "javascript:void%20(()=%3E%7B(function(e)%7Be.body.appendChild(e.createElement(%22script%22)).src=%22https://cdn.jsdelivr.net/gh/ryersondmp/sa11y@latest/bookmarklet/sa11y-en.min.js%22%7D)(document);%7D)();%0A"
   },
   {
-    "bookmarklet": "truncation",
+    "bookmarklet": "Truncation",
     "description": "Identify instances of text-overflow: ellipsis",
     "file": "truncation.js",
     "pageTest": true,
