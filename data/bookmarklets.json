@@ -278,7 +278,7 @@
     "tags": [
       "accessibility"
     ],
-    "dist": "javascript:void%20(()=%3E%7B(function()%7Bwindow.addEventListener(%22resize%22,function()%7Bdocument.body.scrollWidth%3Ewindow.innerWidth&&alert(%22Horizontal%20scrollbar%20detected!%22)%7D)%7D)();%7D)();%0A"
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Bdocument.body.style.outline=%225px%20solid%20green%22,window.addEventListener(%22resize%22,function()%7Bdocument.body.scrollWidth%3Ewindow.innerWidth&&(document.body.style.outline=%2210px%20dashed%20red%22)%7D)%7D)();%7D)();%0A"
   },
   {
     "bookmarklet": "HTML link",
