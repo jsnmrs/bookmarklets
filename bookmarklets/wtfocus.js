@@ -1,4 +1,3 @@
-/* eslint-disable no-undef, no-unused-vars */
 (function () {
   "use strict";
   function WTFocus() {

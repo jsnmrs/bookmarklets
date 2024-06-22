@@ -1,4 +1,3 @@
-/* eslint-disable no-undef, no-unused-vars */
 (function () {
   var d = document,
     w = window,

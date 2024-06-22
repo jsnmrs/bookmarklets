@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 (function () {
   var allElements = document.querySelectorAll("*");
   function findAllVisuallyHiddenElements() {

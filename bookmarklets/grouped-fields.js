@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 (function () {
   function outlineGroupedFIelds() {
     let e = "#662e2e",

@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 // *********************************** //
 function traverseFrames(doc, _framesObj) {
   // check for alt, aria-label,title, or aria-labelledby attribute in current document and then check it's frames
