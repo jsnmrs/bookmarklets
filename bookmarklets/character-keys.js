@@ -1,4 +1,3 @@
-/* eslint-disable no-inner-declarations */
 (function () {
   var e;
   var n = 32;

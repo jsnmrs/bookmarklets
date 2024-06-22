@@ -1,5 +1,4 @@
 (function () {
-  /* eslint-disable no-inner-declarations */
   var d = document,
     id = "phltsbkmklt",
     el = d.getElementById(id),

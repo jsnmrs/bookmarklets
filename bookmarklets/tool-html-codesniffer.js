@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 (function () {
   var _p = "//squizlabs.github.io/HTML_CodeSniffer/build/";
   var _i = function (s, cb) {

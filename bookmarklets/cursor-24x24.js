@@ -1,4 +1,3 @@
-/* eslint-disable no-inner-declarations */
 (function () {
   var d = document,
     id = "AAR24pxBkmklt1",

@@ -1,4 +1,3 @@
-/* eslint-disable */
 // ***********************************************
 function traverseFrames(doc) {
   var src = doc.createElement("script");

@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 (function () {
   function showAllFocusStyles() {
     const e = document.querySelectorAll(
