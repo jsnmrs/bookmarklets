@@ -1,8 +1,13 @@
-import * as esbuild from "esbuild";
-import { rmSync, existsSync } from "fs";
-import { writeFile, readFile, mkdir } from "fs/promises";
-import netscape from "netscape-bookmarks";
-import { join } from "path";
+// import * as esbuild from "esbuild";
+// import { rmSync, existsSync } from "fs";
+// import { writeFile, readFile, mkdir } from "fs/promises";
+// import netscape from "netscape-bookmarks";
+// import { join } from "path";
+const esbuild = require("esbuild");
+const { rmSync, existsSync } = require("fs");
+const { writeFile, readFile, mkdir } = require("fs").promises;
+const netscape = require("netscape-bookmarks");
+const { join } = require("path");
 
 (async () => {
   await setup();
