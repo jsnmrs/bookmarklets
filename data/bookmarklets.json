@@ -272,13 +272,14 @@
     "bookmarklet": "Horizontal scroll",
     "description": "Alert when a horizontal scrollbar appears",
     "file": "horizontal-scroll.js",
+    "auditing": true,
     "pageTest": true,
     "source": " Jason Morris",
     "sourceUrl": "https://jasonmorris.com",
     "tags": [
       "accessibility"
     ],
-    "dist": "javascript:void%20(()=%3E%7B(function()%7Bdocument.body.style.outline=%225px%20solid%20green%22,window.addEventListener(%22resize%22,function()%7Bdocument.body.scrollWidth%3Ewindow.innerWidth&&(document.body.style.outline=%2210px%20dashed%20red%22)%7D)%7D)();%7D)();%0A"
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Blet%20e=document.documentElement.clientWidth,o=!1;function%20n()%7Blet%20t=document.documentElement.clientWidth,i=document.body.scrollWidth%3Edocument.documentElement.clientWidth;i&&!o&&t%3Ce?(console.log(%60%25cHorizontal%20scrollbar%20detected!%25c%0AWindow%20width:%20%60+t+%60px%0AContent%20width:%20%60+document.body.scrollWidth+%60px%0AOverflow:%20%60+(document.body.scrollWidth-t)+%22px%22,%22color:%20#ff0000;%20font-size:%2014px;%20font-weight:%20bold;%22,%22color:%20inherit;%20font-size:%20inherit;%22),o=!0):i%7C%7C(o=!1),e=t%7Dwindow.addEventListener(%22resize%22,n),n(),console.log(%60%25cHorizontal%20scrollbar%20detector%20activated!%25c%0AResize%20the%20window%20to%20test.%60,%22color:%20#4CAF50;%20font-size:%2014px;%20font-weight:%20bold;%22,%22color:%20inherit;%20font-size:%20inherit;%22)%7D)();%7D)();%0A"
   },
   {
     "bookmarklet": "HTML link",
@@ -434,6 +435,20 @@
       "4.1.1 Parsing (A)"
     ],
     "dist": "javascript:void%20(()=%3E%7B(function()%7Bvar%20r=!0,i=%5B%22tag%20seen%22,%22Stray%20end%20tag%22,%22Bad%20start%20tag%22,%22violates%20nesting%20rules%22,%22Duplicate%20ID%22,%22first%20occurrence%20of%20ID%22,%22Unclosed%20element%22,%22not%20allowed%20as%20child%20of%20element%22,%22unclosed%20elements%22,%22not%20allowed%20on%20element%22,%22unquoted%20attribute%20value%22,%22Duplicate%20attribute%22%5D,o,l,s,e,t,n,a=0;if(o=i.join(%22%7C%22),l=document.getElementById(%22results%22),!l)%7Balert(%22No%20results%20container%20found.%22);return%7Dfor(s=l.getElementsByTagName(%22li%22),n=0;n%3Cs.length;n++)e=s%5Bn%5D,e.className!==%22%22&&(t=(e.innerText!==void%200?e.innerText:e.textContent)+%22%22,(t.match(o)===null%7C%7Cr==!0&&t.indexOf(%22not%20allowed%20on%20element%22)!==-1&&t.indexOf(%22ng-%22)!==-1)&&(e.style.display=%22none%22,e.className=e.className+%22%20steveNoLike%22,a++));alert(%22Complete.%20%22+a+%22%20items%20removed.%22)%7D)();%7D)();%0A"
+  },
+  {
+    "bookmarklet": "Placeholder contrast checker",
+    "description": "Measure contrast of placeholder text",
+    "file": "placeholder-contrast.js",
+    "auditing": true,
+    "pageTest": true,
+    "source": " Jason Morris",
+    "sourceUrl": "https://jasonmorris.com",
+    "tags": [
+      "accessibility",
+      "1.4.3 Contrast (Minimum) (AA)"
+    ],
+    "dist": "javascript:void%20(()=%3E%7B(function()%7Bfunction%20s(o,e,t)%7Blet%5Bl,r,c%5D=%5Bo,e,t%5D.map(n=%3E(n=n/255,n%3C=.03928?n/12.92:Math.pow((n+.055)/1.055,2.4)));return%20.2126*l+.7152*r+.0722*c%7Dfunction%20u(o,e)%7Blet%20t=Math.max(o,e),l=Math.min(o,e);return(t+.05)/(l+.05)%7Dfunction%20d(o)%7Breturn%20o.match(/%5Cd+/g).map(Number)%7Dfunction%20g(o)%7Blet%20e=document.createElement(%22style%22),t=%22temp-%22+Math.random().toString(36).substr(2,9);o.classList.add(t),e.textContent=%60.$%7Bt%7D::placeholder%20%7B%20background-color:%20inherit;%20%7D%60,document.head.appendChild(e);let%20r=window.getComputedStyle(o,%22::placeholder%22).color;return%20o.classList.remove(t),e.remove(),r%7Dlet%20i=document.querySelectorAll(%22input%5Bplaceholder%5D,%20textarea%5Bplaceholder%5D%22);console.group(%22Placeholder%20Contrast%20Analysis%22),console.log(%22Analyzing%20%22+i.length+%60%20form%20elements...%0A%60),i.forEach((o,e)=%3E%7Blet%20t=window.getComputedStyle(o),l=g(o),r=t.backgroundColor,c=d(l),n=d(r),p=s(...c),h=s(...n),a=u(p,h),m=o.tagName.toLowerCase()+(o.id?%22#%22+o.id:%22%22)+(o.className?%22.%22+o.className.split(%22%20%22).join(%22.%22):%22%22)+%22::placeholder%22;console.group(%60Element%20$%7Be+1%7D:%20$%7Bm%7D%60),console.log(%22Placeholder%20Text:%22,o.placeholder),console.log(%22Placeholder%20Color:%22,l),console.log(%22Background:%22,r),a%3C4.5?console.log(%22%5Cu%7B1F6D1%7D%20Contrast%20Ratio:%22,a.toFixed(2)):console.log(%22%5Cu2705%20Contrast%20Ratio:%22,a.toFixed(2)),console.groupEnd(),o.style.outline=a%3C4.5?%225px%20solid%20#ff0000%22:%222px%20solid#00ff00%22%7D),console.groupEnd()%7D)();%7D)();%0A"
   },
   {
     "bookmarklet": "Re-enable selection",
