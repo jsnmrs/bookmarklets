@@ -1,0 +1,23 @@
+---
+permalink: "placeholder-contrast/"
+file: "placeholder-contrast.js"
+layout: test
+title: Placeholder contrast checker
+---
+
+<style>
+  #high::placeholder {
+    color: #000;
+  }
+  #low::placeholder {
+    color: #ccc;
+  }
+</style>
+
+
+<p>Open the console to see the results.</p>
+
+<p><input type="text" placeholder="Placeholder text (default)"></p>
+<p><input id="high" type="text" placeholder="Placeholder text (high contrast)"></p>
+<p><input id="low"type="text" placeholder="Placeholder text (low contrast)"></p>
+
