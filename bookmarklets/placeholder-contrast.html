@@ -6,18 +6,29 @@ title: Placeholder contrast checker
 ---
 
 <style>
+  input {
+    width: 12rem;
+  }
   #high::placeholder {
     color: #000;
   }
   #low::placeholder {
     color: #ccc;
   }
+  #red::placeholder {
+    color: #f00;
+  }
+  #green::placeholder {
+    color: #060;
+  }
 </style>
 
 
-<p>Open the console to see the results. Working consistently in Chrome 131. Firefox 132 gets messed up by srgb values. Safari 18 can't figure out the text color with the unprefixed selector (at least).</p>
+<p>Open the console to see the results. This works consistently in Chrome (131). Firefox (132) struggles with default values that contain opacity. Safari (18) can't identify the text color properly, in any case.</p>
 
 <p><input type="text" placeholder="Placeholder text (default)"></p>
 <p><input id="high" type="text" placeholder="Placeholder text (high contrast)"></p>
 <p><input id="low"type="text" placeholder="Placeholder text (low contrast)"></p>
+<p><input id="red" type="text" placeholder="Placeholder text (red)"></p>
+<p><input id="green"type="text" placeholder="Placeholder text (green)"></p>
 
