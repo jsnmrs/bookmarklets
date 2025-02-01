@@ -24,9 +24,9 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "esbuild": "^0.24.2",
-    "eslint": "^9.17.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
     "netscape-bookmarks": "^0.1.1",
     "prettier": "^3.4.2"
   }
