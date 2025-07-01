@@ -27,9 +27,9 @@
     if (
       ((function () {
         const e = document.createElement("style");
-        (e.textContent =
+        ((e.textContent =
           ".problem-highlight {outline:5px solid darkred;outline-offset:3px;box-shadow: 0px 0px 0px 10px #fff;}"),
-          document.head.appendChild(e);
+          document.head.appendChild(e));
       })(),
       Array.from(r).forEach((r) => {
         if (
@@ -51,24 +51,24 @@
                 "FIGURE" !== r.childNodes[0].tagName.toUpperCase()) ||
                 (a = !0)),
             !(function (n) {
-              (e = !1), (t = !1), (o = !1);
+              ((e = !1), (t = !1), (o = !1));
               const r = getComputedStyle(n);
               for (let n = 0; n < r.length; n++) {
                 const l = r[n],
                   a = r.getPropertyValue(l);
-                "text-decoration-line" === l && "underline" === a && (t = !0),
+                ("text-decoration-line" === l && "underline" === a && (t = !0),
                   "border-bottom-style" !== l ||
                     ("solid" !== a && "dotted" !== a && "dashed" !== a) ||
                     (o = !0),
                   "border-bottom-color" === l &&
                     "transparent" === a &&
                     (o = !1),
-                  (t || o) && (e = !0);
+                  (t || o) && (e = !0));
               }
               return e;
             })(r) && !a))
         ) {
-          (consoleOutput += "-------\n"),
+          ((consoleOutput += "-------\n"),
             (consoleOutput += "Link text: " + r.textContent + "\n"),
             n ||
               (!(function (e) {
@@ -88,19 +88,19 @@
                     if ((t = o.parentNode).tagName) {
                       r = t.tagName.toLowerCase();
                       const e = t.querySelectorAll(o.tagName);
-                      (a =
+                      ((a =
                         e.length > 1
                           ? "[" + parseInt(Array.from(e).indexOf(o) + 1) + "]"
                           : ""),
                         (l = (n = o.tagName.toLowerCase()) + a + s + l),
-                        (s = "/");
+                        (s = "/"));
                     }
                     o = t;
                   }
-                  return "" === r && (r = n), (l = "//" + r + a + s + l);
+                  return ("" === r && (r = n), (l = "//" + r + a + s + l));
                 })(r) +
                 "\n"),
-              l++);
+              l++));
           const e = (function (e, t) {
             const o = i(e[0], e[1], e[2]),
               n = i(t[0], t[1], t[2]);
@@ -124,8 +124,8 @@
       l > 0)
     ) {
       const e = l + " possible issues with non-underlined links found";
-      (consoleOutput = e + "\n" + consoleOutput),
-        alert(e + " (check console for more details)");
+      ((consoleOutput = e + "\n" + consoleOutput),
+        alert(e + " (check console for more details)"));
     } else
       alert("No non-underlined links found (outside of a navigation area)");
     console.log(consoleOutput);
