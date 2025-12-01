@@ -306,7 +306,6 @@
               ;
               (e = e.parentElement) &&
               !(e.matches || e.matchesSelector).call(e, t);
-
             );
             return e;
           })(i, "label");
