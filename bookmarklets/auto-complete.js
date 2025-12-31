@@ -1,3 +1,12 @@
+/**
+ * @bookmarklet Autocomplete
+ * @description Display all fields with autocomplete
+ * @author Rachele DiTullio
+ * @authorUrl https://racheleditullio.com/blog/2023/11/autocomplete-accessibility-bookmarklet/
+ * @tags 1.3.5 Identify Input Purpose (AA)
+ * @auditing true
+ * @pageTest true
+ */
 (function () {
   let divs = document.querySelectorAll(".autocomplete-info");
   if (divs.length > 0) {

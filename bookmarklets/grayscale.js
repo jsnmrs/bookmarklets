@@ -1,3 +1,11 @@
+/**
+ * @bookmarklet Grayscale
+ * @description Show entire page in gray scale (no color)
+ * @author Level Access
+ * @authorUrl https://labs.levelaccess.com/index.php/Grayscale_Favlet
+ * @tags accessibility
+ * @pageTest false
+ */
 (function () {
   let style = document.createElement("style");
   style.type = "text/css";

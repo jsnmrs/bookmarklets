@@ -1,10 +1,5 @@
-// import * as esbuild from "esbuild";
-// import { rmSync, existsSync } from "fs";
-// import { writeFile, readFile, mkdir } from "fs/promises";
-// import netscape from "netscape-bookmarks";
-// import { join } from "path";
 const esbuild = require("esbuild");
-const { rmSync, existsSync } = require("fs");
+const { rmSync, existsSync, readdirSync } = require("fs");
 const { writeFile, readFile, mkdir } = require("fs").promises;
 const netscape = require("netscape-bookmarks");
 const { join } = require("path");
@@ -26,10 +21,101 @@ async function setup() {
   }
 }
 
+/**
+ * Parse JSDoc-style metadata from a bookmarklet source file.
+ * Expected format:
+ * /**
+ *  * @bookmarklet Name of bookmarklet
+ *  * @description What it does
+ *  * @author Author name
+ *  * @authorUrl https://example.com
+ *  * @tags tag1, tag2
+ *  * @auditing true
+ *  * @pageTest true
+ *  *\/
+ */
+function parseMetadata(source, filename) {
+  const metadata = {
+    file: filename,
+  };
+
+  // Match the JSDoc block at the start of the file
+  const jsdocMatch = source.match(/^\/\*\*[\s\S]*?\*\//);
+  if (!jsdocMatch) {
+    return null;
+  }
+
+  const jsdoc = jsdocMatch[0];
+
+  // Parse each @tag
+  const tagPatterns = {
+    bookmarklet: /@bookmarklet\s+(.+?)(?:\n|\*\/)/,
+    description: /@description\s+(.+?)(?:\n|\*\/)/,
+    author: /@author\s+(.+?)(?:\n|\*\/)/,
+    authorUrl: /@authorUrl\s+(.+?)(?:\n|\*\/)/,
+    tags: /@tags\s+(.+?)(?:\n|\*\/)/,
+    auditing: /@auditing\s+(.+?)(?:\n|\*\/)/,
+    pageTest: /@pageTest\s+(.+?)(?:\n|\*\/)/,
+  };
+
+  for (const [key, pattern] of Object.entries(tagPatterns)) {
+    const match = jsdoc.match(pattern);
+    if (match) {
+      let value = match[1].replace(/\s*\*\s*$/, "").trim();
+
+      // Convert to appropriate types
+      if (key === "tags") {
+        metadata.tags = value.split(",").map((t) => t.trim());
+      } else if (key === "auditing") {
+        metadata.auditing = value === "true";
+      } else if (key === "pageTest") {
+        if (value === "true") {
+          metadata.pageTest = true;
+        } else if (value === "false") {
+          metadata.pageTest = false;
+        } else {
+          metadata.pageTest = value; // For "self" or other string values
+        }
+      } else if (key === "author") {
+        metadata.source = value;
+      } else if (key === "authorUrl") {
+        metadata.sourceUrl = value;
+      } else {
+        metadata[key] = value;
+      }
+    }
+  }
+
+  return metadata;
+}
+
+/**
+ * Discover and parse all bookmarklet files from the bookmarklets directory.
+ */
+async function discoverBookmarklets() {
+  const bookmarkletDir = "bookmarklets";
+  const files = readdirSync(bookmarkletDir).filter((f) => f.endsWith(".js"));
+
+  const bookmarklets = [];
+
+  for (const file of files) {
+    const source = await readFile(join(bookmarkletDir, file), "utf8");
+    const metadata = parseMetadata(source, file);
+
+    if (metadata && metadata.bookmarklet) {
+      bookmarklets.push(metadata);
+    } else {
+      console.warn(`Warning: ${file} is missing required metadata`);
+    }
+  }
+
+  return bookmarklets;
+}
+
 async function buildBookmarklets() {
-  const references = JSON.parse(
-    await readFile("data/bookmarklets.json", "utf8")
-  );
+  // Auto-discover bookmarklets from JS files instead of reading from JSON
+  const references = await discoverBookmarklets();
+
   const bookmarkletsJson = await Promise.all(
     references.map(esbuildBookMarklet)
   );

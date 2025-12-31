@@ -1,3 +1,11 @@
+/**
+ * @bookmarklet Complex table
+ * @description Visualize headers and IDs in a complex table
+ * @author Jonathan Avila
+ * @authorUrl https://labs.levelaccess.com/index.php/Complex_Tables_Favlet
+ * @tags accessibility
+ * @pageTest true
+ */
 (function () {
   var el = document.querySelectorAll("td, th");
 

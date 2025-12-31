@@ -1,3 +1,12 @@
+/**
+ * @bookmarklet Parsing only
+ * @description Reduce HTML validation results to 4.1.1 Parsing (A) only
+ * @author Steve Faulkner
+ * @authorUrl https://cdpn.io/stevef/debug/dyGeywr
+ * @tags 4.1.1 Parsing (A)
+ * @auditing true
+ * @pageTest self
+ */
 (function () {
   var removeNg = true;
   var filterStrings = [

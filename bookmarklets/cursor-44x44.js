@@ -1,3 +1,11 @@
+/**
+ * @bookmarklet Cursor 44x44
+ * @description Change cursor to 44px by 44px square
+ * @author Adrian Roselli
+ * @authorUrl https://adrianroselli.com/2019/06/target-size-and-2-5-5.html#Update04
+ * @tags 2.5.5 Target Size (AAA)
+ * @pageTest self
+ */
 (function () {
   var style = document.createElement("style"),
     styleContent = document.createTextNode(

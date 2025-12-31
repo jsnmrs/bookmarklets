@@ -1,3 +1,12 @@
+/**
+ * @bookmarklet Buttons
+ * @description Display all buttons
+ * @author Ian Lloyd
+ * @authorUrl https://a11y-tools.com/bookmarklets/
+ * @tags accessibility
+ * @auditing true
+ * @pageTest false
+ */
 (function () {
   "use strict";
   function listButtons() {

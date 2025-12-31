@@ -1,3 +1,11 @@
+/**
+ * @bookmarklet HTML CodeSniffer
+ * @description Checks HTML source code and detects violations of a defined coding standard
+ * @author Squiz Labs
+ * @authorUrl https://squizlabs.github.io/HTML_CodeSniffer/
+ * @tags accessibility, external
+ * @pageTest false
+ */
 (function () {
   var _p = "//squizlabs.github.io/HTML_CodeSniffer/build/";
   var _i = function (s, cb) {

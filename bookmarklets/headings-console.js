@@ -1,3 +1,12 @@
+/**
+ * @bookmarklet Document outline in console
+ * @description Display level of all page headings in console
+ * @author Mu-An Chiou
+ * @authorUrl https://github.com/muan/headings
+ * @tags accessibility
+ * @auditing true
+ * @pageTest self
+ */
 let map = "";
 
 for (const heading of document.querySelectorAll("h1, h2, h3, h4, h5, h6")) {

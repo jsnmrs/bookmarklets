@@ -1,3 +1,12 @@
+/**
+ * @bookmarklet Character key shortcuts
+ * @description Test all printable character shortcut keys
+ * @author Detlev Fischer
+ * @authorUrl http://3needs.org/en/testing/code/kb-shortcuts.html
+ * @tags 2.1.4 Character Key Shortcuts (A)
+ * @auditing true
+ * @pageTest true
+ */
 (function () {
   var e;
   var n = 32;
