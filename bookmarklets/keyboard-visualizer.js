@@ -1,3 +1,11 @@
+/**
+ * @bookmarklet Keyboard visualizer
+ * @description Creates an overlay to display typed keys on the underlying page
+ * @author Sarah Higley
+ * @authorUrl https://codepen.io/smhigley/pen/eYEjKQz
+ * @tags utility
+ * @pageTest self
+ */
 const visualizerStyles = `
 .sh-keyboard-viz {
   position: fixed;

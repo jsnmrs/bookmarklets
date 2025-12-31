@@ -1,3 +1,11 @@
+/**
+ * @bookmarklet Truncation
+ * @description Identify instances of text-overflow: ellipsis
+ * @author  Jason Morris
+ * @authorUrl https://jasonmorris.com
+ * @tags accessibility
+ * @pageTest true
+ */
 (function () {
   function checkRules(sheet) {
     var rules = sheet.cssRules || sheet.rules;

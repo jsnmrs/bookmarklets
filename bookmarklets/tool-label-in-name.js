@@ -1,3 +1,11 @@
+/**
+ * @bookmarklet Label in name
+ * @description Display label in name
+ * @author Jonathan Avila
+ * @authorUrl https://mraccess77.github.io/favlets/Label-in-name.js
+ * @tags 2.5.3 Label in Name (A), external
+ * @pageTest true
+ */
 // ***********************************************
 function traverseFrames(doc) {
   var src = doc.createElement("script");

@@ -1,3 +1,12 @@
+/**
+ * @bookmarklet Find Duplicate ARIA Roles
+ * @description Roles appearing more than once for banner, contentinfo, and main
+ * @author Adrian Roselli
+ * @authorUrl https://adrianroselli.com/2015/01/css-bookmarklets-for-testing-and-fixing.html#ARIAdupes
+ * @tags accessibility, HTML
+ * @auditing true
+ * @pageTest true
+ */
 (function () {
   var a = document.createElement("style"),
     b;

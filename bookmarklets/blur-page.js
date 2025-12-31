@@ -1,3 +1,11 @@
+/**
+ * @bookmarklet Blur page
+ * @description Blur entire page
+ * @author Thomas Park
+ * @authorUrl https://thomaspark.co/2013/11/3-simple-design-bookmarklets-to-improve-your-aesthetics/
+ * @tags diagnostic
+ * @pageTest false
+ */
 (function () {
   document.body.setAttribute(
     "style",

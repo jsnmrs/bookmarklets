@@ -1,3 +1,12 @@
+/**
+ * @bookmarklet Open 1280x1024
+ * @description Opens a new window with the current URL at 1280x1024
+ * @author Mike in a CSS Tricks article comment
+ * @authorUrl https://css-tricks.com/snippets/javascript/1024x768-bookmarklet/#comment-1766738
+ * @tags 1.4.4 Resize Text (AA), 1.4.10 Reflow (AA)
+ * @auditing true
+ * @pageTest true
+ */
 (function () {
   var id = "w" + new Date().getTime();
   var options =
