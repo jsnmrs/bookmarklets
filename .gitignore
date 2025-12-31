@@ -2,3 +2,5 @@ node_modules
 _site
 dist
 .vscode
+data/bookmarklets.json
+data/auditing.json
