@@ -13,11 +13,35 @@ Tools for the browser.
 
 ## Adding a bookmarklet
 
-1. Edit [`data/bookmarklets.json`](/data/bookmarklets.json) and add a new entry, following the schema used on the rest of the file
-2. Create a new JS file (and optionally a test HTML page) for the new entry
-3. Add code
-4. Run `npm start` to lint JS, build data file, and generate static site
-5. New entry will be added to the table of bookmarklets in `index.html`
+1. Create a new JS file in `bookmarklets/` with a JSDoc metadata block at the top:
+   ```javascript
+   /**
+    * @bookmarklet My Bookmarklet Name
+    * @description What the bookmarklet does
+    * @author Your Name
+    * @authorUrl https://example.com
+    * @tags accessibility, utility
+    * @pageTest true
+    */
+   (function() {
+     // Your bookmarklet code here
+   })();
+   ```
+2. Optionally create a test HTML page in `bookmarklets/` with the same base name
+3. Run `npm start` to lint JS, build data files, and generate the static site
+4. The new entry will be added to the table of bookmarklets in `index.html`
+
+### Metadata fields
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `@bookmarklet` | Yes | Display name of the bookmarklet |
+| `@description` | Yes | Brief description of what it does |
+| `@author` | No | Original author's name |
+| `@authorUrl` | No | Link to author or source |
+| `@tags` | No | Comma-separated list of tags |
+| `@auditing` | No | Set to `true` for auditing favorites |
+| `@pageTest` | No | `true`, `false`, or `self` for test page behavior |
 
 ## Related web tools
 
