@@ -13,18 +13,18 @@
     );
     let t,
       o = "";
-    console.clear(),
+    (console.clear(),
       Array.from(e).forEach(function (e) {
-        (e.style.transition = "none"),
+        ((e.style.transition = "none"),
           e.focus(),
           (t = getComputedStyle(e)),
-          (o = "");
+          (o = ""));
         for (var s = 0; s < t.length; s++)
-          (cssProperty = t[s]),
+          ((cssProperty = t[s]),
             (cssValue = t.getPropertyValue(cssProperty)),
-            (o += cssProperty + ":" + cssValue + ";");
+            (o += cssProperty + ":" + cssValue + ";"));
         e.setAttribute("style", o);
-      });
+      }));
   }
   showAllFocusStyles();
 })();
