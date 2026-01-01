@@ -11,7 +11,8 @@
     "test": "npm run lint && npm run build",
     "start": "npm run test && eleventy --serve",
     "build": "node build.js",
-    "buildprod": "npm run lint && eleventy"
+    "buildprod": "npm run lint && eleventy",
+    "new": "node scripts/new-bookmarklet.js"
   },
   "repository": {
     "type": "git",
