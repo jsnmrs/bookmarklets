@@ -4,6 +4,7 @@
  * @author Paul J. Adam
  * @authorUrl https://pauljadam.com/bookmarklets/aria.html
  * @tags accessibility, external
+ * @pageTest self
  */
 (function () {
   document.body.appendChild(document.createElement("script")).src =
