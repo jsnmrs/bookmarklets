@@ -8,7 +8,7 @@
 | Phase 2: Simpler test pages | ✅ Complete | Uses Option B: `bookmarklets.11tydata.cjs` computes `file`, `permalink`, `title`, and `layout` from filename; all frontmatter removed from HTML test pages |
 | Phase 3: Scaffolding | ✅ Complete | `npm run new -- --name "Name"` creates JS and HTML files |
 | Phase 4: Validation | ✅ Complete | Build-time validation with orphan detection, test page checks, and metadata completeness; supports `@helper true` for non-bookmarklet JS files |
-| Phase 5: Documentation | ❌ Not started | No CONTRIBUTING.md |
+| Phase 5: Documentation | ✅ Complete | CONTRIBUTING.md with quick start, metadata fields, tag taxonomy, test pages, and PR checklist |
 
 ---
 
@@ -149,28 +149,19 @@ The build exits with code 1 if any errors are found, ensuring CI catches issues 
 
 ---
 
-### Phase 5: Documentation
+### Phase 5: Documentation ✅
 
 **Goal**: Clear onboarding for contributors.
 
-Create/update `CONTRIBUTING.md`:
+**Implemented**: Created `CONTRIBUTING.md` with:
 
-```markdown
-# Adding a New Bookmarklet
-
-1. Run the scaffolding script:
-   ```bash
-   npm run new -- --name "My Tool" --author "Your Name"
-   ```
-
-2. Edit the generated JS file in `bookmarklets/`
-
-3. Add test content to the generated HTML file
-
-4. Run `npm start` to test locally
-
-5. Submit a PR
-```
+- Quick start guide using scaffolding script
+- Manual setup instructions
+- Complete metadata field reference
+- Tag taxonomy documentation
+- Test page conventions (`@pageTest` values)
+- Build process and available commands
+- PR submission checklist
 
 ---
 
