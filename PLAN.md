@@ -7,7 +7,7 @@
 | Phase 1: Metadata in JS | ✅ Complete | All 62 bookmarklets have @bookmarklet metadata; build.js extracts and generates JSON |
 | Phase 2: Simpler test pages | ✅ Complete | Uses Option B: `bookmarklets.11tydata.cjs` computes `file`, `permalink`, `title`, and `layout` from filename; all frontmatter removed from HTML test pages |
 | Phase 3: Scaffolding | ✅ Complete | `npm run new -- --name "Name"` creates JS and HTML files |
-| Phase 4: Validation | ⚠️ Partial | Basic "missing metadata" warning exists; no orphan detection or test page validation |
+| Phase 4: Validation | ✅ Complete | Build-time validation with orphan detection, test page checks, and metadata completeness; supports `@helper true` for non-bookmarklet JS files |
 | Phase 5: Documentation | ❌ Not started | No CONTRIBUTING.md |
 
 ---
@@ -127,23 +127,25 @@ Features:
 
 ---
 
-### Phase 4: Build-Time Validation
+### Phase 4: Build-Time Validation ✅
 
 **Goal**: Catch errors early in CI.
 
-Add validation step to `build.js`:
+**Implemented**: Validation integrated into `build.js`:
 
 1. **Orphan detection**:
-   - JS files without metadata → error
-   - JSON entries pointing to missing JS files → error
+   - JS files without `@bookmarklet` metadata → error (fails build)
+   - Helper files marked with `@helper true` are excluded from validation
 
 2. **Test page validation**:
-   - If `pageTest: true`, verify HTML file exists
-   - Warn about bookmarklets without test pages
+   - If `@pageTest true`, verify corresponding HTML file exists → error
+   - Missing `@pageTest` tag → warning
 
 3. **Metadata completeness**:
-   - Required fields: `bookmarklet`, `description`, `file`
-   - Warn on missing optional fields: `author`, `authorUrl`, `tags`
+   - Missing `@description` → warning
+   - Missing `@author`, `@authorUrl`, `@tags` → warning
+
+The build exits with code 1 if any errors are found, ensuring CI catches issues early.
 
 ---
 

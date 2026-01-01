@@ -4,6 +4,7 @@
  * @author TPGi
  * @authorUrl https://thepaciellogroup.github.io/WAI-ARIA-Usage/WAI-ARIA_usage.html
  * @tags accessibility, external
+ * @pageTest self
  */
 void (function () {
   var objScript = document.createElement("script");

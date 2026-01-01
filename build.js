@@ -6,8 +6,17 @@ const { join } = require("path");
 
 (async () => {
   await setup();
-  await buildBookmarklets();
+  const { bookmarklets, validationResults } = await buildBookmarklets();
   await exportBookmarklets();
+
+  // Run validation and report results
+  const { errors, warnings } = validationResults;
+  reportValidation(errors, warnings);
+
+  // Exit with error code if there are validation errors
+  if (errors.length > 0) {
+    process.exit(1);
+  }
 })();
 
 async function setup() {
@@ -90,16 +99,33 @@ function parseMetadata(source, filename) {
 }
 
 /**
+ * Check if a file is marked as a helper (not a bookmarklet).
+ * Helper files are excluded from bookmarklet processing.
+ */
+function isHelperFile(source) {
+  return /@helper\s+true/.test(source);
+}
+
+/**
  * Discover and parse all bookmarklet files from the bookmarklets directory.
+ * Returns { bookmarklets, helpers } where helpers are non-bookmarklet JS files.
  */
 async function discoverBookmarklets() {
   const bookmarkletDir = "bookmarklets";
   const files = readdirSync(bookmarkletDir).filter((f) => f.endsWith(".js"));
 
   const bookmarklets = [];
+  const helpers = [];
 
   for (const file of files) {
     const source = await readFile(join(bookmarkletDir, file), "utf8");
+
+    // Skip helper files (they're not bookmarklets)
+    if (isHelperFile(source)) {
+      helpers.push(file);
+      continue;
+    }
+
     const metadata = parseMetadata(source, file);
 
     if (metadata && metadata.bookmarklet) {
@@ -109,12 +135,100 @@ async function discoverBookmarklets() {
     }
   }
 
-  return bookmarklets;
+  return { bookmarklets, helpers };
+}
+
+/**
+ * Validate bookmarklets for completeness and consistency.
+ * Returns errors (build-breaking) and warnings (informational).
+ */
+function validateBookmarklets(bookmarklets, allJsFiles, helpers) {
+  const errors = [];
+  const warnings = [];
+  const bookmarkletDir = "bookmarklets";
+
+  // Track which JS files have valid metadata or are helpers
+  const filesWithMetadata = new Set(bookmarklets.map((b) => b.file));
+  const helperFiles = new Set(helpers);
+
+  // 1. Orphan detection: JS files without metadata (excluding helpers)
+  for (const file of allJsFiles) {
+    if (!filesWithMetadata.has(file) && !helperFiles.has(file)) {
+      errors.push(`${file}: Missing required @bookmarklet metadata`);
+    }
+  }
+
+  // 2. Validate each bookmarklet
+  for (const bookmarklet of bookmarklets) {
+    const { file } = bookmarklet;
+
+    // Required fields check
+    if (!bookmarklet.description) {
+      warnings.push(`${file}: Missing @description`);
+    }
+
+    // Test page validation
+    if (bookmarklet.pageTest === true) {
+      const htmlFile = file.replace(/\.js$/, ".html");
+      const htmlPath = join(bookmarkletDir, htmlFile);
+      if (!existsSync(htmlPath)) {
+        errors.push(`${file}: Has @pageTest true but missing ${htmlFile}`);
+      }
+    }
+
+    // Optional fields warnings
+    if (!bookmarklet.source) {
+      warnings.push(`${file}: Missing @author`);
+    }
+    if (!bookmarklet.sourceUrl) {
+      warnings.push(`${file}: Missing @authorUrl`);
+    }
+    if (!bookmarklet.tags || bookmarklet.tags.length === 0) {
+      warnings.push(`${file}: Missing @tags`);
+    }
+    if (bookmarklet.pageTest === undefined) {
+      warnings.push(`${file}: Missing @pageTest`);
+    }
+  }
+
+  return { errors, warnings };
+}
+
+/**
+ * Report validation results to console.
+ */
+function reportValidation(errors, warnings) {
+  if (warnings.length > 0) {
+    console.log("\n⚠️  Validation Warnings:");
+    for (const warning of warnings) {
+      console.log(`   ${warning}`);
+    }
+  }
+
+  if (errors.length > 0) {
+    console.log("\n❌ Validation Errors:");
+    for (const error of errors) {
+      console.log(`   ${error}`);
+    }
+    console.log("\nBuild failed due to validation errors.\n");
+  } else if (warnings.length > 0) {
+    console.log("\nBuild completed with warnings.\n");
+  } else {
+    console.log("\n✅ All validations passed.\n");
+  }
 }
 
 async function buildBookmarklets() {
+  const bookmarkletDir = "bookmarklets";
+
+  // Get all JS files for validation
+  const allJsFiles = readdirSync(bookmarkletDir).filter((f) => f.endsWith(".js"));
+
   // Auto-discover bookmarklets from JS files instead of reading from JSON
-  const references = await discoverBookmarklets();
+  const { bookmarklets: references, helpers } = await discoverBookmarklets();
+
+  // Run validation
+  const validationResults = validateBookmarklets(references, allJsFiles, helpers);
 
   const bookmarkletsJson = await Promise.all(
     references.map(esbuildBookMarklet)
@@ -144,6 +258,8 @@ async function buildBookmarklets() {
   } catch (err) {
     console.error(err);
   }
+
+  return { bookmarklets: bookmarkletsJson, validationResults };
 }
 
 async function esbuildBookMarklet(bookmarklet) {
