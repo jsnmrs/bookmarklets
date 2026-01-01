@@ -3,7 +3,7 @@
  * @description Report on ARIA usage on current URL
  * @author TPGi
  * @authorUrl https://thepaciellogroup.github.io/WAI-ARIA-Usage/WAI-ARIA_usage.html
- * @tags accessibility, external
+ * @tags accessibility, external, wcag:4.1.2
  * @pageTest self
  */
 void (function () {

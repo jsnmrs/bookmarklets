@@ -3,7 +3,7 @@
  * @description Validate HTML of DOM
  * @author Deque
  * @authorUrl https://dequeuniversity.com/validator
- * @tags 4.1.1 Parsing (A)
+ * @tags diagnostic, external, wcag:4.1.1
  * @auditing true
  * @pageTest self
  */

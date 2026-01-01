@@ -3,7 +3,7 @@
  * @description Display all lang attributes on page
  * @author Jason Morris
  * @authorUrl https://jasonmorris.com
- * @tags 3.1.1 Language of Page (A), 3.1.2 Language of Parts (AA)
+ * @tags accessibility, wcag:3.1.1, wcag:3.1.2
  * @auditing true
  * @pageTest true
  */

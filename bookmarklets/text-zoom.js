@@ -3,7 +3,7 @@
  * @description Zoom text only (not page) size to 200%
  * @author Ashlee M. Boyer
  * @authorUrl https://ashleemboyer.com/blog/an-accessibility-bookmarklet-for-testing-200-percent-text-size
- * @tags accessibility, 1.4.4, WCAG
+ * @tags accessibility, wcag:1.4.4
  * @pageTest false
  */
 (function () {

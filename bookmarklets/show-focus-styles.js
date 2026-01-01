@@ -3,7 +3,7 @@
  * @description Force visibility of all focus styles at the same time
  * @author Ian Lloyd
  * @authorUrl https://a11y-tools.com/bookmarklets/
- * @tags 2.4.7 Focus Visible (2.2 A), 2.4.11 Focus Appearance (2.2 AA), 2.4.12 Focus Not Obscured (2.2 AA, 2.4.13 Focus Not Obscured (2.2 AAA)
+ * @tags accessibility, wcag:2.4.7, wcag:2.4.11, wcag:2.4.12, wcag:2.4.13
  * @pageTest true
  */
 (function () {

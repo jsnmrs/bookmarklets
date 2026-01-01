@@ -3,7 +3,7 @@
  * @description Display label in name
  * @author Jonathan Avila
  * @authorUrl https://mraccess77.github.io/favlets/Label-in-name.js
- * @tags 2.5.3 Label in Name (A), external
+ * @tags accessibility, external, wcag:2.5.3
  * @pageTest true
  */
 // ***********************************************

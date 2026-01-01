@@ -3,7 +3,7 @@
  * @description Display image alt, role, title, aria-label, aria-labelledby
  * @author Jonathan Avila
  * @authorUrl https://github.com/mraccess77/mraccess77.github.io/blob/master/favlets/images.js
- * @tags 1.1.1 Non-text Content (A), 1.4.5 Images of Text (A), 2.4.4 Link Purpose (In Context) (A)
+ * @tags accessibility, wcag:1.1.1, wcag:1.4.5
  * @pageTest true
  */
 // *********************************** //

@@ -3,7 +3,7 @@
  * @description Display all images
  * @author Ian Lloyd
  * @authorUrl https://a11y-tools.com/bookmarklets/
- * @tags 1.1.1 Non-text Content (A), 1.4.5 Images of Text (A), 2.4.4 Link Purpose (In Context) (A)
+ * @tags accessibility, wcag:1.1.1, wcag:1.4.5
  * @auditing true
  * @pageTest true
  */

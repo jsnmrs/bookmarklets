@@ -3,7 +3,7 @@
  * @description Display grouped fields
  * @author Ian Lloyd
  * @authorUrl https://a11y-tools.com/bookmarklets/
- * @tags accessibility
+ * @tags accessibility, wcag:1.3.1
  * @pageTest self
  */
 (function () {

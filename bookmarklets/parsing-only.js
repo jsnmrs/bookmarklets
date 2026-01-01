@@ -3,7 +3,7 @@
  * @description Reduce HTML validation results to 4.1.1 Parsing (A) only
  * @author Steve Faulkner
  * @authorUrl https://cdpn.io/stevef/debug/dyGeywr
- * @tags 4.1.1 Parsing (A)
+ * @tags accessibility, wcag:4.1.1
  * @auditing true
  * @pageTest self
  */

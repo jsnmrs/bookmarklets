@@ -3,7 +3,7 @@
  * @description Roles appearing more than once for banner, contentinfo, and main
  * @author Adrian Roselli
  * @authorUrl https://adrianroselli.com/2015/01/css-bookmarklets-for-testing-and-fixing.html#ARIAdupes
- * @tags accessibility, HTML
+ * @tags accessibility, wcag:4.1.2
  * @auditing true
  * @pageTest true
  */

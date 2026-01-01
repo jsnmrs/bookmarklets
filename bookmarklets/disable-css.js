@@ -3,7 +3,7 @@
  * @description Drop all page styles
  * @author Sarah Higley
  * @authorUrl https://dorward.uk/software/disablecss/
- * @tags diagnostic, accessibility, css
+ * @tags diagnostic
  * @pageTest false
  */
 for (var i = 0; i < document.styleSheets.length; i++) {

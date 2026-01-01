@@ -3,7 +3,7 @@
  * @description Change cursor to 24px by 24px circle
  * @author Adrian Roselli
  * @authorUrl https://adrianroselli.com/2022/05/24x24-pixel-cursor-bookmarklet.html#Update01
- * @tags 2.5.8 Target Size (Minimum) (2.2 AA)
+ * @tags accessibility, wcag:2.5.8
  * @pageTest self
  */
 (function () {

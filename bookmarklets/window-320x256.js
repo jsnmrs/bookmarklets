@@ -3,7 +3,7 @@
  * @description Opens a new window with the current URL at 320x256
  * @author Mike in a CSS Tricks article comment
  * @authorUrl https://css-tricks.com/snippets/javascript/1024x768-bookmarklet/#comment-1766738
- * @tags 1.4.10 Reflow (AA)
+ * @tags accessibility, wcag:1.4.10
  * @pageTest true
  */
 (function () {

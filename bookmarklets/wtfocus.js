@@ -3,7 +3,7 @@
  * @description Display information with focusable elements
  * @author Ian Lloyd
  * @authorUrl https://a11y-tools.com/bookmarklets/
- * @tags 2.4.4 Link Purpose (In Context) (A), 4.1.2 Name, Role, Value (A)
+ * @tags accessibility, wcag:2.4.7, wcag:4.1.2
  * @auditing true
  * @pageTest self
  */
