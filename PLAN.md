@@ -6,7 +6,7 @@
 |-------|--------|-------|
 | Phase 1: Metadata in JS | ✅ Complete | All 62 bookmarklets have @bookmarklet metadata; build.js extracts and generates JSON |
 | Phase 2: Simpler test pages | ✅ Complete | Uses Option B: `bookmarklets.11tydata.cjs` computes `file`, `permalink`, `title`, and `layout` from filename; all frontmatter removed from HTML test pages |
-| Phase 3: Scaffolding | ❌ Not started | No scaffolding script exists |
+| Phase 3: Scaffolding | ✅ Complete | `npm run new -- --name "Name"` creates JS and HTML files |
 | Phase 4: Validation | ⚠️ Partial | Basic "missing metadata" warning exists; no orphan detection or test page validation |
 | Phase 5: Documentation | ❌ Not started | No CONTRIBUTING.md |
 
@@ -105,26 +105,25 @@ Test pages now contain only their test content with no frontmatter required.
 
 ---
 
-### Phase 3: Scaffolding Script
+### Phase 3: Scaffolding Script ✅
 
 **Goal**: Make adding new bookmarklets trivially easy.
 
-Create `scripts/new-bookmarklet.js`:
+**Implemented**: `scripts/new-bookmarklet.js`
 
 ```bash
-npm run new -- --name "My Bookmarklet" --author "Your Name"
+npm run new -- --name "My Bookmarklet" --author "Your Name" --description "What it does" --tags "accessibility"
 ```
 
 This generates:
 1. `bookmarklets/my-bookmarklet.js` with metadata template
 2. `bookmarklets/my-bookmarklet.html` test page stub
 
-**package.json addition**:
-```json
-"scripts": {
-  "new": "node scripts/new-bookmarklet.js"
-}
-```
+Features:
+- Converts name to kebab-case slug
+- Validates required name argument
+- Prevents overwriting existing files
+- Shows helpful next steps after creation
 
 ---
 
