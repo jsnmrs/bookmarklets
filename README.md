@@ -13,7 +13,23 @@ Tools for the browser.
 
 ## Adding a bookmarklet
 
-1. Create a new JS file in `bookmarklets/` with a JSDoc metadata block at the top:
+Use the scaffolding script to create the required files:
+
+```bash
+npm run new -- --name "My Bookmarklet" --author "Your Name" --description "What it does" --tags "accessibility"
+```
+
+This creates:
+- `bookmarklets/my-bookmarklet.js` with metadata template
+- `bookmarklets/my-bookmarklet.html` test page stub
+
+Then edit the generated files and run `npm start` to test locally.
+
+### Manual setup
+
+Alternatively, create files manually:
+
+1. Create a JS file in `bookmarklets/` with a JSDoc metadata block:
    ```javascript
    /**
     * @bookmarklet My Bookmarklet Name
@@ -27,9 +43,8 @@ Tools for the browser.
      // Your bookmarklet code here
    })();
    ```
-2. Optionally create a test HTML page in `bookmarklets/` with the same base name
+2. Optionally create a test HTML page in `bookmarklets/` with the same base name (no frontmatter needed)
 3. Run `npm start` to lint JS, build data files, and generate the static site
-4. The new entry will be added to the table of bookmarklets in `index.html`
 
 ### Metadata fields
 
