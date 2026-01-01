@@ -1,6 +1,6 @@
-const path = require("path");
+import path from "path";
 
-module.exports = {
+export default {
   layout: "test",
   eleventyComputed: {
     file: (data) => {
@@ -9,7 +9,7 @@ module.exports = {
     },
     permalink: (data) => {
       const basename = path.basename(data.page.inputPath, ".html");
-      return `${basename}/`;
+      return `/${basename}/`;
     },
     title: (data) => {
       const file = `${path.basename(data.page.inputPath, ".html")}.js`;
