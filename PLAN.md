@@ -1,5 +1,17 @@
 # Bookmarklet Codebase Improvement Plan
 
+## Implementation Status
+
+| Phase | Status | Notes |
+|-------|--------|-------|
+| Phase 1: Metadata in JS | ✅ Complete | All 62 bookmarklets have @bookmarklet metadata; build.js extracts and generates JSON |
+| Phase 2: Simpler test pages | ✅ Complete | Uses Option B: `bookmarklets.11tydata.cjs` computes `file`, `permalink`, `title`, and `layout` from filename; all frontmatter removed from HTML test pages |
+| Phase 3: Scaffolding | ❌ Not started | No scaffolding script exists |
+| Phase 4: Validation | ⚠️ Partial | Basic "missing metadata" warning exists; no orphan detection or test page validation |
+| Phase 5: Documentation | ❌ Not started | No CONTRIBUTING.md |
+
+---
+
 ## Current State Analysis
 
 ### What Works Well
@@ -74,38 +86,22 @@ Add JSDoc-style metadata block to each bookmarklet:
 
 ---
 
-### Phase 2: Auto-Generated Test Page Stubs
+### Phase 2: Auto-Generated Test Page Stubs ✅
 
 **Goal**: Reduce boilerplate for test pages by auto-generating the frontmatter.
 
-#### Option A: Simplified Frontmatter (Recommended)
-Test pages only need to specify the file reference:
+**Implemented**: Option B (Convention-Based)
 
-```yaml
----
-file: are-ya-hidden.js
----
-<section>
-  <!-- Test content only -->
-</section>
-```
-
-The layout template derives all other data (`permalink`, `title`, `description`) from the bookmarklets data.
-
-**Layout change** (`_includes/layouts/test.html`):
-```liquid
----
-layout: page
-permalink: "{{ file | replace: '.js', '/' }}"
----
-{% assign bm = bookmarklets | where: "file", file | first %}
-<h1>{{ bm.bookmarklet }}</h1>
-...
-```
-
-#### Option B: Convention-Based (No Frontmatter Needed)
-Use Eleventy's computed data to auto-match HTML files to their JS counterparts by filename convention:
+Created `bookmarklets/bookmarklets.11tydata.cjs` that uses Eleventy's computed data to auto-match HTML files to their JS counterparts by filename convention:
 - `bookmarklets/foo.js` → auto-matched by `bookmarklets/foo.html`
+
+The directory data file computes:
+- `layout`: Always `test`
+- `file`: Derived from HTML filename (e.g., `foo.html` → `foo.js`)
+- `permalink`: Derived from HTML filename (e.g., `foo.html` → `foo/`)
+- `title`: Looked up from bookmarklets data by file
+
+Test pages now contain only their test content with no frontmatter required.
 
 ---
 
