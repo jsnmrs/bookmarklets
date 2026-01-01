@@ -1,3 +1,12 @@
+/**
+ * @bookmarklet Titles
+ * @description Display all titles
+ * @author Ian Lloyd
+ * @authorUrl https://a11y-tools.com/bookmarklets/
+ * @tags accessibility, wcag:2.4.2
+ * @auditing true
+ * @pageTest false
+ */
 (function () {
   "use strict";
   function listThingsWithTitles() {

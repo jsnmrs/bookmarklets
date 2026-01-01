@@ -1,3 +1,11 @@
+/**
+ * @bookmarklet Viewport
+ * @description Display viewport width and height
+ * @author jakob-e
+ * @authorUrl https://codepen.io/jakob-e/pen/qEZZox/top/
+ * @tags diagnostic
+ * @pageTest self
+ */
 (function () {
   var d = document,
     w = window,

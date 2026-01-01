@@ -1,3 +1,12 @@
+/**
+ * @bookmarklet WTFocus
+ * @description Display information with focusable elements
+ * @author Ian Lloyd
+ * @authorUrl https://a11y-tools.com/bookmarklets/
+ * @tags accessibility, wcag:2.4.7, wcag:4.1.2
+ * @auditing true
+ * @pageTest self
+ */
 (function () {
   "use strict";
   function WTFocus() {
@@ -30,10 +39,10 @@
       x = !1,
       v = !1;
     function T() {
-      ((y = !1), (h = !1));
+      (y = !1), (h = !1);
     }
     function k(e, t, o, n, a) {
-      (f &&
+      f &&
         ((t = t.split("<").join("&lt;").split(">").join("&gt;")),
         (g += "<li"),
         (a || n) &&
@@ -46,28 +55,28 @@
         h && (g += b),
         (g += e + "</span>&nbsp;" + t + "</li>\n")),
         (t = t.replace("&lt;", "<").replace("&gt;", ">")),
-        console.log("%c" + e + '"' + t + '"', o));
+        console.log("%c" + e + '"' + t + '"', o);
     }
     function F() {
       const e = document.createElement("button");
-      ((e.textContent = "Close (Esc)"),
+      (e.textContent = "Close (Esc)"),
         e.setAttribute("type", "button"),
         e.setAttribute("class", "panel-btn"),
         e.addEventListener("click", () => {
           W();
-        }));
+        });
       const t = document.createElement("button");
-      ((t.textContent = "Change Mode (M)"),
+      (t.textContent = "Change Mode (M)"),
         t.setAttribute("type", "button"),
         t.setAttribute("class", "panel-btn"),
         t.addEventListener("click", (e) => {
           S();
         }),
         r.appendChild(e),
-        r.appendChild(t));
+        r.appendChild(t);
     }
     function S() {
-      (v
+      v
         ? (document
             .querySelector("#WTFocusPanel")
             .classList.remove("curtainsMode"),
@@ -84,13 +93,13 @@
           (v = !0),
           (m = "")),
         C(e),
-        e.focus());
+        e.focus();
     }
     function W() {
-      (document.querySelector("#WTFocusCurtain").remove(),
+      document.querySelector("#WTFocusCurtain").remove(),
         document.querySelector("#WTFocusPanel").remove(),
         document.querySelector("#panelStyles").remove(),
-        document.querySelector("#focusStyles").remove());
+        document.querySelector("#focusStyles").remove();
     }
     function C(e) {
       const t = e.getBoundingClientRect(),
@@ -124,10 +133,10 @@
             (r.style.right = "auto"),
             r.classList.remove("toLeft"));
     }
-    (console.clear(),
+    console.clear(),
       (function () {
         const e = document.createElement("style");
-        (e.setAttribute("type", "text/css"),
+        e.setAttribute("type", "text/css"),
           e.setAttribute("id", "panelStyles"),
           (e.textContent =
             ".dupeAccName {outline:4px dashed #CC3300!important;outline-offset:" +
@@ -137,20 +146,20 @@
             "px solid black!important;outline-offset:" +
             u +
             "px!important;overflow:visible;/*background:yellow!important;color:black!important;*/} .WTFocusTempFocusStyle.dupeAccName:focus {outline-color:#CC3300!important;} .visually-hidden {clip-path: inset(100%);clip: rect(1px, 1px, 1px, 1px);height: 1px;overflow: hidden;position: absolute;white-space: nowrap;width: 1px;}#WTFocusCurtain {background:black;position: fixed;top: 0;bottom: 0;left: 0;right: 0;z-index:49999}"),
-          document.querySelector("body").appendChild(e));
+          document.querySelector("body").appendChild(e);
       })(),
       document.querySelector("#WTFocusCurtain") && W(),
       (f = !0),
       (g = ""),
       (function (e) {
         const t = document.createElement("style");
-        (t.setAttribute("type", "text/css"),
+        t.setAttribute("type", "text/css"),
           t.setAttribute("id", "focusStyles"),
           (t.textContent =
             "#WTFocusPanel.error {background:darkred;} #WTFocusPanel.warning {background:#CC3300;} #WTFocusPanel.curtainsMode.error {background:black;} #WTFocusPanel.curtainsMode {z-index:50000;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);} #WTFocusPanel.curtainsMode.warning {background:black;} #WTFocusPanel[hidden] {display:none;} #WTFocusPanel * {text-align:left} #WTFocusPanel {border:2px solid #fff;z-index:1000;text-shadow:none;font-family:sans-serif;display:block;text-align:left;position: absolute;z-index:10000;background: black;padding: 20px 20px;width:" +
             e +
             "px;font-size:16px;} #WTFocusPanel button {font-weight:bold;background:none;color:#fff;padding:3px 10px;font-size:14px;border:1px solid #fff;display:inline-block;margin:10px 1em -10px 0;} #WTFocusPanel ul,#WTFocusPanel li {margin:0;padding:0;list-style:none} #WTFocusPanel li {margin:3px 0;background:#fff;color:#333;padding:2px} #WTFocusPanel li.outline {outline:4px solid rgb(58, 190, 58);outline-offset:-4px;padding:8px} #WTFocusPanel.error:before {background:darkred} #WTFocusPanel.warning:before {background:#CC3300} #WTFocusPanel:before {content:'';display:block;height:20px;width:20px;transform:rotate(45deg);position:absolute;background:#000;left:-12px;top:3px;border:2px solid #fff;border-right:none;border-top:none;} #WTFocusPanel.toBottom:before {top:auto;bottom:3px} #WTFocusPanel.toLeft:before {left:auto;right:-12px;border:2px solid #fff;border-left:none;border-bottom:none;} #WTFocusPanel.curtainsMode {outline:10px solid orange;} #WTFocusPanel.curtainsMode:before {display:none;} #WTFocusPanel.curtainsMode li {display:none;} #WTFocusPanel.curtainsMode li.visible {display:block;} #WTFocusPanel.curtainsMode li span {display:none!important;} "),
-          document.querySelector("head").appendChild(t));
+          document.querySelector("head").appendChild(t);
       })(s),
       i.setAttribute("id", "WTFocusCurtain"),
       i.setAttribute("hidden", "hidden"),
@@ -171,12 +180,12 @@
           document.querySelector("#WTFocusPanel") &&
           S();
       }),
-      F());
+      F();
     let N = [];
     Array.from(t).forEach(function (i) {
       i.classList.add("WTFocusTempFocusStyle");
       const c = i.querySelectorAll("style");
-      (Array.from(c).forEach(function (e) {
+      Array.from(c).forEach(function (e) {
         e.remove();
       }),
         i.addEventListener("focus", () => {
@@ -212,7 +221,7 @@
             "input" == s)
           ) {
             let e = i.getAttribute("type").toLowerCase();
-            ("text" === e && (c = "textbox"),
+            "text" === e && (c = "textbox"),
               "range" === e && (c = "slider"),
               "number" === e && (c = "spinbutton"),
               ("checkbox" !== e && "radio" !== e) || (c = e),
@@ -220,22 +229,22 @@
                 "image" !== e &&
                 "reset" !== e &&
                 "submit" !== e) ||
-                (c = "button"));
+                (c = "button");
           }
-          ((e = i),
+          (e = i),
             Array.from(t).forEach(function (e) {
               e.classList.remove("dupeAccName");
-            }));
+            });
           let u = !1;
-          ((y = !1), (h = !1));
+          (y = !1), (h = !1);
           const d = i.querySelectorAll(
             "img, [role='image'][aria-label], [role='img'][aria-label]"
           );
-          ((u = d.length > 0) &&
+          (u = d.length > 0) &&
             Array.from(d).forEach(function (e) {
               const t = document.createElement("SPAN");
               var o, n;
-              (t.setAttribute("class", "visually-hidden"),
+              t.setAttribute("class", "visually-hidden"),
                 t.setAttribute(
                   "style",
                   "clip-path: inset(100%);clip: rect(1px, 1px, 1px, 1px);height: 1px;overflow: hidden;position: absolute;white-space: nowrap;width: 1px;"
@@ -247,12 +256,12 @@
                   e.getAttribute("aria-label") &&
                   (t.textContent = " " + e.getAttribute("aria-label") + " "),
                 (o = t),
-                (n = e).parentNode.insertBefore(o, n.nextSibling));
+                (n = e).parentNode.insertBefore(o, n.nextSibling);
             }),
             setTimeout(function () {
               i.classList.add("WTFocusTempFocusStyle");
             }, 100),
-            (g = ""));
+            (g = "");
           const b = i.tagName.toLowerCase();
           let p = i.getAttribute("role");
           p && (p = i.getAttribute("role").toLowerCase());
@@ -300,12 +309,13 @@
             R = !1,
             V = "",
             D = !1;
-          (f && C(i), (P = P.trim()));
+          f && C(i), (P = P.trim());
           const Y = (function (e, t) {
             for (
               ;
               (e = e.parentElement) &&
               !(e.matches || e.matchesSelector).call(e, t);
+
             );
             return e;
           })(i, "label");
@@ -352,7 +362,7 @@
             "input" === b)
           ) {
             const e = i.getAttribute("type");
-            ("submit" === e &&
+            "submit" === e &&
               "N/A" === z &&
               ((H = "Submit"), (V = "Not provided (using default)")),
               "image" === e &&
@@ -360,7 +370,7 @@
                 ((H = "Submit"), (V = "Not provided (using default)")),
               "cancel" === e &&
                 "N/A" === z &&
-                ((H = "Cancel"), (V = "Not provided (using default)")));
+                ((H = "Cancel"), (V = "Not provided (using default)"));
           }
           if (
             ("N/A" !== I && ((H = I), (V = "title attribute")),
@@ -390,7 +400,7 @@
               f && r.classList.add("warning");
               const e = document.querySelectorAll("[data-accname='" + H + "']"),
                 t = e.length;
-              (k(m, H, a, !1, !0),
+              k(m, H, a, !1, !0),
                 x ||
                   (Array.from(e).forEach(function (e) {
                     e.classList.add("dupeAccName");
@@ -406,13 +416,13 @@
                 Array.from(e).forEach(function (e) {
                   console.log(e);
                 }),
-                k("Accessible Name Source: ", V, a));
+                k("Accessible Name Source: ", V, a);
             }
           } else
-            (f && (r.classList.remove("error"), r.classList.remove("warning")),
+            f && (r.classList.remove("error"), r.classList.remove("warning")),
               k(m, H, n, !1, !0),
-              k("Accessible Name Source: ", V, n));
-          ((h = !1),
+              k("Accessible Name Source: ", V, n);
+          (h = !1),
             k("HTML Element: ", v, n),
             k("Role: ", c, "color:#333;background:#fff;", !1, !0),
             f ||
@@ -517,9 +527,9 @@
               ((document.querySelector("#WTFocusPanel").innerHTML =
                 '<ul role="list">' + g + "</ul>"),
               document.querySelector("#WTFocusPanel").removeAttribute("hidden"),
-              F()));
+              F());
           const K = document.querySelectorAll("[data-temp-node]");
-          (Array.from(K).forEach(function (e) {
+          Array.from(K).forEach(function (e) {
             e.remove();
           }),
             i.setAttribute("data-accname", H),
@@ -538,29 +548,29 @@
                   );
                   o.setAttribute("data-dupe", "true");
                 } else N.push(e);
-              })(H, i));
-        }));
+              })(H, i);
+        });
     });
     let E = !1;
-    (!(function () {
+    !(function () {
       if (
         ((p = document.activeElement),
         Array.from(t).forEach(function (e) {
-          (document.activeElement === e && e.blur(), e.focus());
+          document.activeElement === e && e.blur(), e.focus();
         }),
         (E = !0),
         "BODY" === p.tagName)
       ) {
         const e = document.querySelector("body");
-        (e.setAttribute("tabindex", "-1"),
+        e.setAttribute("tabindex", "-1"),
           e.focus(),
           document
             .querySelector("#WTFocusPanel")
-            .setAttribute("hidden", "hidden"));
+            .setAttribute("hidden", "hidden");
       } else p.focus();
       console.clear();
     })(),
-      console.log("had focus = ", e));
+      console.log("had focus = ", e);
   }
   WTFocus();
 })();

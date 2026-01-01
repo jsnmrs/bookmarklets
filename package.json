@@ -11,7 +11,8 @@
     "test": "npm run lint && npm run build",
     "start": "npm run test && eleventy --serve",
     "build": "node build.js",
-    "buildprod": "npm run lint && eleventy"
+    "buildprod": "npm run lint && eleventy",
+    "new": "node scripts/new-bookmarklet.js"
   },
   "repository": {
     "type": "git",
@@ -23,11 +24,11 @@
   "author": "Jason Morris",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "esbuild": "^0.27.0",
-    "eslint": "^9.39.1",
+    "esbuild": "^0.27.2",
+    "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "netscape-bookmarks": "^0.1.1",
-    "prettier": "^3.7.3"
+    "prettier": "^3.7.4"
   }
 }

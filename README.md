@@ -13,11 +13,50 @@ Tools for the browser.
 
 ## Adding a bookmarklet
 
-1. Edit [`data/bookmarklets.json`](/data/bookmarklets.json) and add a new entry, following the schema used on the rest of the file
-2. Create a new JS file (and optionally a test HTML page) for the new entry
-3. Add code
-4. Run `npm start` to lint JS, build data file, and generate static site
-5. New entry will be added to the table of bookmarklets in `index.html`
+Use the scaffolding script to create the required files:
+
+```bash
+npm run new -- --name "My Bookmarklet" --author "Your Name" --description "What it does" --tags "accessibility"
+```
+
+This creates:
+- `bookmarklets/my-bookmarklet.js` with metadata template
+- `bookmarklets/my-bookmarklet.html` test page stub
+
+Then edit the generated files and run `npm start` to test locally.
+
+### Manual setup
+
+Alternatively, create files manually:
+
+1. Create a JS file in `bookmarklets/` with a JSDoc metadata block:
+   ```javascript
+   /**
+    * @bookmarklet My Bookmarklet Name
+    * @description What the bookmarklet does
+    * @author Your Name
+    * @authorUrl https://example.com
+    * @tags accessibility, utility
+    * @pageTest true
+    */
+   (function() {
+     // Your bookmarklet code here
+   })();
+   ```
+2. Optionally create a test HTML page in `bookmarklets/` with the same base name (no frontmatter needed)
+3. Run `npm start` to lint JS, build data files, and generate the static site
+
+### Metadata fields
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `@bookmarklet` | Yes | Display name of the bookmarklet |
+| `@description` | Yes | Brief description of what it does |
+| `@author` | No | Original author's name |
+| `@authorUrl` | No | Link to author or source |
+| `@tags` | No | Comma-separated list of tags |
+| `@auditing` | No | Set to `true` for auditing favorites |
+| `@pageTest` | No | `true`, `false`, or `self` for test page behavior |
 
 ## Related web tools
 

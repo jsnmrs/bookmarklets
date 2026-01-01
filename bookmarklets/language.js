@@ -1,3 +1,12 @@
+/**
+ * @bookmarklet Language of page/parts
+ * @description Display all lang attributes on page
+ * @author Jason Morris
+ * @authorUrl https://jasonmorris.com
+ * @tags accessibility, wcag:3.1.1, wcag:3.1.2
+ * @auditing true
+ * @pageTest true
+ */
 var el = document.querySelectorAll("[lang]"),
   page = document.querySelector("html[lang]"),
   msg = "";

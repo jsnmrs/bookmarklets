@@ -1,3 +1,12 @@
+/**
+ * @bookmarklet Open 1280x1024
+ * @description Opens a new window with the current URL at 1280x1024
+ * @author Mike in a CSS Tricks article comment
+ * @authorUrl https://css-tricks.com/snippets/javascript/1024x768-bookmarklet/#comment-1766738
+ * @tags accessibility, wcag:1.4.4, wcag:1.4.10
+ * @auditing true
+ * @pageTest true
+ */
 (function () {
   var id = "w" + new Date().getTime();
   var options =

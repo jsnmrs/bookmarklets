@@ -1,3 +1,12 @@
+/**
+ * @bookmarklet Headings
+ * @description Display level of all page headings
+ * @author Jonathan Avila
+ * @authorUrl https://github.com/mraccess77/mraccess77.github.io/blob/master/favlets/headings.js
+ * @tags accessibility, wcag:1.3.1, wcag:2.4.6
+ * @auditing true
+ * @pageTest self
+ */
 // ***********************************************
 function traverseFrames(doc) {
   showHeading(doc);

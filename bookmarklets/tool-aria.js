@@ -1,3 +1,11 @@
+/**
+ * @bookmarklet ARIA
+ * @description Display ARIA information for accessibility testing
+ * @author Paul J. Adam
+ * @authorUrl https://pauljadam.com/bookmarklets/aria.html
+ * @tags accessibility, external, wcag:4.1.2
+ * @pageTest self
+ */
 (function () {
   document.body.appendChild(document.createElement("script")).src =
     "https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/aria.js";

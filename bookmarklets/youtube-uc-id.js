@@ -1,3 +1,11 @@
+/**
+ * @bookmarklet Get YouTube UC ID
+ * @description Fetches UC ID while on a YouTube profile page
+ * @author Jason Morris
+ * @authorUrl https://jasonmorris.com
+ * @tags utility
+ * @pageTest false
+ */
 var result = document
   .querySelector("link[rel=canonical]")
   .getAttribute("href")

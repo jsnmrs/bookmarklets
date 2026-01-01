@@ -1,3 +1,12 @@
+/**
+ * @bookmarklet Links
+ * @description Display all links
+ * @author Ian Lloyd
+ * @authorUrl https://a11y-tools.com/bookmarklets/
+ * @tags accessibility, wcag:2.4.4
+ * @auditing true
+ * @pageTest false
+ */
 (function () {
   "use strict";
   function listLinks() {

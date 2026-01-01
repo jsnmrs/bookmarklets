@@ -1,3 +1,12 @@
+/**
+ * @bookmarklet Validate
+ * @description Validate HTML of DOM
+ * @author Deque
+ * @authorUrl https://dequeuniversity.com/validator
+ * @tags diagnostic, external, wcag:4.1.1
+ * @auditing true
+ * @pageTest self
+ */
 (function () {
   (function () {
     var doctypeNode = document.doctype;

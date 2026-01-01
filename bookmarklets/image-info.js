@@ -1,3 +1,11 @@
+/**
+ * @bookmarklet Image info
+ * @description Display image alt, role, title, aria-label, aria-labelledby
+ * @author Jonathan Avila
+ * @authorUrl https://github.com/mraccess77/mraccess77.github.io/blob/master/favlets/images.js
+ * @tags accessibility, wcag:1.1.1, wcag:1.4.5
+ * @pageTest true
+ */
 // *********************************** //
 function traverseFrames(doc, _framesObj) {
   // check for alt, aria-label,title, or aria-labelledby attribute in current document and then check it's frames

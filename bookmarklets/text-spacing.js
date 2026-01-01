@@ -1,3 +1,12 @@
+/**
+ * @bookmarklet Text spacing
+ * @description Test on WCAG 1.4.12 Text Spacing
+ * @author Steve Faulkner
+ * @authorUrl https://codepen.io/stevef/pen/YLMqbo
+ * @tags accessibility, wcag:1.4.12
+ * @auditing true
+ * @pageTest self
+ */
 (function () {
   var d = document,
     id = "phltsbkmklt",

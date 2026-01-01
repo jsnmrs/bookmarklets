@@ -1,3 +1,11 @@
+/**
+ * @bookmarklet Contrast checker
+ * @description Contrast checker for color combinations
+ * @author WebAIM
+ * @authorUrl https://webaim.org/resources/contrastchecker/bookmarklet
+ * @tags accessibility, external, wcag:1.4.3, wcag:1.4.11
+ * @pageTest false
+ */
 (function () {
   var constrastletelem = document.getElementById("contrastletdragable");
   if (constrastletelem == null) {

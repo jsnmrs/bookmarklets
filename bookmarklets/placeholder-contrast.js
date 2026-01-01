@@ -1,3 +1,12 @@
+/**
+ * @bookmarklet Placeholder contrast checker
+ * @description Measure contrast of placeholder text
+ * @author  Jason Morris
+ * @authorUrl https://jasonmorris.com
+ * @tags accessibility, wcag:1.4.3
+ * @auditing true
+ * @pageTest true
+ */
 javascript: (function () {
   // Helper function to convert RGB to relative luminance
   function getLuminance(r, g, b) {
