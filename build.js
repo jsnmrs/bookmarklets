@@ -138,6 +138,28 @@ async function discoverBookmarklets() {
   return { bookmarklets, helpers };
 }
 
+// Valid tag taxonomy
+const VALID_CATEGORIES = ["accessibility", "diagnostic", "utility"];
+const VALID_MODIFIERS = ["external"];
+const WCAG_PATTERN = /^wcag:\d+\.\d+\.\d+$/;
+
+/**
+ * Validate a single tag against the taxonomy.
+ * Returns null if valid, or an error message if invalid.
+ */
+function validateTag(tag) {
+  if (VALID_CATEGORIES.includes(tag)) {
+    return null;
+  }
+  if (VALID_MODIFIERS.includes(tag)) {
+    return null;
+  }
+  if (WCAG_PATTERN.test(tag)) {
+    return null;
+  }
+  return `Invalid tag "${tag}". Must be a category (${VALID_CATEGORIES.join(", ")}), modifier (${VALID_MODIFIERS.join(", ")}), or WCAG reference (wcag:X.X.X)`;
+}
+
 /**
  * Validate bookmarklets for completeness and consistency.
  * Returns errors (build-breaking) and warnings (informational).
@@ -185,6 +207,21 @@ function validateBookmarklets(bookmarklets, allJsFiles, helpers) {
     }
     if (!bookmarklet.tags || bookmarklet.tags.length === 0) {
       warnings.push(`${file}: Missing @tags`);
+    } else {
+      // Validate tag taxonomy
+      let hasCategory = false;
+      for (const tag of bookmarklet.tags) {
+        const tagError = validateTag(tag);
+        if (tagError) {
+          warnings.push(`${file}: ${tagError}`);
+        }
+        if (VALID_CATEGORIES.includes(tag)) {
+          hasCategory = true;
+        }
+      }
+      if (!hasCategory) {
+        warnings.push(`${file}: Missing category tag (${VALID_CATEGORIES.join(", ")})`);
+      }
     }
     if (bookmarklet.pageTest === undefined) {
       warnings.push(`${file}: Missing @pageTest`);

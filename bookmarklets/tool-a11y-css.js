@@ -3,7 +3,7 @@
  * @description Warns about possible risks and mistakes in HTML code
  * @author Gaël Poupard
  * @authorUrl https://ffoodd.github.io/a11y.css/
- * @tags accessibility, css, external
+ * @tags accessibility, external
  * @pageTest false
  */
 (function () {

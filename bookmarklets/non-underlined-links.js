@@ -3,7 +3,7 @@
  * @description Display information about links without underlines
  * @author Ian Lloyd
  * @authorUrl https://a11y-tools.com/bookmarklets/
- * @tags 1.4.1 Use of Color (A)
+ * @tags accessibility, wcag:1.4.1
  * @auditing true
  * @pageTest true
  */

@@ -3,7 +3,7 @@
  * @description Measure contrast of placeholder text
  * @author  Jason Morris
  * @authorUrl https://jasonmorris.com
- * @tags accessibility, 1.4.3 Contrast (Minimum) (AA)
+ * @tags accessibility, wcag:1.4.3
  * @auditing true
  * @pageTest true
  */

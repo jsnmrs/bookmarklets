@@ -3,7 +3,7 @@
  * @description Test on WCAG 1.4.12 Text Spacing
  * @author Steve Faulkner
  * @authorUrl https://codepen.io/stevef/pen/YLMqbo
- * @tags 1.4.12 Text Spacing (AA)
+ * @tags accessibility, wcag:1.4.12
  * @auditing true
  * @pageTest self
  */

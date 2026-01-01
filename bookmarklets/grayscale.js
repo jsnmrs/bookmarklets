@@ -3,7 +3,7 @@
  * @description Show entire page in gray scale (no color)
  * @author Level Access
  * @authorUrl https://labs.levelaccess.com/index.php/Grayscale_Favlet
- * @tags accessibility
+ * @tags accessibility, wcag:1.4.1
  * @pageTest false
  */
 (function () {

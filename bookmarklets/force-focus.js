@@ -3,7 +3,7 @@
  * @description Adds a 4 pixel solid orange outline around all focusable elements
  * @author Paul J. Adam
  * @authorUrl https://pauljadam.com/bookmarklets/focus.html
- * @tags accessibility
+ * @tags accessibility, wcag:2.4.7
  * @auditing true
  * @pageTest false
  */

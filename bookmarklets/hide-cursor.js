@@ -3,7 +3,7 @@
  * @description Hides cursor from window to encourage keyboard use
  * @author Iain Bean
  * @authorUrl https://iainbean.com/posts/2020/an-opinionated-guide-to-accessibility-testing/
- * @tags accessibility, 2.1, 2.1.1 (A), 2.1.2 (A), 2.1.4 (A), WCAG, cursor
+ * @tags accessibility, wcag:2.1.1, wcag:2.1.2, wcag:2.1.4
  * @pageTest false
  */
 var style = document.createElement("style"),

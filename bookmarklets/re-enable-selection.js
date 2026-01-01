@@ -3,7 +3,7 @@
  * @description Unset user-select CSS property
  * @author Adrian Roselli
  * @authorUrl https://adrianroselli.com/2015/01/css-bookmarklets-for-testing-and-fixing.html#Selection
- * @tags diagnostic
+ * @tags utility
  * @pageTest true
  */
 (function () {

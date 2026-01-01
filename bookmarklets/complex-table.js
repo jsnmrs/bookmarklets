@@ -3,7 +3,7 @@
  * @description Visualize headers and IDs in a complex table
  * @author Jonathan Avila
  * @authorUrl https://labs.levelaccess.com/index.php/Complex_Tables_Favlet
- * @tags accessibility
+ * @tags accessibility, wcag:1.3.1
  * @pageTest true
  */
 (function () {

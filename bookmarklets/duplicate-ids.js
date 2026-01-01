@@ -3,7 +3,7 @@
  * @description Display duplicated ID values
  * @author Jonathan Avila
  * @authorUrl https://github.com/mraccess77/mraccess77.github.io/blob/master/favlets/duplicateIds.js
- * @tags accessibility
+ * @tags accessibility, wcag:4.1.1
  * @pageTest true
  */
 function runDuplicateIds() {

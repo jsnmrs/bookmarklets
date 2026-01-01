@@ -215,9 +215,47 @@ bookmarklets/
 
 ---
 
-## Questions for Consideration
+## Tag Taxonomy
 
-1. **Metadata format**: JSDoc-style (`@tag`) vs JSON5 block vs YAML frontmatter in JS comments?
-2. **Test page generation**: Should test pages be fully auto-generated for simple cases (just showing the button)?
-3. **Categories/tags**: Current tags are inconsistent. Should there be a defined taxonomy?
-4. **`pageTest: "self"`**: Keep this convention or handle differently?
+Tags follow a standardized taxonomy with build-time validation.
+
+### Category tags (required, pick one)
+
+| Tag | Description |
+|-----|-------------|
+| `accessibility` | Accessibility testing and visualization tools |
+| `diagnostic` | Page information and debugging tools |
+| `utility` | Convenience and productivity tools |
+
+### Modifier tags (optional)
+
+| Tag | Description |
+|-----|-------------|
+| `external` | Loads external scripts or redirects to external services |
+
+### WCAG tags (optional)
+
+Format: `wcag:X.X.X` where X.X.X is the success criterion number.
+
+Examples:
+- `wcag:1.4.3` (Contrast)
+- `wcag:2.4.7` (Focus Visible)
+- `wcag:4.1.2` (Name, Role, Value)
+
+### Example
+
+```javascript
+/**
+ * @bookmarklet Headings
+ * @tags accessibility, wcag:1.3.1, wcag:2.4.6
+ */
+```
+
+---
+
+## Resolved Questions
+
+1. **Metadata format**: Keep JSDoc-style (`@tag`) - familiar, easy to parse, good IDE support.
+2. **Test page generation**: Keep manual - each test page needs specific HTML content.
+3. **Categories/tags**: Defined taxonomy above with build-time validation.
+4. **`pageTest: "self"`**: Keep - semantically useful for bookmarklets that work on any page.

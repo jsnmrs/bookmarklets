@@ -3,7 +3,7 @@
  * @description Fetches UC ID while on a YouTube profile page
  * @author Jason Morris
  * @authorUrl https://jasonmorris.com
- * @tags diagnostic, bmxfeed, YouTube
+ * @tags utility
  * @pageTest false
  */
 var result = document

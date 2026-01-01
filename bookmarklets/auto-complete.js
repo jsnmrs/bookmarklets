@@ -3,7 +3,7 @@
  * @description Display all fields with autocomplete
  * @author Rachele DiTullio
  * @authorUrl https://racheleditullio.com/blog/2023/11/autocomplete-accessibility-bookmarklet/
- * @tags 1.3.5 Identify Input Purpose (AA)
+ * @tags accessibility, wcag:1.3.5
  * @auditing true
  * @pageTest true
  */

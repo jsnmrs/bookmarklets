@@ -3,7 +3,7 @@
  * @description Test all printable character shortcut keys
  * @author Detlev Fischer
  * @authorUrl http://3needs.org/en/testing/code/kb-shortcuts.html
- * @tags 2.1.4 Character Key Shortcuts (A)
+ * @tags accessibility, wcag:2.1.4
  * @auditing true
  * @pageTest true
  */

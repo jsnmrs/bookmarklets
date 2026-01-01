@@ -3,7 +3,7 @@
  * @description Display level of all page headings in console
  * @author Mu-An Chiou
  * @authorUrl https://github.com/muan/headings
- * @tags accessibility
+ * @tags accessibility, wcag:1.3.1, wcag:2.4.6
  * @auditing true
  * @pageTest self
  */

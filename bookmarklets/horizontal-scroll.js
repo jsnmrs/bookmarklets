@@ -3,7 +3,7 @@
  * @description Alert when a horizontal scrollbar appears
  * @author  Jason Morris
  * @authorUrl https://jasonmorris.com
- * @tags accessibility
+ * @tags accessibility, wcag:1.4.10
  * @auditing true
  * @pageTest true
  */

@@ -3,7 +3,7 @@
  * @description Run a Lighthouse scan on current URL (regardless of broswer)
  * @author Jeremy Keith
  * @authorUrl https://adactio.com/journal/16523
- * @tags performance
+ * @tags diagnostic, external
  * @pageTest self
  */
 void window.open(

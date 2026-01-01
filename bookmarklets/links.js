@@ -3,7 +3,7 @@
  * @description Display all links
  * @author Ian Lloyd
  * @authorUrl https://a11y-tools.com/bookmarklets/
- * @tags accessibility
+ * @tags accessibility, wcag:2.4.4
  * @auditing true
  * @pageTest false
  */
