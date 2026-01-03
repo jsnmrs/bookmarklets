@@ -5,7 +5,7 @@
  * @authorUrl https://a11y-tools.com/bookmarklets/
  * @tags accessibility, wcag:2.4.4
  * @auditing true
- * @pageTest false
+ * @pageTest self
  */
 (function () {
   "use strict";

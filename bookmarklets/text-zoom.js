@@ -4,7 +4,7 @@
  * @author Ashlee M. Boyer
  * @authorUrl https://ashleemboyer.com/blog/an-accessibility-bookmarklet-for-testing-200-percent-text-size
  * @tags accessibility, wcag:1.4.4
- * @pageTest false
+ * @pageTest self
  */
 (function () {
   const htmlElement = document.querySelector("html");
