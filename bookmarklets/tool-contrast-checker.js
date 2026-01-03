@@ -33,9 +33,9 @@
     contrastletclose.style.float = "right";
     contrastletclose.style.padding = "0";
     contrastletclose.style.border = "0";
-    contrastletclose.style.borderTop = "1pxsolid#0f2c65";
-    contrastletclose.style.borderRight = "1pxsolid#0f2c65";
-    contrastletclose.setAttribute("aria-label", "CloseContrastChecker");
+    contrastletclose.style.borderTop = "1px solid #0f2c65";
+    contrastletclose.style.borderRight = "1px solid #0f2c65";
+    contrastletclose.setAttribute("aria-label", "Close Contrast Checker");
     contrastletclose.addEventListener(
       "click",
       function () {
@@ -91,7 +91,7 @@
     document.addEventListener("securitypolicyviolation", (e) => {
       contrastlet.remove();
       var contrastleterrortext = document.createTextNode(
-        "TheContentSecurityPolicyonthispagedoesnotallowembeddediframes.TheContrastCheckerBookmarkletcannotrunonthispage.PressEsctodismissthismessage."
+        "The Content Security Policy on this page does not allow embedded iframes.The Contrast Checker Bookmarklet cannot run on this page. Press Esc to dismiss this message."
       );
       contrastletdragable.style.backgroundColor = "#fff";
       contrastletdragable.appendChild(contrastleterrortext);
