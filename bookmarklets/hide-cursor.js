@@ -1,10 +1,10 @@
 /**
  * @bookmarklet Hide cursor
- * @description Hides cursor from window to encourage keyboard use
+ * @description Hides cursor from window to encourage keyboard use (refresh page to reset)
  * @author Iain Bean
  * @authorUrl https://iainbean.com/posts/2020/an-opinionated-guide-to-accessibility-testing/
  * @tags accessibility, wcag:2.1.1, wcag:2.1.2, wcag:2.1.4
- * @pageTest false
+ * @pageTest self
  */
 var style = document.createElement("style"),
   styleContent = document.createTextNode(

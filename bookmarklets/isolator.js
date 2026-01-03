@@ -4,7 +4,7 @@
  * @author Ian Lloyd
  * @authorUrl https://a11y-tools.com/bookmarklets/
  * @tags accessibility
- * @pageTest false
+ * @pageTest self
  */
 (function () {
   "use strict";

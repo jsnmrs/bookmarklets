@@ -4,7 +4,7 @@
  * @author Christoph Wagner
  * @authorUrl https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent#examples
  * @tags diagnostic
- * @pageTest false
+ * @pageTest self
  */
 document.designMode = document.designMode == "on" ? "off" : "on";
 void 0;

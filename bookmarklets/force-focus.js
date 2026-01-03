@@ -5,7 +5,7 @@
  * @authorUrl https://pauljadam.com/bookmarklets/focus.html
  * @tags accessibility, wcag:2.4.7
  * @auditing true
- * @pageTest false
+ * @pageTest self
  */
 var style = document.createElement("style"),
   styleContent = document.createTextNode(

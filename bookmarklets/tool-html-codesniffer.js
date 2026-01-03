@@ -4,7 +4,7 @@
  * @author Squiz Labs
  * @authorUrl https://squizlabs.github.io/HTML_CodeSniffer/
  * @tags accessibility, external
- * @pageTest false
+ * @pageTest self
  */
 (function () {
   var _p = "//squizlabs.github.io/HTML_CodeSniffer/build/";

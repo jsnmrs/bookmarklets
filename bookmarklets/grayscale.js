@@ -4,7 +4,7 @@
  * @author Level Access
  * @authorUrl https://labs.levelaccess.com/index.php/Grayscale_Favlet
  * @tags accessibility, wcag:1.4.1
- * @pageTest false
+ * @pageTest self
  */
 (function () {
   let style = document.createElement("style");

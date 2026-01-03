@@ -4,14 +4,14 @@
  * @author WebAIM
  * @authorUrl https://webaim.org/resources/contrastchecker/bookmarklet
  * @tags accessibility, external, wcag:1.4.3, wcag:1.4.11
- * @pageTest false
+ * @pageTest self
  */
 (function () {
   var constrastletelem = document.getElementById("contrastletdragable");
   if (constrastletelem == null) {
     var contrastletdragable = document.createElement("div");
     contrastletdragable.id = "contrastletdragable";
-    contrastletdragable.style.width = "384px";
+    contrastletdragable.style.width = "425px";
     contrastletdragable.style.position = "absolute";
     contrastletdragable.style.right = "20px";
     contrastletdragable.style.top = window.pageYOffset + 20 + "px";
@@ -33,9 +33,9 @@
     contrastletclose.style.float = "right";
     contrastletclose.style.padding = "0";
     contrastletclose.style.border = "0";
-    contrastletclose.style.borderTop = "1px solid #0f2c65";
-    contrastletclose.style.borderRight = "1px solid #0f2c65";
-    contrastletclose.setAttribute("aria-label", "Close Contrast Checker");
+    contrastletclose.style.borderTop = "1pxsolid#0f2c65";
+    contrastletclose.style.borderRight = "1pxsolid#0f2c65";
+    contrastletclose.setAttribute("aria-label", "CloseContrastChecker");
     contrastletclose.addEventListener(
       "click",
       function () {
@@ -48,9 +48,9 @@
     contrastletdragzone.appendChild(contrastletclose);
     var contrastlet = document.createElement("iframe");
     contrastlet.src =
-      "https://webaim.org/resources/contrastchecker/mini?ver=1&a=" +
+      "https://webaim.org/resources/contrastchecker/mini?ver=2&a=" +
       Math.random();
-    contrastlet.style.width = "380px";
+    contrastlet.style.width = "421px";
     contrastlet.style.height = "368px";
     contrastlet.style.margin = "0px";
     contrastlet.style.borderStyle = "solid";
@@ -69,9 +69,7 @@
       const dx = e.clientX - x;
       const dy = e.clientY - y;
       contrastletdragable.style.top = `${contrastletdragable.offsetTop + dy}px`;
-      contrastletdragable.style.left = `${
-        contrastletdragable.offsetLeft + dx
-      }px`;
+      contrastletdragable.style.left = `${contrastletdragable.offsetLeft + dx}px`;
       x = e.clientX;
       y = e.clientY;
     };
@@ -90,10 +88,10 @@
         contrastletdragable.remove();
       }
     });
-    document.addEventListener("securitypolicyviolation", () => {
+    document.addEventListener("securitypolicyviolation", (e) => {
       contrastlet.remove();
       var contrastleterrortext = document.createTextNode(
-        "The Content Security Policy on this page does not allow embedded iframes. The Contrast Checker Bookmarklet cannot run on this page. Press Esc to dismiss this message."
+        "TheContentSecurityPolicyonthispagedoesnotallowembeddediframes.TheContrastCheckerBookmarkletcannotrunonthispage.PressEsctodismissthismessage."
       );
       contrastletdragable.style.backgroundColor = "#fff";
       contrastletdragable.appendChild(contrastleterrortext);

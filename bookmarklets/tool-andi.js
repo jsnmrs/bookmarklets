@@ -5,7 +5,7 @@
  * @authorUrl https://www.ssa.gov/accessibility/andi/help/install.html
  * @tags accessibility, external
  * @auditing true
- * @pageTest false
+ * @pageTest self
  */
 void (function () {
   var andiScript = document.createElement("script");
