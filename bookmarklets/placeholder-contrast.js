@@ -61,8 +61,13 @@ javascript: (function () {
   console.group("Placeholder Contrast Analysis");
   if (isWebKit) {
     console.warn(
-      "⚠️ WebKit browsers (Safari, iOS) cannot accurately compute placeholder text colors. Results may be incorrect."
+      "⚠️ WebKit browsers (Safari, iOS) cannot accurately compute placeholder text colors."
     );
+    console.log(
+      "Found " + elements.length + " form elements with placeholders."
+    );
+    console.groupEnd();
+    return;
   }
   console.log("Analyzing " + elements.length + " form elements...\n");
 
