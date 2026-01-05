@@ -8,6 +8,12 @@
  * @pageTest true
  */
 javascript: (function () {
+  // Detect WebKit browsers (Safari, iOS browsers)
+  let isWebKit =
+    navigator.userAgent.indexOf("AppleWebKit") !== -1 &&
+    navigator.userAgent.indexOf("Chrome") === -1 &&
+    navigator.userAgent.indexOf("Chromium") === -1;
+
   // Helper function to convert RGB to relative luminance
   function getLuminance(r, g, b) {
     let [rs, gs, bs] = [r, g, b].map((c) => {
@@ -53,6 +59,11 @@ javascript: (function () {
   );
 
   console.group("Placeholder Contrast Analysis");
+  if (isWebKit) {
+    console.warn(
+      "⚠️ WebKit browsers (Safari, iOS) cannot accurately compute placeholder text colors. Results may be incorrect."
+    );
+  }
   console.log("Analyzing " + elements.length + " form elements...\n");
 
   elements.forEach((el, index) => {
