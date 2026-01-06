@@ -3,7 +3,7 @@
  * @description Identify instances of text-overflow: ellipsis
  * @author  Jason Morris
  * @authorUrl https://jasonmorris.com
- * @tags accessibility
+ * @tags accessibility, wcag:1.4.10
  * @pageTest true
  */
 (function () {
