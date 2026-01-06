@@ -11,7 +11,7 @@ document.addEventListener("securitypolicyviolation", cspCheck, false);
 var testScript = document.createElement("script");
 testScript.setAttribute(
   "src",
-  "https://jsnmrs.github.io/bookmarklets/bookmarklets/test-js-external.js"
+  "https://code.jasonmorris.com/bookmarklets/bookmarklets/test-js-external.js"
 );
 document.body.appendChild(testScript);
 
