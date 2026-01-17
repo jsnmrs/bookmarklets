@@ -1,5 +1,5 @@
 /**
- * @bookmarklet Background images
+ * @bookmarklet Background image highlight
  * @description Highlight all CSS background images
  * @author Zoe Mickley Gillenwater
  * @authorUrl https://zomigi.com/blog/bookmarklets-for-accessibility-testing/
