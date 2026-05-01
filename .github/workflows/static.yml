@@ -40,7 +40,7 @@ jobs:
       - name: Build with esbuild and Eleventy
         run: "npm run buildprod"
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./_site
 
