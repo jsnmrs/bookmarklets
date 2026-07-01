@@ -16,7 +16,7 @@
       a = "",
       r = "",
       l = "";
-    for (; o.parentNode; ) {
+    for (; o.parentNode;) {
       if ((t = o.parentNode).tagName) {
         i = t.tagName.toLowerCase();
         const e = t.querySelectorAll(":scope > " + o.tagName);

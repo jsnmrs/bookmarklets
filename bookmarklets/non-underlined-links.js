@@ -92,7 +92,7 @@
                     l = "",
                     a = "",
                     s = "";
-                  for (; o.parentNode; ) {
+                  for (; o.parentNode;) {
                     if ((t = o.parentNode).tagName) {
                       r = t.tagName.toLowerCase();
                       const e = t.querySelectorAll(o.tagName);
