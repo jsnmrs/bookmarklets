@@ -1,16 +1,112 @@
-
-<p>Does not account for <code>:focus-visible</code> at this time.</p>
-
-<p>A <a href="https://example.com">link</a> and a <button>button</button> walk into a bar...</p>
+<style>
+  .demo-focus-visible:focus-visible {
+    outline: 3px solid #d04a02;
+    outline-offset: 2px;
+  }
+  .demo-suppress:focus {
+    outline: 3px solid #005ea2;
+    outline-offset: 2px;
+  }
+  .demo-suppress:focus:not(:focus-visible) {
+    outline: 0;
+  }
+  .demo-hover:hover {
+    background: #ffe066;
+    text-decoration-thickness: 3px;
+  }
+  .demo-both:hover,
+  .demo-both:focus-visible {
+    background: #000;
+    color: #fff;
+  }
+  .demo-within {
+    border: 3px solid #ccc;
+    padding: 0 1rem 1rem;
+  }
+  .demo-within:focus-within {
+    border-color: #008817;
+  }
+  @media (min-width: 1px) {
+    .demo-media:focus-visible {
+      box-shadow: 0 0 0 4px #b50909;
+    }
+  }
+  .demo-nest {
+    & a:focus-visible {
+      outline: 3px dashed #6f42c1;
+      outline-offset: 2px;
+    }
+  }
+  .demo-transition {
+    transition: outline 2s;
+  }
+  .demo-transition:focus-visible {
+    outline: 3px solid #e52207;
+    outline-offset: 2px;
+  }
+  .demo-list li {
+    margin: 0.75rem 0;
+  }
+</style>
 
 <p>
-  <label for="badfield"
-    >Password field with <code>onpaste="return false;"</code></label
-  ><br /><input type="password" id="badfield" onpaste="return false;" />
+  Click the bookmarklet to show every keyboard focus style on the page at
+  once. Click it again for hover styles, a third time for both, and a fourth
+  time to remove them.
 </p>
 
-<p>
-  <label for="goodfield"
-    >Password field without <code>onpaste</code> attribute</label
-  ><br /><input type="password" id="goodfield" />
-</p>
+<ul class="demo-list">
+  <li>
+    <a class="demo-focus-visible" href="https://example.com"
+      >Link styled with <code>:focus-visible</code> only</a
+    >
+  </li>
+  <li>
+    <button type="button" class="demo-suppress">
+      Button that hides its <code>:focus</code> ring for mouse users with
+      <code>:focus:not(:focus-visible)</code>
+    </button>
+  </li>
+  <li>
+    <a class="demo-hover" href="https://example.com"
+      >Link with a <code>:hover</code> style only</a
+    >
+  </li>
+  <li>
+    <a class="demo-both" href="https://example.com"
+      >Link sharing one rule for <code>:hover</code> and
+      <code>:focus-visible</code></a
+    >
+  </li>
+  <li>
+    <a class="demo-media" href="https://example.com"
+      >Link whose <code>:focus-visible</code> rule sits inside
+      <code>@media</code></a
+    >
+  </li>
+  <li class="demo-nest">
+    <a href="https://example.com"
+      >Link styled with a nested <code>&amp; a:focus-visible</code> rule</a
+    >
+  </li>
+  <li>
+    <a class="demo-transition" href="https://example.com"
+      >Link with a two second <code>transition</code> on its outline</a
+    >
+  </li>
+  <li>
+    <button type="button">
+      Button with no author focus styles (browser default ring)
+    </button>
+  </li>
+</ul>
+
+<fieldset class="demo-within">
+  <legend>Fieldset with a <code>:focus-within</code> border</legend>
+  <p>
+    <label for="demo-text">Text field</label><br /><input
+      type="text"
+      id="demo-text"
+    />
+  </p>
+</fieldset>
