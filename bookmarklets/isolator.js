@@ -48,7 +48,8 @@
       e.classList.add("isolatorHighlight");
     }
     function d(e) {
-      (console.log("Isolator:", getXpath(e)), (o.innerHTML = getXpath(e)));
+      const t = "string" == typeof e ? e : getXpath(e);
+      (console.log("Isolator:", t), (o.innerHTML = t));
     }
     (Array.from(a).forEach((t) => {
       (t.addEventListener("click", (o) => {
