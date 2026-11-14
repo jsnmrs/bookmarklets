@@ -51,9 +51,9 @@
     }
 
     if (!sentinel) {
-      alert("no valid headers found");
+      alert("Complex table: no valid headers found.");
     }
   } else {
-    alert("No table cells found");
+    alert("Complex table: no table cells found.");
   }
 })();

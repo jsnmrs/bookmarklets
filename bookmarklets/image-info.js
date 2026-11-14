@@ -89,8 +89,10 @@ function run(doc) {
 
   // Display alert dialog with message with count of found properties
   alert(
-    _framesObj.foundCount +
-      " element(s) with alt, title, aria-label, aria-labelledby attributes found. "
+    "Image info: " +
+      _framesObj.foundCount +
+      (_framesObj.foundCount === 1 ? " element" : " elements") +
+      " with alt, title, aria-label, or aria-labelledby attributes found."
   );
 }
 

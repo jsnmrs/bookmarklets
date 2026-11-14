@@ -33,7 +33,9 @@
         document.body.appendChild(div);
       });
     } else {
-      alert("No input fields with autocomplete attribute found on this page.");
+      alert(
+        "Autocomplete: no input fields with an autocomplete attribute found on this page."
+      );
     }
   }
 })();

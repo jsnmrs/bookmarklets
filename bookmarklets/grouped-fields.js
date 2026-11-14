@@ -32,26 +32,23 @@
     }
     var o,
       a = document.querySelectorAll("fieldset");
-    (console.log(a),
-      Array.from(a).forEach((l) => {
-        (console.log(l),
-          r(l, e),
-          l.querySelector("legend") &&
-            t(
-              l,
-              'Group label (from fieldset > legend): <br><br>"' +
-                l.querySelector("legend").textContent +
-                '"',
-              e
-            ));
-      }),
+    (Array.from(a).forEach((l) => {
+      (r(l, e),
+        l.querySelector("legend") &&
+          t(
+            l,
+            'Group label (from fieldset > legend): <br><br>"' +
+              l.querySelector("legend").textContent +
+              '"',
+            e
+          ));
+    }),
       (e = "#66482e"),
       Array.from(
         document.querySelectorAll(
           "[role=group][aria-label],[role=region][aria-label]"
         )
       ).forEach((l) => {
-        console.log(l);
         let o = l.getAttribute("role").toLowerCase();
         (r(l, e),
           t(
@@ -70,7 +67,6 @@
           "[role=group][aria-labelledby],[role=region][aria-labelledby]"
         )
       ).forEach((l) => {
-        console.log(l);
         let o = l.getAttribute("role").toLowerCase();
         r(l, e);
         let a = "Source for aria-labelledby is missing/broken";
@@ -88,7 +84,8 @@
             e
           ));
       }),
-      0 === l && alert("No grouped fields found on this page"));
+      0 === l &&
+        alert("Grouped fields: no grouped fields found on this page."));
   }
   outlineGroupedFIelds();
 })();

@@ -9,14 +9,30 @@
  */
 var el = document.querySelectorAll("[lang]"),
   page = document.querySelector("html[lang]"),
-  msg = "";
+  parts = page ? el.length - 1 : el.length,
+  msg = "Language of page/parts: ";
 if (!page) {
-  msg += "Page is missing lang attribute\n";
+  msg += "the page is missing a lang attribute. ";
 } else {
-  msg += "The page lang attribute is " + page.getAttribute("lang") + "\n";
+  msg += 'the page lang attribute is "' + page.getAttribute("lang") + '". ';
 }
-for (var i = 0; i < el.length; i++) {
-  msg += el[i].tagName + " tag has " + el[i].getAttribute("lang") + "\n";
+msg +=
+  parts +
+  (parts === 1 ? " other element sets" : " other elements set") +
+  " a lang attribute.";
+if (el.length > 0) {
+  msg += " See the browser console for details.";
+  console.group("Language of page/parts");
+  for (var i = 0; i < el.length; i++) {
+    console.log(
+      el[i].tagName.toLowerCase() +
+        ' has lang="' +
+        el[i].getAttribute("lang") +
+        '"',
+      el[i]
+    );
+  }
+  console.groupEnd();
 }
 
 alert(msg);

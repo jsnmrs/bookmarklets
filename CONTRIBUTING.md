@@ -117,6 +117,18 @@ The HTML file contains only the test content (no frontmatter needed):
 <p>Content that exercises the bookmarklet's functionality.</p>
 ```
 
+## Console and alert output
+
+Bookmarklets report through the browser console and, when nothing else is visible, through `alert()`. Keep that output consistent:
+
+- Start every message with the bookmarklet's display name (the `@bookmarklet` value) and a colon. Example: `Duplicate IDs: 4 elements share an id with another element.`
+- Write complete sentences in sentence case, ending with a period, with no emoji or `%c` styling. Use numerals and real plurals ("1 element", "2 elements"), not "element(s)".
+- Let the console level carry severity. Use `console.log` for results and status, `console.warn` for accessibility issues and limitations (an unreadable stylesheet, a browser that can't compute a value), and `console.error` only when the bookmarklet itself fails.
+- Never call `console.clear()`. The console history belongs to the person auditing.
+- Put multi-item results in a `console.group` titled with the bookmarklet name, one `console.log` or `console.warn` per item, then `console.groupEnd()`. Pass objects and elements as extra arguments instead of stringifying them.
+- Use `alert()` only when the bookmarklet has no other visible output, and keep it to one or two sentences. When details exist, end with "See the browser console for details." When nothing is found, say so: `Name: no <things> found on this page.`
+- Remove debugging logs before committing.
+
 ## Build process
 
 The build process:
@@ -150,4 +162,5 @@ The build process:
 - [ ] Bookmarklet has all required metadata fields
 - [ ] Tags follow the taxonomy (category + optional WCAG)
 - [ ] Test page exists if `@pageTest` is `true`
+- [ ] Console and alert output follows the conventions above
 - [ ] `npm test` passes

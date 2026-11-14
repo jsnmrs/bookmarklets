@@ -12,14 +12,27 @@ function runDuplicateIds() {
 
   var results = [];
   find_duplicate_ids(col, results);
-  var strResults = results.length + " elements with duplicate ids" + "\n";
 
+  if (results.length === 0) {
+    alert("Duplicate IDs: no duplicate ids found on this page.");
+    return;
+  }
+
+  console.group("Duplicate IDs");
   results.forEach(function (item) {
     //item.style.border = "thin solid magenta";
     item.innerHTML = "";
-    strResults = strResults + item.outerHTML + "\n";
+    console.warn(
+      item.outerHTML,
+      document.querySelectorAll('[id="' + item.id + '"]')
+    );
   });
-  alert(strResults);
+  console.groupEnd();
+  alert(
+    "Duplicate IDs: " +
+      results.length +
+      " elements share an id with another element. See the browser console for details."
+  );
 }
 
 function find_duplicate_ids(arIDs, results) {

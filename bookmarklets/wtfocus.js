@@ -55,7 +55,7 @@
         h && (g += b),
         (g += e + "</span>&nbsp;" + t + "</li>\n")),
         (t = t.replace("&lt;", "<").replace("&gt;", ">")),
-        console.log("%c" + e + '"' + t + '"', o));
+        console.log(e + '"' + t + '"'));
     }
     function F() {
       const e = document.createElement("button");
@@ -133,21 +133,20 @@
             (r.style.right = "auto"),
             r.classList.remove("toLeft"));
     }
-    (console.clear(),
-      (function () {
-        const e = document.createElement("style");
-        (e.setAttribute("type", "text/css"),
-          e.setAttribute("id", "panelStyles"),
-          (e.textContent =
-            ".dupeAccName {outline:4px dashed #CC3300!important;outline-offset:" +
-            u +
-            "px!important;overflow:visible;} .WTFocusTempFocusStyle:focus {outline:" +
-            u +
-            "px solid black!important;outline-offset:" +
-            u +
-            "px!important;overflow:visible;/*background:yellow!important;color:black!important;*/} .WTFocusTempFocusStyle.dupeAccName:focus {outline-color:#CC3300!important;} .visually-hidden {clip-path: inset(100%);clip: rect(1px, 1px, 1px, 1px);height: 1px;overflow: hidden;position: absolute;white-space: nowrap;width: 1px;}#WTFocusCurtain {background:black;position: fixed;top: 0;bottom: 0;left: 0;right: 0;z-index:49999}"),
-          document.querySelector("body").appendChild(e));
-      })(),
+    ((function () {
+      const e = document.createElement("style");
+      (e.setAttribute("type", "text/css"),
+        e.setAttribute("id", "panelStyles"),
+        (e.textContent =
+          ".dupeAccName {outline:4px dashed #CC3300!important;outline-offset:" +
+          u +
+          "px!important;overflow:visible;} .WTFocusTempFocusStyle:focus {outline:" +
+          u +
+          "px solid black!important;outline-offset:" +
+          u +
+          "px!important;overflow:visible;/*background:yellow!important;color:black!important;*/} .WTFocusTempFocusStyle.dupeAccName:focus {outline-color:#CC3300!important;} .visually-hidden {clip-path: inset(100%);clip: rect(1px, 1px, 1px, 1px);height: 1px;overflow: hidden;position: absolute;white-space: nowrap;width: 1px;}#WTFocusCurtain {background:black;position: fixed;top: 0;bottom: 0;left: 0;right: 0;z-index:49999}"),
+        document.querySelector("body").appendChild(e));
+    })(),
       document.querySelector("#WTFocusCurtain") && W(),
       (f = !0),
       (g = ""),
@@ -191,7 +190,7 @@
         i.addEventListener("focus", () => {
           let c = i.getAttribute("role"),
             s = i.tagName.toLowerCase();
-          if ((console.clear(), c));
+          if (c);
           else if (
             (("article" != s &&
               "button" != s &&
@@ -379,10 +378,7 @@
             "N/A" !== j && ((H = j), (V = "<label> text")),
             "N/A" !== L && ((H = L), (V = "aria-label")),
             "N/A" !== q && ((H = B), (V = "aria-labelledby")),
-            console.log(
-              "%cACTIVE ELEMENT: ",
-              "background:#193c10;color:white;"
-            ),
+            console.log("WTFocus: active element"),
             console.log(i),
             (A = "true" === i.getAttribute("data-dupe")),
             (x = A && "" === H),
@@ -410,7 +406,7 @@
                     a
                   )),
                 console.log(
-                  "Elements on page that have identical accessible names:"
+                  "WTFocus: elements on page that have identical accessible names:"
                 ),
                 Array.from(e).forEach(function (e) {
                   console.log(e);
@@ -424,11 +420,7 @@
           ((h = !1),
             k("HTML Element: ", v, n),
             k("Role: ", c, "color:#333;background:#fff;", !1, !0),
-            f ||
-              console.log(
-                "%cACCESSIBLE NAME COMES FROM: ",
-                "background:#193c10;color:white;"
-              ),
+            f || console.log("WTFocus: accessible name comes from"),
             S && ((h = !0), k("Superfluous `role` attribute", "", a)),
             W && ((h = !0), k("Better to use a native HTML element", "", a)),
             (P = P.trim()),
@@ -551,7 +543,7 @@
         }));
     });
     let E = !1;
-    (!(function () {
+    !(function () {
       if (
         ((p = document.activeElement),
         Array.from(t).forEach(function (e) {
@@ -567,9 +559,7 @@
             .querySelector("#WTFocusPanel")
             .setAttribute("hidden", "hidden"));
       } else p.focus();
-      console.clear();
-    })(),
-      console.log("had focus = ", e));
+    })();
   }
   WTFocus();
 })();
