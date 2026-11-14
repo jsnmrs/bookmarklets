@@ -75,7 +75,7 @@ const jsContent = `/**
  */
 (function () {
   // TODO: Implement bookmarklet
-  console.log("${args.name} bookmarklet executed");
+  console.log("${args.name}: done.");
 })();
 `;
 
