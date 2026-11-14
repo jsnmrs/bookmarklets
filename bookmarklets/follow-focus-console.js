@@ -11,15 +11,17 @@
   if (window._focusLogEnabled) {
     document.removeEventListener("focusin", window._focusLogHandler);
     window._focusLogEnabled = false;
-    console.log("Focus logging disabled.");
-    alert("Focus logging disabled.");
+    console.log("Follow focus (in console): logging disabled.");
+    alert("Follow focus (in console): logging disabled.");
   } else {
     window._focusLogHandler = function (e) {
-      console.log("Focused:", e.target);
+      console.log("Follow focus (in console):", e.target);
     };
     document.addEventListener("focusin", window._focusLogHandler);
     window._focusLogEnabled = true;
-    console.log("Focus logging enabled.");
-    alert("Focus logging enabled. Open DevTools console (F12) to see results.");
+    console.log("Follow focus (in console): logging enabled.");
+    alert(
+      "Follow focus (in console): logging enabled. See the browser console for details."
+    );
   }
 })();

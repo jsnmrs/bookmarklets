@@ -6,4 +6,4 @@
  * @tags diagnostic
  * @pageTest self
  */
-alert("Your browser is not blocking JavaScript in favorites/bookmarks");
+alert("Test local JS: your browser is not blocking JavaScript in bookmarks.");

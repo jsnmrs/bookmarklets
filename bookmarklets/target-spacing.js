@@ -302,7 +302,7 @@
     document.body.appendChild(highlight);
   });
 
-  console.log("Target spacing analysis:", {
+  console.log("Target spacing check: analysis complete.", {
     total: results.length,
     violations: violations.length,
     warnings: warnings.length,

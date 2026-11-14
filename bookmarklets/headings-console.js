@@ -7,7 +7,7 @@
  * @auditing true
  * @pageTest self
  */
-let map = "";
+const lines = [];
 
 for (const heading of document.querySelectorAll("h1, h2, h3, h4, h5, h6")) {
   const text = getAccesibleName(heading);
@@ -18,15 +18,23 @@ for (const heading of document.querySelectorAll("h1, h2, h3, h4, h5, h6")) {
   ) {
     // visible
     const n = parseInt(heading.tagName.match(/\d/)[0]);
-    map +=
+    lines.push(
       new Array((n - 1) * 2).fill("-").join("") +
-      heading.tagName.toLowerCase() +
-      ": " +
-      text +
-      "\n";
+        heading.tagName.toLowerCase() +
+        ": " +
+        text
+    );
   }
 }
-console.log(map);
+if (lines.length === 0) {
+  console.log(
+    "Document outline in console: no visible headings found on this page."
+  );
+} else {
+  console.group("Document outline in console");
+  lines.forEach((line) => console.log(line));
+  console.groupEnd();
+}
 
 function getAccesibleName(element) {
   const labelledby = element.getAttribute("aria-labelledby");

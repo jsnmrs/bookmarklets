@@ -33,7 +33,7 @@
   filterRE = filterStrings.join("|");
   root = document.getElementById("results");
   if (!root) {
-    alert("No results container found.");
+    alert("Parsing only: no results container found.");
     return;
   }
   results = root.getElementsByTagName("li");
@@ -60,5 +60,10 @@
       }
     }
   }
-  alert("Complete. " + cnt + " items removed.");
+  alert(
+    "Parsing only: done. " +
+      cnt +
+      (cnt === 1 ? " item" : " items") +
+      " removed."
+  );
 })();

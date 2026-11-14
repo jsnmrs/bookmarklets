@@ -13,7 +13,13 @@
   var end = 8365;
   key();
   function key() {
-    console.log("pressed: " + n + ": " + String.fromCharCode(n));
+    console.log(
+      "Character key shortcuts: pressed " +
+        n +
+        " (" +
+        String.fromCharCode(n) +
+        ")."
+    );
     e = document.createEvent("Event");
     e.initEvent("keydown", true, false);
     e.key = String.fromCharCode(n);

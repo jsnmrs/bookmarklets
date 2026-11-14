@@ -18,5 +18,9 @@ document.body.appendChild(testScript);
 function cspCheck(e) {
   "use strict";
 
-  alert(e.violatedDirective + " breaks Content Security Policy (CSP)");
+  alert(
+    "Test CSP: " +
+      e.violatedDirective +
+      " breaks the Content Security Policy (CSP)."
+  );
 }
