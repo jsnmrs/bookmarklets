@@ -58,18 +58,19 @@ javascript: (function () {
     "input[placeholder], textarea[placeholder]"
   );
 
-  console.group("Placeholder Contrast Analysis");
+  const count =
+    elements.length +
+    (elements.length === 1 ? " form element" : " form elements");
+  console.group("Placeholder contrast checker");
   if (isWebKit) {
     console.warn(
-      "⚠️ WebKit browsers (Safari, iOS) cannot accurately compute placeholder text colors."
+      "WebKit browsers (Safari, iOS) cannot accurately compute placeholder text colors."
     );
-    console.log(
-      "Found " + elements.length + " form elements with placeholders."
-    );
+    console.log(count + " with a placeholder found.");
     console.groupEnd();
     return;
   }
-  console.log("Analyzing " + elements.length + " form elements...\n");
+  console.log("Analyzing " + count + " with a placeholder.");
 
   elements.forEach((el, index) => {
     let styles = window.getComputedStyle(el);
@@ -90,12 +91,12 @@ javascript: (function () {
       "::placeholder";
 
     console.group(`Element ${index + 1}: ${selector}`);
-    console.log("Placeholder Text:", el.placeholder);
-    console.log("Placeholder Color:", placeholderColor);
+    console.log("Placeholder text:", el.placeholder);
+    console.log("Placeholder color:", placeholderColor);
     console.log("Background:", backgroundColor);
     ratio < 4.5
-      ? console.log("🛑 Contrast Ratio:", ratio.toFixed(2))
-      : console.log("✅ Contrast Ratio:", ratio.toFixed(2));
+      ? console.warn("Contrast ratio " + ratio.toFixed(2) + " fails 4.5:1.")
+      : console.log("Contrast ratio " + ratio.toFixed(2) + " passes 4.5:1.");
     console.groupEnd();
 
     el.style.outline = ratio < 4.5 ? "5px solid #ff0000" : "2px solid#00ff00";

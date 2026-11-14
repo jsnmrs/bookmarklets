@@ -11,7 +11,6 @@
   "use strict";
   var consoleOutput = "";
   function checkNonUnderlinedLinks() {
-    console.clear();
     let e = !1,
       t = !1,
       o = !1,
@@ -20,6 +19,8 @@
     let l = 0,
       a = !1,
       s = !1;
+    const issues = [],
+      notes = [];
     function i(e, t, o) {
       const n = [e, t, o].map(function (e) {
         return (e /= 255) <= 0.03928
@@ -76,8 +77,7 @@
               return e;
             })(r) && !a))
         ) {
-          ((consoleOutput += "-------\n"),
-            (consoleOutput += "Link text: " + r.textContent + "\n"),
+          ((consoleOutput = "Link text: " + r.textContent + "\n"),
             n ||
               (!(function (e) {
                 e.classList.add("problem-highlight");
@@ -118,25 +118,37 @@
             c(getComputedStyle(r.parentNode).color)
           );
           n
-            ? (consoleOutput +=
-                "Link is inside a <nav> element and therefore its position/display does not require the underline for it to be perceived as a link.\n")
+            ? ((consoleOutput +=
+                "Link is inside a <nav> element and therefore its position/display does not require the underline for it to be perceived as a link.\n"),
+              notes.push(consoleOutput.trim()))
             : (e < 3 &&
                 (consoleOutput +=
-                  "🚨 Contrast between link text and parent text node is under 3:1. Ratio is " +
+                  "Contrast between link text and parent text node is under 3:1. Ratio is " +
                   e.toFixed(2) +
-                  ":1."),
+                  ":1.\n"),
               (consoleOutput +=
-                "\n   Very likely a [SC 1.4.1 Use of Color](https://www.w3.org/TR/WCAG21/#use-of-color) issue\n"));
+                "Very likely a SC 1.4.1 Use of Color issue (https://www.w3.org/TR/WCAG21/#use-of-color).\n"),
+              issues.push(consoleOutput.trim()));
         }
       }),
       l > 0)
     ) {
-      const e = l + " possible issues with non-underlined links found";
-      ((consoleOutput = e + "\n" + consoleOutput),
-        alert(e + " (check console for more details)"));
+      alert(
+        "Non-underlined links: " +
+          l +
+          (l === 1 ? " possible issue" : " possible issues") +
+          " found. See the browser console for details."
+      );
     } else
-      alert("No non-underlined links found (outside of a navigation area)");
-    console.log(consoleOutput);
+      alert(
+        "Non-underlined links: no non-underlined links found outside navigation areas."
+      );
+    if (issues.length > 0 || notes.length > 0) {
+      console.group("Non-underlined links");
+      issues.forEach((issue) => console.warn(issue));
+      notes.forEach((note) => console.log(note));
+      console.groupEnd();
+    }
   }
   checkNonUnderlinedLinks();
   var kmOutput = consoleOutput;

@@ -21,19 +21,14 @@
       !scrollbarAppeared &&
       currentWidth < prevWidth
     ) {
-      console.log(
-        "%cHorizontal scrollbar detected!%c\n" +
-          "Window width: " +
+      console.warn(
+        "Horizontal scroll: horizontal scrollbar detected. Window width " +
           currentWidth +
-          "px\n" +
-          "Content width: " +
+          "px, content width " +
           document.body.scrollWidth +
-          "px\n" +
-          "Overflow: " +
+          "px, overflow " +
           (document.body.scrollWidth - currentWidth) +
-          "px",
-        "color: #ff0000; font-size: 14px; font-weight: bold;",
-        "color: inherit; font-size: inherit;"
+          "px."
       );
       scrollbarAppeared = true;
     } else if (!hasHorizontalScrollbar) {
@@ -49,8 +44,6 @@
   checkForScrollbar();
 
   console.log(
-    "%cHorizontal scrollbar detector activated!%c\nResize the window to test.",
-    "color: #4CAF50; font-size: 14px; font-weight: bold;",
-    "color: inherit; font-size: inherit;"
+    "Horizontal scroll: detector activated. Resize the window to test."
   );
 })();
