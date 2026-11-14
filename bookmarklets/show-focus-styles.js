@@ -21,6 +21,7 @@
 
   const PREFIX = "sfs";
   const STYLE_ID = PREFIX + "-styles";
+  const BASE_ID = PREFIX + "-base";
   const BADGE_ID = PREFIX + "-badge";
   const MODES = ["focus", "hover", "both"];
   const LABELS = {
@@ -41,14 +42,18 @@
   const HOVER_CLASSES = [PREFIX + "-hover"];
 
   // Emulates the user agent focus ring so elements with no author focus
-  // styles still show an indicator. It comes first in the injected sheet so
-  // any author focus rule of equal or higher specificity overrides it, as
-  // author styles override the user agent stylesheet. The last outline
-  // declaration wins where the browser supports it.
+  // styles still show an indicator. Author styles override the user agent
+  // stylesheet, so the ring lives in its own cascade layer inside a
+  // stylesheet placed first in the document: that makes the layer sort
+  // below every layer the page declares, and unlayered author styles beat
+  // layered ones anyway. The last outline declaration wins where the
+  // browser supports it.
   const BASE_CSS =
-    "." +
+    "@layer " +
     PREFIX +
-    "-ua-ring{outline:1px auto Highlight;outline:1px auto -webkit-focus-ring-color}" +
+    "-ua-ring{." +
+    PREFIX +
+    "-ua-ring{outline:1px auto Highlight;outline:1px auto -webkit-focus-ring-color}}" +
     "." +
     PREFIX +
     "-focus,." +
@@ -135,7 +140,7 @@
           .filter((name) => name.startsWith(PREFIX + "-"))
           .forEach((name) => element.classList.remove(name));
       });
-    [STYLE_ID, BADGE_ID].forEach((id) => {
+    [STYLE_ID, BASE_ID, BADGE_ID].forEach((id) => {
       const element = document.getElementById(id);
       if (element) {
         element.remove();
@@ -172,10 +177,17 @@
       .join("\n")
       .replace(PSEUDO_ALL, "." + PREFIX + "-$1");
 
+    const base = document.createElement("style");
+    base.id = BASE_ID;
+    base.textContent = BASE_CSS;
+    document.head.prepend(base);
+
+    // Cloned rules go last so they win ties on source order, exactly as the
+    // original pseudo-class rules would.
     const style = document.createElement("style");
     style.id = STYLE_ID;
     style.dataset.mode = mode;
-    style.textContent = BASE_CSS + "\n" + css;
+    style.textContent = css;
     document.head.appendChild(style);
 
     const focusables = document.querySelectorAll(FOCUSABLE);
