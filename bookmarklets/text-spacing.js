@@ -30,7 +30,10 @@
           f[i].contentWindow.document.getElementById(id).remove();
           removeFromShadows(f[i].contentWindow.document);
         } catch (e) {
-          console.log(e);
+          console.warn(
+            "Text spacing: could not reach an iframe, probably because it is cross-origin.",
+            e
+          );
         }
       }
     }
@@ -59,7 +62,10 @@
           .appendChild(s.cloneNode(true));
         applyToShadows(f[i].contentWindow.document);
       } catch (e) {
-        console.log(e);
+        console.warn(
+          "Text spacing: could not reach an iframe, probably because it is cross-origin.",
+          e
+        );
       }
     }
     applyToShadows(d);

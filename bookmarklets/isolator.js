@@ -48,27 +48,26 @@
       e.classList.add("isolatorHighlight");
     }
     function d(e) {
-      (console.clear(), console.log(getXpath(e)), (o.innerHTML = getXpath(e)));
+      (console.log("Isolator:", getXpath(e)), (o.innerHTML = getXpath(e)));
     }
     (Array.from(a).forEach((t) => {
       (t.addEventListener("click", (o) => {
-        (console.log("preventClicks = ", n),
-          n &&
-            (!(function (t, o) {
-              ((e = t), "HTML" === t.tagName && (n = !1));
-              !(function (e) {
-                if (!i) {
-                  const t = e.parentNode,
-                    o = t.childNodes;
-                  "HTML" !== t.tagName
-                    ? Array.from(o).forEach((t) => {
-                        t !== e && t.remove();
-                      })
-                    : (i = !0);
-                }
-              })(t);
-            })(t),
-            o.preventDefault()));
+        n &&
+          (!(function (t, o) {
+            ((e = t), "HTML" === t.tagName && (n = !1));
+            !(function (e) {
+              if (!i) {
+                const t = e.parentNode,
+                  o = t.childNodes;
+                "HTML" !== t.tagName
+                  ? Array.from(o).forEach((t) => {
+                      t !== e && t.remove();
+                    })
+                  : (i = !0);
+              }
+            })(t);
+          })(t),
+          o.preventDefault());
       }),
         t.addEventListener("mouseover", (o) => {
           ((e = t), o.stopPropagation(), i || s(t), d(e));
@@ -92,10 +91,7 @@
             (n.preventDefault(),
             e.parentNode &&
               "HTML" !== e.tagName &&
-              (l(e),
-              console.log("currentEl.parentNode = ", e.parentNode),
-              (t = e.parentNode),
-              s((e = t))),
+              (l(e), (t = e.parentNode), s((e = t))),
             d(e),
             (o.textContent =
               o.textContent + " (Press Return to isolate this element)")),

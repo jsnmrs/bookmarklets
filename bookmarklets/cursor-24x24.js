@@ -31,7 +31,10 @@
           f[i].contentWindow.document.getElementById(id).remove();
           removeFromShadows(f[i].contentWindow.document);
         } catch (e) {
-          console.log(e);
+          console.warn(
+            "Cursor 24x24: could not reach an iframe, probably because it is cross-origin.",
+            e
+          );
         }
       }
     }
@@ -60,7 +63,10 @@
           .appendChild(s.cloneNode(true));
         applyToShadows(f[i].contentWindow.document);
       } catch (e) {
-        console.log(e);
+        console.warn(
+          "Cursor 24x24: could not reach an iframe, probably because it is cross-origin.",
+          e
+        );
       }
     }
     applyToShadows(d);
